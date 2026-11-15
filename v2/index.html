@@ -420,13 +420,60 @@ body.noscroll{overflow:hidden}
 .avail{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--muted)}
 .avail a{color:var(--text);border-bottom:1px solid var(--line-2);transition:border-color .2s,color .2s}
 .avail a:hover{color:var(--a1);border-color:var(--a1)}
-.totop{position:fixed;right:18px;bottom:22px;z-index:80;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:rgba(14,16,22,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .4s var(--ease),border-color .2s}
+.totop{position:fixed;right:18px;bottom:84px;z-index:80;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:rgba(14,16,22,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .4s var(--ease),border-color .2s}
 .totop.show{opacity:1;pointer-events:auto;transform:none}
 .totop:hover{border-color:var(--a1);color:var(--a1)}
 .totop svg{width:18px;height:18px}
 .rd-copy{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 11px;transition:all .2s}
 .rd-copy:hover{color:var(--text);border-color:var(--line-2)}
 .cta-row .btn-g svg{width:15px;height:15px}
+
+/* assistant */
+.cb-fab{position:fixed;right:18px;bottom:22px;z-index:85;display:flex;align-items:center;gap:10px;padding:13px 18px 13px 14px;border-radius:999px;border:1px solid rgba(198,243,107,.45);background:rgba(14,16,22,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--text);font-weight:600;font-size:14px;box-shadow:0 14px 40px -12px rgba(0,0,0,.8),0 0 0 0 rgba(198,243,107,.4);transition:transform .3s var(--ease),border-color .2s,opacity .25s,box-shadow .3s}
+.cb-fab:hover{transform:translateY(-2px);border-color:var(--a1);box-shadow:0 18px 44px -12px rgba(0,0,0,.85),0 0 0 6px rgba(198,243,107,.12)}
+.cb-fab svg{width:20px;height:20px;color:var(--a1);flex:none}
+.cb-fab.hide{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px);transition:transform .3s var(--ease),opacity .25s,visibility 0s .25s}
+.cb{padding:0;position:fixed;right:18px;bottom:22px;z-index:180;width:min(392px,calc(100vw - 24px));height:min(600px,calc(100vh - 44px));display:none;flex-direction:column;border:1px solid var(--line-2);border-radius:22px;background:var(--bg-2);box-shadow:0 40px 100px -20px rgba(0,0,0,.9);overflow:hidden}
+.cb.open{display:flex;animation:pop .3s var(--ease)}
+.cb-h{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(198,243,107,.06),transparent)}
+.cb-av{width:38px;height:38px;border-radius:12px;background:var(--grad);color:#0a0b0e;font-weight:700;font-size:13px;display:grid;place-items:center;flex:none}
+.cb-h div{flex:1;min-width:0}
+.cb-h b{display:block;font-size:15px;letter-spacing:-.01em}
+.cb-h small{display:block;color:var(--dim);font-size:11.5px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cb-h button{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--muted);border:1px solid transparent;transition:all .2s;flex:none}
+.cb-h button:hover{color:var(--text);background:var(--surface-2);border-color:var(--line)}
+.cb-h button svg{width:16px;height:16px}
+.cb-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;overscroll-behavior:contain}
+.cb-m{display:flex;flex-direction:column;gap:8px;max-width:92%}
+.cb-m.u{align-self:flex-end;align-items:flex-end}
+.cb-b{padding:11px 14px;border-radius:16px;font-size:14px;line-height:1.55;color:#c9cedb;background:var(--surface-2);border:1px solid var(--line);border-top-left-radius:6px}
+.cb-b b{color:var(--text);font-weight:600}
+.cb-b i{color:var(--text)}
+.cb-m.u .cb-b{background:var(--a1);color:#0a0b0e;border-color:transparent;border-radius:16px;border-top-right-radius:6px;font-weight:500}
+.cb-acts{display:flex;flex-wrap:wrap;gap:6px}
+.cb-act{font-size:12.5px;padding:7px 12px;border-radius:999px;border:1px solid rgba(94,231,223,.4);color:var(--a2);background:rgba(94,231,223,.06);transition:all .2s;text-decoration:none;display:inline-flex;align-items:center}
+.cb-act:hover{background:rgba(94,231,223,.16);color:var(--text)}
+.cb-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px;min-height:10px}
+.cb-chip{font-size:12.5px;padding:7px 12px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted);transition:all .2s}
+.cb-chip:hover{color:var(--text);border-color:var(--a1);background:rgba(198,243,107,.08)}
+.cb-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:rgba(255,255,255,.015)}
+.cb-form input{flex:1;min-width:0;background:var(--surface);border:1px solid var(--line-2);border-radius:999px;padding:11px 16px;color:var(--text);font:inherit;font-size:14px;outline:0;transition:border-color .2s}
+.cb-form input:focus{border-color:var(--a1)}
+.cb-form input::placeholder{color:var(--dim)}
+.cb-form button{width:44px;height:44px;border-radius:50%;background:var(--a1);color:#0a0b0e;display:grid;place-items:center;flex:none;transition:transform .2s}
+.cb-form button:hover{transform:scale(1.06)}
+.cb-form button svg{width:18px;height:18px}
+.cb-dots{display:inline-flex;gap:4px;padding:3px 0}
+.cb-dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:cbd 1s infinite}
+.cb-dots i:nth-child(2){animation-delay:.15s}.cb-dots i:nth-child(3){animation-delay:.3s}
+@keyframes cbd{0%,60%,100%{opacity:.25;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+@media (max-width:680px){
+  .cb{right:0;bottom:0;left:0;width:100%;height:min(82vh,640px);border-radius:22px 22px 0 0;border-bottom:0}
+  .cb-fab{right:14px;bottom:16px;padding:14px}
+  .cb-fab span{display:none}
+  .totop{right:14px;bottom:78px}
+  .cb-form input{font-size:16px}
+}
 </style>
 </head>
 <body>
@@ -916,6 +963,24 @@ body.noscroll{overflow:hidden}
     <div class="pal-list" id="palList"></div>
   </div>
 </div>
+<button class="cb-fab" id="cbFab" aria-expanded="false" aria-controls="cb" aria-label="Open the assistant: ask about Tharun">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg>
+  <span>Ask about Tharun</span>
+</button>
+<section class="cb" id="cb" role="dialog" aria-label="Portfolio assistant" aria-modal="false">
+  <header class="cb-h">
+    <span class="cb-av" aria-hidden="true">TK</span>
+    <div><b>Ask about Tharun</b><small>Runs in your browser. Nothing is sent.</small></div>
+    <button id="cbClear" type="button" aria-label="Start over" title="Start over"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg></button>
+    <button id="cbX" type="button" aria-label="Close the assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </header>
+  <div class="cb-log" id="cbLog" role="log" aria-live="polite" aria-label="Conversation"></div>
+  <div class="cb-chips" id="cbChips" aria-label="Suggested questions"></div>
+  <form class="cb-form" id="cbForm" autocomplete="off">
+    <input id="cbIn" type="text" maxlength="200" placeholder="Ask about projects, skills, availability…" aria-label="Your question" enterkeyhint="send">
+    <button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+</section>
 <button class="totop" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 <div class="toast" id="toast"></div>
 <div class="rd" id="rd" role="dialog" aria-modal="true" aria-labelledby="rdT" aria-hidden="true">
@@ -1186,6 +1251,142 @@ addEventListener('keydown', e => {
   else if (e.key === 'ArrowUp'){ e.preventDefault(); act = (act - 1 + res.length) % res.length; render(); }
   else if (e.key === 'Enter'){ e.preventDefault(); runAct(act); }
 });
+
+
+/* ---------- portfolio assistant (answers from this page's own content; no server, no AI API) ---------- */
+const LINKEDIN = 'https://www.linkedin.com/in/tharunreddyy';
+const RESUME = 'assets/Tharun_Kumar_Reddy_Resume.pdf';
+const A_WORK = {t:'See it in Work', go:'work'}, A_PLAT = {t:'See Platform engineering', go:'platforms'}, A_SYS = {t:'Explore the architecture', go:'systems'};
+const A_MAIL = {t:'Copy email', mail:1}, A_IN = {t:'LinkedIn', href:LINKEDIN}, A_CV = {t:'Download résumé', href:RESUME, dl:1};
+
+/* k = keywords/phrases to match, a = answer (HTML), act = buttons, next = follow-up topic ids, p = priority */
+const KB = [
+ {id:'hello', k:['hi','hello','hey','hola','namaste','good morning','good evening'], p:-2, a:"Hi! I answer questions about Tharun's work using what's on this page: projects, skills, experience, writing and how to reach him. What would you like to know?", next:['projects','skills','hire']},
+ {id:'thanks', k:['thanks','thank you','thx','great','awesome','cool','nice'], p:-2, a:"Happy to help. If you'd like to talk to Tharun directly, email is the quickest way.", act:[A_MAIL], next:['projects','hire']},
+ {id:'bot', k:['are you ai','are you an ai','are you a bot','are you a robot','are you human','are you real','are you chatgpt','are you gpt','are you an llm','is this ai','is this a bot','is this chatgpt','powered by gpt','do you use ai','who are you','what are you','how do you function','real person'], p:2, a:"I'm a small assistant built into this page. I don't call an AI service: I match your question against the content of this portfolio, so I only say what's written here and I won't make things up. For anything else, ask Tharun directly.", act:[A_MAIL], next:['about','projects']},
+ {id:'about', k:['who is tharun','who is he','who is this','tell me about tharun','about tharun','tell me about yourself','introduce yourself','introduction','summary','background','profile','overview'], p:1, a:"<b>Tharun Kumar Reddy</b> is an AI &amp; Data Engineer in Bengaluru, India. He takes LLMs from demo to production: RAG assistants, real-time voice agents, Claude &amp; MCP connectors and agentic automation, built on solid data platforms with the latency, accuracy and guardrails that make people trust them. About 2.5 years of experience, currently at Easystepin IT Services.", act:[A_WORK, A_CV], next:['projects','experience','skills']},
+ {id:'experience', k:['experience','experienced','job','role','company','employer','easystepin','career','years','current','work history','where does he work','designation','position'], p:1, a:"<b>Data Engineer</b> at Easystepin IT Services Pvt. Ltd., Bengaluru, since <b>Jun 2024</b>. Highlights: RAG assistants (40% lower query latency), a sub-800ms voice agent, an invoice pipeline (500+/day at 95% accuracy), 10 forecasting APIs, guardrails for AI workflows with 60+ n8n workflows, and CI/CD with OpenTelemetry tracing.", act:[{t:'See Experience', go:'experience'}, A_CV], next:['metrics','projects']},
+ {id:'education', k:['education','degree','college','university','btech','b.tech','studied','graduate','graduated','qualification','study'], a:"<b>B.Tech in Computer Science</b>, Sri Venkateswara Engineering College, Tirupati (2021 - 2024).", next:['certs','experience']},
+ {id:'location', k:['where','location','based','city','bengaluru','bangalore','india','remote','relocate'], a:"Based in <b>Bengaluru, India</b>.", next:['hire','contact']},
+ {id:'hire', k:['hire','hiring','available','availability','open to','opportunity','opportunities','freelance','consulting','consultant','contract','job offer','work together','collaborate','recruit','recruiter','join','looking for'], p:2, a:"Tharun is open to <b>AI engineering roles, consulting and ambitious builds</b>: agents, RAG, voice and automation. The best way to start is a short email describing what you're building.", act:[A_MAIL, A_IN, A_CV], next:['skills','projects']},
+ {id:'contact', k:['contact','email','mail','reach','phone','phone number','mobile number','contact number','call him','linkedin','message','get in touch','connect'], p:2, a:"You can reach Tharun at <b>tharunkumarau01@gmail.com</b> or on LinkedIn. Email is the quickest way. A phone number isn't published on this site.", act:[A_MAIL, A_IN, A_CV], next:['hire','projects']},
+ {id:'resume', k:['resume','cv','curriculum','download'], p:2, a:"Here's the résumé as a PDF (two pages).", act:[A_CV], next:['experience','certs']},
+ {id:'rates', k:['rate','rates','salary','price','pricing','cost','charge','fee','budget','ctc','expected','compensation'], p:2, a:"Rates and compensation aren't published here, and I don't know them. Please email Tharun with the scope and he can reply directly.", act:[A_MAIL], next:['hire']},
+
+ {id:'projects', k:['projects','project','built','built what','portfolio','showcase','products','work','shipped','examples','list','everything','all','done'], p:1, a:"There are <b>11 products</b> and <b>6 platform builds</b>. Headliners: a manufacturing-intelligence platform, Claude &amp; MCP connectors, a sub-800ms voice agent, a 60+ workflow n8n marketing engine, a Databricks agent, an invoice AI, a farmer WhatsApp bot and a trading bot. Ask about any of them, or use the filters in Work.", act:[A_WORK, A_PLAT], next:['voice','rag','mcp','automation']},
+ {id:'manufacturing', k:['manufacturing','factory','industrial','erp','mes','scada','oee','operations platform','business units','plant','production data','uptime'], a:"<b>Manufacturing Intelligence Platform</b>: an industrial operations platform covering ERP, MES, SCADA, inventory and invoicing across <b>9 business units</b>, then made intelligent. It has an operations RAG assistant (pdfplumber, per-user ChromaDB, SHA-256 hashing to skip re-embedding), <b>10 prediction APIs</b>, and natural-language analytics over production, OEE and machine uptime. Stack: Django/DRF, Flask, PostgreSQL, LangChain, GPT-4o, ChromaDB, XGBoost, Prophet, Mistral OCR.", act:[A_WORK], next:['forecast','rag']},
+ {id:'mcp', k:['mcp','model context protocol','claude','connector','connectors','anthropic','enterprise connectors','tool schemas','oauth'], p:1, a:"<b>Claude Enterprise Connectors</b>: custom MCP servers that plug Claude into enterprise systems, with typed tool schemas, scoped auth and audited access, so teams can work with live company data from inside Claude. MCP is also the tool layer in the voice agent. Tharun holds the Claude Certified Architect credential and wrote about why MCP matters.", act:[A_WORK, {t:'Read: Why MCP is more than a buzzword', post:1}], next:['voice','certs']},
+ {id:'voice', k:['voice','speech','call','calls','phone agent','twilio','whisper','tts','stt','telephony','latency','800ms','multilingual','phone agent','voice agent','voice ai'], p:1, a:"<b>Real-time multilingual voice agent</b>: Twilio, then Whisper STT, then GPT-4o with tool calling + MCP, then Azure TTS, at <b>sub-800ms end-to-end</b>. It pulls live balances, orders and CRM data mid-call, books calendars and takes payments by caller intent, and new industries go live <b>by prompt, not code</b>.", act:[A_WORK, A_SYS], next:['mcp','guardrails']},
+ {id:'rag', k:['rag','retrieval','vector','chromadb','embedding','embeddings','langchain','citations','citation','grounded','grounding','abstention','chunking','semantic search','knowledge base','hybrid','rag latency','query latency','keyword search'], p:2, a:"Tharun's RAG work: LangChain + GPT-4/4o + ChromaDB over PostgreSQL, MySQL and OCR'd PDFs, with semantic chunking, agent-based tool routing and <b>40% lower query latency</b> than keyword search. Design choices: per-user vector stores, SHA-256 hashing to skip re-embedding, hybrid retrieval with cross-encoder reranking, citations, and abstention when relevance is low.", act:[A_SYS, {t:'Read: RAG is not the hard part', post:0}], next:['hybrid','manufacturing']},
+ {id:'hybrid', k:['hybrid sql','text to sql','text-to-sql','nl to sql','sql agent','router','intent router','medallion','bronze','silver','gold','lakehouse','data platform','data architecture','capacity','events per day'], a:"<b>Medallion Data + AI Platform</b> (design): Bronze/Silver/Gold across 6 source systems, with an intent router that sends numeric questions to a schema-validated, read-only text-to-SQL tool and document questions to BM25 + vector retrieval with reranking. Sized for <b>2M events/day</b>, 500 assistant queries/day, sub-6s p95 and roughly $4.5K a month, with an evaluation framework (faithfulness, retrieval, citation accuracy) and OpenTelemetry tracing.", act:[A_SYS, A_PLAT], next:['databricks','rag']},
+ {id:'automation', k:['n8n','automation','marketing','seo','workflow','workflows','subflows','social','ads','cro','sales','campaigns','b2b'], p:1, a:"<b>n8n Sales &amp; Marketing Automation</b>: <b>60+ workflows on 17 shared subflows</b> for SEO, content, social, ad campaigns, CRO and compliance. Claude/OpenAI content generation sits behind validation and human-approval gates, and it's wired into Search Console, GA4, PageSpeed, WordPress, Google Workspace and Slack.", act:[A_WORK, {t:'Read: Automation is a data engineering problem', post:5}], next:['guardrails','invoice']},
+ {id:'guardrails', k:['guardrail','guardrails','safe','safety','validation','fallback','approval','human in the loop','confidence','reliable','reliability','fail','failure','observability','tracing','opentelemetry','langfuse','evaluation','monitoring'], p:1, a:"<b>Guardrails</b>: every AI action goes through layered checks: schema validation, confidence scoring, a fallback chain across models, and human-approval gates for anything that publishes or spends. Tracing with OpenTelemetry covers it end to end.", act:[A_SYS, {t:'Read: The boring infrastructure behind reliable AI', post:2}], next:['automation','hybrid']},
+ {id:'invoice', k:['invoice','invoices','invoice pipeline','ocr','extraction','document','documents','pdf','ledger','finance','accounting','mistral'], p:1, a:"<b>Invoice Intelligence</b>: email in, ledger out. OCR, GPT-4 extraction to a strict schema, then business-rule checks, handling <b>500+ invoices a day at 95% field accuracy</b> with about 90% less manual entry. Only doubtful fields go to a person. Built with n8n, Azure OpenAI GPT-4 and OCR.", act:[A_WORK, A_SYS], next:['guardrails','automation']},
+ {id:'forecast', k:['forecast','forecasting','prediction','predict','ml','machine learning','xgboost','prophet','random forest','classification','predictive maintenance','model','models','churn'], a:"<b>10 forecasting and classification APIs</b>: sales, inventory, energy, quality, predictive maintenance and delivery risk, using XGBoost, Random Forest and Prophet with lag features and recursive forecasting, served as REST APIs from Flask/DRF.", act:[A_SYS], next:['manufacturing','skills']},
+ {id:'databricks', k:['databricks','lakehouse agent','data agent'], a:"<b>Databricks AI Agent</b>: answers business questions over the lakehouse, routing to governed, read-only SQL on medallion tables and explaining the numbers it returns.", act:[A_WORK], next:['hybrid','boomi']},
+ {id:'boomi', k:['boomi','ipaas','integration','integrations','agentic workflows'], a:"<b>Boomi Agents</b>: AI agents running on top of Boomi integrations, reasoning over cross-system events and triggering the right processes across connected apps.", act:[A_WORK], next:['mcp','databricks']},
+ {id:'allocator', k:['allocator','allocation','capacity allocator','optimization','optimisation','demand'], a:"<b>Capacity Allocator</b>: a product that matches demand to available capacity, with clear, explainable recommendations instead of spreadsheets. Python, optimization and APIs.", act:[A_WORK], next:['projects']},
+ {id:'agri', k:['agri','agriculture','farmer','farmers','crop','whatsapp','agritech','farm','voice note','local language'], a:"<b>Agri WhatsApp Bot</b>: a WhatsApp assistant for farmers that meets them where they already are. They ask in their local language, including voice notes, and get crop advisory and market information. Built with the WhatsApp Business API, an LLM, speech-to-text and RAG.", act:[A_WORK], next:['voice','projects']},
+ {id:'trading', k:['binance','trading','trade','trader','crypto','bot','stop loss','algo','algorithmic','websocket'], a:"<b>Binance Trading Bot</b>: an automated trading bot on the Binance API. Strategy signals in, orders out, with position sizing and stop-loss risk controls built in from day one. Python, WebSockets.", act:[A_WORK], next:['agri','projects']},
+ {id:'ca', k:['chartered accountant','ca','accountant','analysis bot','financial analysis','local bot'], p:1, a:"<b>Analysis Bot for a Chartered Accountant</b>: a working analysis assistant built for a chartered accountant and run locally, so the figures they work with can be questioned in plain language.", act:[A_WORK], next:['invoice','projects']},
+ {id:'platforms', k:['platform engineering','platforms','backend','backends','saas','multi tenant','multi-tenant','django','tenant','schema per tenant','celery','kubernetes','sso','rbac','multi cloud','multi-cloud','terraform','portal','recognition','chatbot'], p:1, a:"Six platform builds sit under the products: the Medallion data + AI platform, an NL-to-SQL enterprise chatbot (RBAC, Microsoft SSO, 30% faster queries), an employee recognition platform (MCP + n8n), a multi-tenant Django design (schema-per-tenant, 4 Celery queues, circuit breakers), a multi-cloud provisioning platform (99.95-99.999% uptime SLA) and an SMB &amp; accelerator-programme portal.", act:[A_PLAT, {t:'Read: Multi-tenant scaling decisions', post:3}], next:['hybrid','skills']},
+ {id:'accelerators', k:['accelerator','accelerators','reusable','kit','kits','templates','building blocks'], a:"There are <b>8 reusable accelerators</b>: Enterprise RAG Kit, Voice Agent Kit, Invoice Intelligence Kit, NL-to-SQL Assistant, Forecasting Suite, Marketing Engine, MCP Connector Kit and Multi-tenant SaaS Core. They turn a months-long AI build into a short configuration project.", act:[{t:'See Accelerators', go:'accelerators'}], next:['projects','platforms']},
+
+ {id:'skills', k:['skills','skill','llm','llms','llm experience','tech','technology','technologies','stack','tools','languages','language','python','sql','expertise','good at','know','proficient','toolbox','frameworks'], p:1, a:"<b>LLMs &amp; agents:</b> GPT-4/4o, Anthropic and Azure OpenAI, MCP, tool calling, LangChain, hybrid retrieval and reranking, guardrails. <b>Data:</b> ETL/ELT, Medallion, PostgreSQL, MySQL, ChromaDB, Redis. <b>Backend:</b> Django/DRF, FastAPI, Flask, Celery, REST, WebSockets. <b>Voice &amp; automation:</b> n8n, Twilio, Whisper, Azure TTS. <b>Cloud:</b> Azure, Docker, GitLab CI/CD, OpenTelemetry. <b>ML:</b> XGBoost, Random Forest, Prophet.", act:[{t:'See the Toolbox', go:'toolbox'}], next:['projects','certs']},
+ {id:'certs', k:['certification','certifications','certified','certificate','certificates','credential','credentials','microsoft','azure','ab-100','ab-620','ai-103','tensorflow','google','badge'], p:1, a:"Six credentials: <b>Claude Certified Architect</b> (Anthropic), <b>Microsoft Frontier Engineer</b>, <b>AB-100</b> Agentic AI Business Solutions Architect, <b>AB-620</b> AI Agent Builder Associate, <b>AI-103</b> Azure AI Engineer Associate, and the <b>Google TensorFlow Developer Certificate</b>.", act:[{t:'See Credentials', go:'credentials'}], next:['skills','education']},
+ {id:'metrics', k:['metrics','numbers','key numbers','results','impact','achievements','achievement','stats','accuracy','performance','improvement','outcome','outcomes','kpi','proof'], p:1, a:"Highlights: <b>&lt;800ms</b> voice-agent latency, <b>95%</b> invoice field accuracy on <b>500+ invoices/day</b>, <b>-40%</b> RAG query latency, <b>-90%</b> manual entry, <b>60+</b> n8n workflows on 17 subflows, <b>10</b> prediction APIs, <b>9</b> business units, <b>30%</b> faster NL-to-SQL queries and a <b>99.95-99.999%</b> uptime SLA on a multi-cloud platform.", act:[A_WORK], next:['voice','invoice','rag']},
+ {id:'writing', k:['writing','blog','blogs','article','articles','post','posts','essay','essays','read','write','wrote','notes','newsletter'], p:1, a:"Six short essays on production AI. Pick one to read it here:", act:[{t:'RAG is not the hard part', post:0},{t:'Why MCP is more than a buzzword', post:1},{t:'The boring infrastructure behind reliable AI', post:2},{t:'Multi-tenant SaaS scaling decisions', post:3},{t:'Data quality is a trust problem', post:4},{t:'Automation is a data engineering problem', post:5}], next:['rag','mcp']},
+ {id:'dataquality', k:['data quality','trust','testing','great expectations','stakeholder'], a:"Tharun's view: schema tests and not-null checks catch known failures, but they don't answer the question a stakeholder actually asks: <i>can I trust this number?</i>", act:[{t:'Read the essay', post:4}], next:['writing']}
+];
+
+const STOP = new Set('a an the is are was were be been am do does did can could would should will shall of to in on at for with about and or but if then so than that this these those it its i me my you your we our they their he his him she her has have had ai what which who whom how when why please tell give show want need like know any some there here just also very more most much many tharun s'.split(' '));
+const stem = w => w.length > 4 ? w.replace(/(ing|ed|es|s)$/, '') : w;
+const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(Boolean);
+const toks = s => norm(s).filter(w => !STOP.has(w)).map(stem);
+KB.forEach(e => { e.set = new Set(e.k.filter(k => !k.includes(' ')).flatMap(toks)); e.phr = e.k.filter(k => k.includes(' ')).map(k => norm(k).join(' ')); });
+const byId = Object.fromEntries(KB.map(e => [e.id, e]));
+
+function ask(q){
+  const text = norm(q).join(' '), qt = [...new Set(toks(q))];
+  const scored = KB.map(e => {
+    let m = 0;
+    qt.forEach(t => { if (e.set.has(t)) m += 3; else if (t.length >= 4 && [...e.set].some(w => w.length >= 4 && (w.startsWith(t) || t.startsWith(w)))) m += 1; });
+    e.phr.forEach(p => { if (text.includes(p)) m += 4; });
+    return {e, m, s: m + (e.p || 0)};
+  }).filter(x => x.m >= 3).sort((a, b) => b.s - a.s);
+  return {best: scored[0] ? scored[0].e : null, rest: scored.slice(1, 3).map(x => x.e)};
+}
+
+const cb = $('#cb'), cbLog = $('#cbLog'), cbChips = $('#cbChips'), cbIn = $('#cbIn'), cbFab = $('#cbFab');
+const CHIP_LABEL = {hello:'Say hello', projects:'What has he built?', skills:'Tech stack', hire:'Is he available?', contact:'How do I contact him?', voice:'Voice agent', rag:'RAG work', mcp:'Claude & MCP', automation:'n8n automation', invoice:'Invoice AI', forecast:'Forecasting APIs', manufacturing:'Manufacturing platform', hybrid:'Hybrid SQL + RAG', guardrails:'Guardrails', metrics:'Key numbers', certs:'Certifications', experience:'Experience', education:'Education', writing:'Writing', platforms:'Platform engineering', accelerators:'Accelerators', about:'Who is Tharun?', databricks:'Databricks agent', boomi:'Boomi agents', agri:'Farmer WhatsApp bot', trading:'Trading bot', ca:'CA analysis bot', allocator:'Capacity allocator', resume:'Résumé', bot:'Are you an AI?', location:'Where is he based?', dataquality:'Data quality essay', rates:'Rates'};
+const startChips = ['projects','voice','skills','metrics','hire','writing'];
+let cbBusy = false;
+
+function actBtn(a){
+  const b = document.createElement(a.href ? 'a' : 'button');
+  b.className = 'cb-act'; b.textContent = a.t;
+  if (a.href){ b.href = a.href; if (a.dl) b.setAttribute('download', ''); else { b.target = '_blank'; b.rel = 'noopener'; } }
+  else b.type = 'button';
+  b.addEventListener('click', () => {
+    if (a.go){ go(a.go)(); if (innerWidth < 681) closeChat(); }
+    else if (a.post != null){ closeChat(); openPost(a.post, cbFab); }
+    else if (a.mail) copyMail();
+  });
+  return b;
+}
+function addMsg(role, html, acts){
+  const m = document.createElement('div'); m.className = 'cb-m ' + role;
+  const bub = document.createElement('div'); bub.className = 'cb-b';
+  if (role === 'u') bub.textContent = html; else bub.innerHTML = html;
+  m.appendChild(bub);
+  if (acts && acts.length){ const r = document.createElement('div'); r.className = 'cb-acts'; acts.forEach(a => r.appendChild(actBtn(a))); m.appendChild(r); }
+  cbLog.appendChild(m); cbLog.scrollTop = cbLog.scrollHeight; return m;
+}
+function setChips(ids){
+  cbChips.innerHTML = '';
+  [...new Set(ids)].filter(i => byId[i] || i === 'hello').slice(0, 4).forEach(id => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'cb-chip'; b.textContent = CHIP_LABEL[id] || id;
+    b.addEventListener('click', () => submit(CHIP_LABEL[id] || id, id)); cbChips.appendChild(b);
+  });
+  cbLog.scrollTop = cbLog.scrollHeight;
+}
+function reply(entry, rest){
+  const done = () => {
+    if (entry){ addMsg('b', entry.a, entry.act); setChips([...(entry.next || []), ...rest.map(r => r.id)]); }
+    else { addMsg('b', "I don't have that on this page. I can talk about the projects, skills, experience, writing and availability, or you can email Tharun directly.", [A_MAIL]); setChips(['projects','skills','hire','contact']); }
+    cbBusy = false; cbIn.focus();
+  };
+  if (reduce){ done(); return; }
+  const t = addMsg('b', '<span class="cb-dots"><i></i><i></i><i></i></span>'); t.classList.add('typing');
+  setTimeout(() => { t.remove(); done(); }, 380 + Math.random() * 260);
+}
+function submit(q, forceId){
+  q = q.trim(); if (!q || cbBusy) return;
+  cbBusy = true; addMsg('u', q); cbChips.innerHTML = '';
+  if (forceId && byId[forceId]) { reply(byId[forceId], []); return; }
+  const r = ask(q); reply(r.best, r.rest);
+}
+function resetChat(){
+  cbLog.innerHTML = ''; cbBusy = false;
+  addMsg('b', "Hi, I'm Tharun's portfolio assistant. Ask me about his projects, skills, experience, writing or availability. I answer only from what's on this page.");
+  setChips(startChips);
+}
+function openChat(){
+  closeRd();
+  cb.classList.add('open'); cbFab.setAttribute('aria-expanded', 'true'); cbFab.classList.add('hide');
+  if (!cbLog.children.length) resetChat();
+  setTimeout(() => cbIn.focus(), 30);
+}
+function closeChat(){
+  if (!cb.classList.contains('open')) return;
+  cb.classList.remove('open'); cbFab.setAttribute('aria-expanded', 'false'); cbFab.classList.remove('hide');
+}
+cbFab.onclick = openChat;
+$('#cbX').onclick = () => { closeChat(); cbFab.focus(); };
+$('#cbClear').onclick = resetChat;
+$('#cbForm').addEventListener('submit', e => { e.preventDefault(); const v = cbIn.value; cbIn.value = ''; submit(v); });
+cb.addEventListener('keydown', e => { if (e.key === 'Escape'){ e.stopPropagation(); closeChat(); cbFab.focus(); } });
+CMDS.push({g:'Actions', l:'Ask the assistant', run: openChat, hint:'chat'});
 
 /* ---------- neural network background ---------- */
 const cv = $('#net');

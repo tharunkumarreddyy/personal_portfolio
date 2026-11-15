@@ -65,6 +65,7 @@ Without `SITE_URL` the workflow defaults to `https://<owner>.github.io/<repo>`.
 ## Updating the site
 
 - **Content and layout:** edit `v2/index.html`. Project cards live under `<!-- WORK -->` and `<!-- PLATFORMS -->`. Blog posts are the `POSTS` array in the script at the bottom of the file.
+- **Assistant ("Ask about Tharun"):** a chat widget that answers from the page's own content. It runs entirely in the browser: no server, no API key, nothing sent anywhere. Its answers live in the `KB` array in the script at the bottom of `v2/index.html` (search for `portfolio assistant`). Each entry has `k` (keywords and phrases to match), `a` (the answer, as HTML), `act` (buttons), and `next` (follow-up suggestions). When you add a project or change a number on the page, update the matching entry so the assistant stays in sync.
 - **Résumé:** edit `resume/resume.html`, then regenerate the PDF with Microsoft Edge (or Chrome) from the repo root. On Windows PowerShell:
 
   ```powershell
