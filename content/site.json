@@ -1,0 +1,35 @@
+{
+  "name": "Tharun Kumar Reddy",
+  "alternateName": "Tharun Kumar Reddy B",
+  "jobTitle": "AI & Data Engineer",
+  "locality": "Bengaluru",
+  "country": "IN",
+  "worksFor": "Easystepin IT Services Pvt. Ltd.",
+  "alumniOf": "Sri Venkateswara Engineering College",
+  "sameAs": [
+    "https://www.linkedin.com/in/tharunreddyy",
+    "https://github.com/tharunkumarreddyy"
+  ],
+  "knowsAbout": [
+    "Retrieval-augmented generation (RAG)",
+    "Model Context Protocol (MCP)",
+    "Agentic AI",
+    "Large language model engineering",
+    "Real-time voice AI agents",
+    "Data engineering",
+    "Medallion architecture",
+    "Text-to-SQL",
+    "n8n workflow automation",
+    "Multi-tenant SaaS backends",
+    "Python"
+  ],
+  "tagline": "I build AI systems that actually ship.",
+  "summary": "AI & Data Engineer in Bengaluru, India. Takes LLMs from demo to production: RAG assistants, real-time voice agents, Claude & MCP connectors and agentic automation, built on solid data platforms with the latency, accuracy and guardrails that make people trust them.",
+  "facts": [
+    "Role: Data Engineer at Easystepin IT Services Pvt. Ltd., Bengaluru (since June 2024).",
+    "Education: B.Tech in Computer Science, Sri Venkateswara Engineering College, Tirupati (2021-2024).",
+    "Availability: open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.",
+    "Selected results: 40% lower RAG query latency; sub-800ms end-to-end voice agent; 95% field accuracy on 500+ invoices per day; 10 forecasting APIs; 60+ n8n workflows on 17 shared subflows."
+  ],
+  "updated": "2026-11-15"
+}

@@ -1,0 +1,26 @@
+# Tharun Kumar Reddy
+
+> AI & Data Engineer in Bengaluru, India. Takes LLMs from demo to production: RAG assistants, real-time voice agents, Claude & MCP connectors and agentic automation, built on solid data platforms with the latency, accuracy and guardrails that make people trust them.
+
+## Key facts
+- Role: Data Engineer at Easystepin IT Services Pvt. Ltd., Bengaluru (since June 2024).
+- Education: B.Tech in Computer Science, Sri Venkateswara Engineering College, Tirupati (2021-2024).
+- Availability: open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.
+- Selected results: 40% lower RAG query latency; sub-800ms end-to-end voice agent; 95% field accuracy on 500+ invoices per day; 10 forecasting APIs; 60+ n8n workflows on 17 shared subflows.
+- Location: Bengaluru, India.
+- Profiles: https://www.linkedin.com/in/tharunreddyy, https://github.com/tharunkumarreddyy
+
+## Pages
+- [Portfolio](__SITE_URL__/): projects, platform engineering, writing, toolbox, credentials and FAQ
+- [Writing](__SITE_URL__/writing/): essays on production AI
+
+## Essays
+- [RAG Is Not the Hard Part](__SITE_URL__/writing/rag-is-not-the-hard-part/): Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.
+- [Why MCP Is More Than a Buzzword](__SITE_URL__/writing/why-mcp-is-more-than-a-buzzword/): Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface — here's why that matters more than the model underneath.
+- [The Boring Infrastructure Behind Reliable AI Systems](__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/): Nobody gets excited about tracing spans or eval harnesses. They're also the difference between a demo and a system that survives three weeks of real usage.
+- [Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About](__SITE_URL__/writing/multi-tenant-saas-scaling-decisions/): Adding multi-tenancy gets treated like a checkbox. In practice it's a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.
+- [Data Quality Is a Trust Problem, Not a Testing Problem](__SITE_URL__/writing/data-quality-is-a-trust-problem/): Schema tests and not-null checks catch known failure modes. They don't answer the question a stakeholder actually asks: can I trust this number?
+- [Automation Is a Data Engineering Problem](__SITE_URL__/writing/automation-is-a-data-engineering-problem/): A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.
+
+## Optional
+- [Full text of this site for language models](__SITE_URL__/llms-full.txt)

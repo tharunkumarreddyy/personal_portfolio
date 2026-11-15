@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy</title>
+<meta name="description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="Tharun Kumar Reddy">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#06070a">
+<link rel="canonical" href="__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tharun Kumar Reddy">
+<meta property="og:title" content="The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy">
+<meta property="og:description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
+<meta property="og:url" content="__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/">
+<meta property="og:image" content="__SITE_URL__/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tharun Kumar Reddy — AI &amp; Data Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy">
+<meta name="twitter:description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
+<meta name="twitter:image" content="__SITE_URL__/assets/og-image.png">
+<meta property="article:published_time" content="2026-09">
+<meta property="article:author" content="Tharun Kumar Reddy">
+<meta property="article:section" content="Observability &amp; Evaluation">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/#article","headline":"The Boring Infrastructure Behind Reliable AI Systems","description":"Nobody gets excited about tracing spans or eval harnesses. They're also the difference between a demo and a system that survives three weeks of real usage.","url":"__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/","mainEntityOfPage":{"@type":"WebPage","@id":"__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/"},"inLanguage":"en","articleSection":"Observability & Evaluation","datePublished":"2026-09","dateModified":"2026-09","wordCount":312,"image":"__SITE_URL__/assets/og-image.png","author":{"@type":"Person","@id":"__SITE_URL__/#person","name":"Tharun Kumar Reddy","url":"__SITE_URL__/","sameAs":["https://www.linkedin.com/in/tharunreddyy","https://github.com/tharunkumarreddyy"]},"publisher":{"@type":"Person","@id":"__SITE_URL__/#person","name":"Tharun Kumar Reddy","url":"__SITE_URL__/","sameAs":["https://www.linkedin.com/in/tharunreddyy","https://github.com/tharunkumarreddyy"]},"isPartOf":{"@id":"__SITE_URL__/writing/#blog"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"__SITE_URL__/"},{"@type":"ListItem","position":2,"name":"Writing","item":"__SITE_URL__/writing/"},{"@type":"ListItem","position":3,"name":"The Boring Infrastructure Behind Reliable AI Systems","item":"__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/"}]}]}</script>
+<style>:root{--bg:#06070a;--text:#eceef3;--muted:#8a90a2;--dim:#7b8196;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.14);--a1:#c6f36b;--a2:#5ee7df;--a3:#8b93ff;--surface:rgba(255,255,255,.028);--surface-2:rgba(255,255,255,.05);--sans:"Inter Tight",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Instrument Serif",Georgia,serif;--mono:ui-monospace,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
+body{background:radial-gradient(60% 40% at 85% -5%,rgba(139,147,255,.2),transparent 60%),radial-gradient(50% 40% at 0 100%,rgba(198,243,107,.08),transparent 60%),var(--bg);background-attachment:fixed;color:var(--text);font-family:var(--sans);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:2px solid var(--a1);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-80px;padding:10px 16px;border-radius:10px;background:var(--a1);color:#0a0b0e;font-weight:600;text-decoration:none}.skip:focus{top:12px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;padding:20px 0;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:-.01em}
+.mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--a1),var(--a3));color:#0a0b0e;display:grid;place-items:center;font-size:12.5px;font-weight:700}
+.top nav{display:flex;gap:2px;flex-wrap:wrap}.top nav a{font-size:14px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;transition:.2s}.top nav a:hover{color:var(--text);background:var(--surface-2)}
+main{padding:clamp(24px,5vw,56px) 0 40px}
+.back{font-family:var(--mono);font-size:12px;color:var(--dim);text-decoration:none}.back:hover{color:var(--text)}
+.cat{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--a2)}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.035em;font-weight:600;margin-top:14px}
+.lede{color:var(--muted);font-size:18px;margin-top:14px;max-width:56ch}
+.meta{margin-top:18px;font-family:var(--mono);font-size:12.5px;color:var(--dim);display:flex;gap:14px;flex-wrap:wrap}.meta a{color:var(--muted)}
+.body{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.body p{color:#b9bfce;font-size:18px;line-height:1.75;margin:0 0 20px}
+.body h2{font-size:clamp(22px,3vw,28px);letter-spacing:-.025em;font-weight:600;margin:38px 0 12px;line-height:1.15}
+.pull-quote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.2vw,32px);line-height:1.3;color:var(--text);border-left:2px solid var(--a1);padding:4px 0 4px 22px;margin:34px 0}
+.cta{margin-top:44px;padding:26px;border:1px solid var(--line-2);border-radius:20px;background:var(--surface)}
+.cta h2{font-size:22px;letter-spacing:-.02em;font-weight:600}.cta p{color:var(--muted);margin-top:6px}
+.btn{display:inline-block;margin-top:16px;padding:12px 20px;border-radius:999px;background:var(--a1);color:#0a0b0e;font-weight:600;text-decoration:none;font-size:15px}
+.more{margin-top:40px}.more h2{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:12px}
+.more ul{list-style:none;display:grid;gap:10px}
+.more a{display:block;padding:16px 18px;border:1px solid var(--line);border-radius:14px;text-decoration:none;background:var(--surface);transition:.2s}.more a:hover{border-color:var(--line-2);background:var(--surface-2)}
+.more b{display:block;font-weight:600;letter-spacing:-.01em}.more span{display:block;color:var(--muted);font-size:14.5px;margin-top:3px}.more small{display:block;font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-top:6px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="../../" aria-label="Tharun Kumar Reddy — home"><span class="mark" aria-hidden="true">TK</span><span>Tharun Kumar Reddy</span></a>
+  <nav aria-label="Primary"><a href="../../#work">Work</a><a href="../../writing/">Writing</a><a href="../../#faq">FAQ</a><a href="../../#contact">Contact</a></nav>
+</header>
+<main id="main">
+<article>
+  <a class="back" href="../">← All writing</a>
+  <p class="cat">Observability &amp; Evaluation</p>
+  <h1>The Boring Infrastructure Behind Reliable AI Systems</h1>
+  <p class="meta"><span>By <a href="../../" rel="author">Tharun Kumar Reddy</a></span><time datetime="2026-09">Sep 2026</time><span>5 min read</span></p>
+  <div class="body">
+<p>Nobody gets excited about tracing spans or eval harnesses. Everyone gets excited about the demo where the agent answers a hard question correctly on the first try. The gap between those two things is where most AI projects actually die &mdash; quietly, in production, a few weeks after the demo, once the questions stop being the ones in the slide deck.</p>
+    <h2>Evaluation is not a one-time gate</h2>
+    <p>Faithfulness, retrieval recall and precision, citation accuracy &mdash; metrics in the style of Ragas or DeepEval &mdash; are usually run once, right before launch, to satisfy a checklist. They're far more useful run continuously, against real traffic, because the failure modes that show up after launch are rarely the ones anyone tested for.</p>
+    <h2>Observability has to span the whole stack</h2>
+    <p>Tracing with OpenTelemetry and LLM-specific tooling like Langfuse or MLflow only pays off when it's tied back to data quality and cost, not treated as a separate dashboard for "the AI part." The systems that actually stay healthy correlate all three &mdash; data quality, generation quality, and cost &mdash; into one view instead of three dashboards nobody cross-references.</p>
+    <p class="pull-quote">If you can't tell me why the model said what it said, you don't have an AI system &mdash; you have a slot machine with good PR.</p>
+    <h2>This is a data engineering problem wearing an AI costume</h2>
+    <p>Schema validation, testing, lineage, capacity planning &mdash; none of this is new. It's the same discipline data engineering has always required, just pointed at a new kind of pipeline where the transformation step happens to be a language model instead of a SQL query.</p>
+    <h2>Why this is the part I want to own</h2>
+    <p>It's not the flashiest layer of the stack, but it's the layer that decides whether an AI system survives contact with real usage instead of quietly rotting after the demo. That's the direction I'm deliberately building toward.</p>
+  </div>
+  <aside class="cta"><h2>Building something similar?</h2><p>Tharun Kumar Reddy is open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.</p><a class="btn" href="../../#contact">Get in touch</a></aside>
+  <section class="more" aria-labelledby="more-h"><h2 id="more-h">More essays</h2><ul><li><a href="../rag-is-not-the-hard-part/"><b>RAG Is Not the Hard Part</b><span>Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.</span><small>RAG &amp; Retrieval · 5 min read</small></a></li><li><a href="../why-mcp-is-more-than-a-buzzword/"><b>Why MCP Is More Than a Buzzword</b><span>Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface — here&#x27;s why that matters more than the model underneath.</span><small>Agentic AI &amp; MCP · 4 min read</small></a></li><li><a href="../multi-tenant-saas-scaling-decisions/"><b>Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About</b><span>Adding multi-tenancy gets treated like a checkbox. In practice it&#x27;s a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.</span><small>Backend &amp; Systems · 5 min read</small></a></li><li><a href="../data-quality-is-a-trust-problem/"><b>Data Quality Is a Trust Problem, Not a Testing Problem</b><span>Schema tests and not-null checks catch known failure modes. They don&#x27;t answer the question a stakeholder actually asks: can I trust this number?</span><small>Data Engineering · 4 min read</small></a></li><li><a href="../automation-is-a-data-engineering-problem/"><b>Automation Is a Data Engineering Problem</b><span>A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.</span><small>Automation &amp; Workflows · 4 min read</small></a></li></ul></section>
+</article>
+</main>
+<footer><span>© 2026 Tharun Kumar Reddy · Bengaluru, India</span><span><a href="../../">Portfolio</a> · <a href="https://www.linkedin.com/in/tharunreddyy" rel="me noopener">LinkedIn</a> · <a href="https://github.com/tharunkumarreddyy" rel="me noopener">GitHub</a></span></footer>
+</div>
+</body>
+</html>

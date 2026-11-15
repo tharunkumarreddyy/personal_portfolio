@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "v2/**"
+      - "content/**"
       - "scripts/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
@@ -31,6 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Make sure generated pages match content/ (run scripts/build.py locally if this fails)
+        run: python3 scripts/build.py --check
 
       - name: Fill in the public URL (canonical, Open Graph, sitemap)
         run: |

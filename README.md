@@ -1,23 +1,31 @@
 # Tharun Kumar Reddy — Portfolio
 
-A fast, dependency-free static portfolio. Plain HTML, CSS and JavaScript: no build step, no framework, no tracking.
+A fast static portfolio. Plain HTML, CSS and JavaScript with no framework and no tracking. A small standard-library Python script generates the search-engine pages (essays, FAQ, structured data, sitemap).
 
 **The live site is the `v2/` folder.** It is deployed to GitHub Pages by `.github/workflows/deploy-pages.yml`.
 
 ```
+content/            the text that generates the SEO pages (edit these)
+  site.json         name, role, links, key facts, "updated" date
+  posts.json        the essays
+  faq.json          the FAQ (shown on the page and published as FAQPage data)
 v2/
-  index.html        the whole site (projects, platform work, writing, toolbox, credentials)
+  index.html        the single-page site (projects, platform work, writing, toolbox, credentials, FAQ)
+  writing/          GENERATED: one page per essay, plus an index
   404.html          not-found page
-  robots.txt        crawler rules  (URL filled in at deploy time)
-  sitemap.xml       sitemap        (URL filled in at deploy time)
+  llms.txt, llms-full.txt   GENERATED: plain-text summaries for AI tools
+  robots.txt, sitemap.xml   GENERATED (URL filled in at deploy time)
+  favicon.*, apple-touch-icon.png, manifest.webmanifest   icons
   assets/
     profile.webp    portrait used on the page
     og-image.png    1200×630 link-preview image
     Tharun_Kumar_Reddy_Resume.pdf   résumé download
+resume/resume.html  editable source of the résumé PDF
 scripts/
-  check_site.py     pre-deploy checks (broken links, JSON-LD, private-name guard)
+  build.py          generates the pages listed above from content/
+  check_site.py     pre-deploy checks (links, titles, canonicals, JSON-LD, sitemap, private-name guard)
 .github/workflows/
-  deploy-pages.yml  builds and publishes v2/ to GitHub Pages
+  deploy-pages.yml  checks and publishes v2/ to GitHub Pages
 ```
 
 `resume/resume.html` is the editable source of the résumé PDF (see "Updating the site").
@@ -33,10 +41,13 @@ Then open <http://localhost:5178>. The `__SITE_URL__` tokens in the meta tags ar
 ## Check before you push
 
 ```bash
-python scripts/check_site.py v2
+python scripts/build.py          # regenerate essays, FAQ, sitemap, llms.txt from content/
+python scripts/check_site.py v2  # verify the result
 ```
 
-Fails on missing local files or invalid structured data. If `scripts/banned-terms.local.txt` exists (it is git-ignored), it also fails when any listed private name appears in the site.
+`build.py --check` is also run by the deploy workflow and fails if the generated files are out of date, so always run `build.py` and commit its output after editing anything in `content/`.
+
+`check_site.py` fails on missing local files, missing titles, descriptions or canonical links, pages without exactly one `<h1>`, invalid structured data, or a sitemap entry with no page. If `scripts/banned-terms.local.txt` exists (it is git-ignored), it also fails when any listed private name appears in the site.
 
 **Manual check — the résumé PDF.** The checker cannot read inside PDFs. After regenerating it, open `v2/assets/Tharun_Kumar_Reddy_Resume.pdf` and confirm it contains only what you are happy to publish. The current one lists your email, LinkedIn and city, but no phone number or private project names.
 
@@ -64,7 +75,10 @@ Without `SITE_URL` the workflow defaults to `https://<owner>.github.io/<repo>`.
 
 ## Updating the site
 
-- **Content and layout:** edit `v2/index.html`. Project cards live under `<!-- WORK -->` and `<!-- PLATFORMS -->`. Blog posts are the `POSTS` array in the script at the bottom of the file.
+- **Layout and projects:** edit `v2/index.html`. Project cards live under `<!-- WORK -->` and `<!-- PLATFORMS -->`. Do not edit the regions between `<!--NAME:START-->` and `<!--NAME:END-->` markers by hand (structured data, essay cards, FAQ, updated date); `build.py` regenerates them.
+- **Essays:** add or edit entries in `content/posts.json` (`slug`, `cat`, `title`, `date`, `iso`, `read`, `excerpt`, `body` as HTML), then run `python scripts/build.py`. Each essay gets its own page, a sitemap entry and a card on the home page.
+- **FAQ:** edit `content/faq.json`. Keep each answer to 40 to 70 words, written to stand alone, because answer engines quote them.
+- **Facts and dates:** edit `content/site.json` and bump `updated` whenever you change something meaningful.
 - **Assistant ("Ask about Tharun"):** a chat widget that answers from the page's own content. It runs entirely in the browser: no server, no API key, nothing sent anywhere. Its answers live in the `KB` array in the script at the bottom of `v2/index.html` (search for `portfolio assistant`). Each entry has `k` (keywords and phrases to match), `a` (the answer, as HTML), `act` (buttons), and `next` (follow-up suggestions). When you add a project or change a number on the page, update the matching entry so the assistant stays in sync.
 - **Résumé:** edit `resume/resume.html`, then regenerate the PDF with Microsoft Edge (or Chrome) from the repo root. On Windows PowerShell:
 
@@ -76,6 +90,13 @@ Without `SITE_URL` the workflow defaults to `https://<owner>.github.io/<repo>`.
   Or simply replace `v2/assets/Tharun_Kumar_Reddy_Resume.pdf` with your own file, keeping the filename.
 - **Link-preview image:** replace `v2/assets/og-image.png` (1200×630).
 - Push to `main` and the workflow redeploys.
+
+## After the first deploy (search visibility)
+
+1. **Google Search Console:** add the site as a property, verify it, and submit `sitemap.xml`. Do the same in **Bing Webmaster Tools**.
+2. **Custom domain:** see above; it is the strongest single trust signal, and the workflow updates every canonical link automatically.
+3. **Test:** run the home page and an essay through Google's Rich Results Test and PageSpeed Insights.
+4. **AI crawlers:** `robots.txt` currently allows the main AI search and answer crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and others). To opt one out, change its `Allow` to `Disallow` in `scripts/build.py` and rebuild.
 
 ## Privacy notes
 

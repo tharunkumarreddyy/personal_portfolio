@@ -1,0 +1,240 @@
+# Tharun Kumar Reddy
+
+> AI & Data Engineer in Bengaluru, India. Takes LLMs from demo to production: RAG assistants, real-time voice agents, Claude & MCP connectors and agentic automation, built on solid data platforms with the latency, accuracy and guardrails that make people trust them.
+
+## Key facts
+- Role: Data Engineer at Easystepin IT Services Pvt. Ltd., Bengaluru (since June 2024).
+- Education: B.Tech in Computer Science, Sri Venkateswara Engineering College, Tirupati (2021-2024).
+- Availability: open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.
+- Selected results: 40% lower RAG query latency; sub-800ms end-to-end voice agent; 95% field accuracy on 500+ invoices per day; 10 forecasting APIs; 60+ n8n workflows on 17 shared subflows.
+- Location: Bengaluru, India.
+- Profiles: https://www.linkedin.com/in/tharunreddyy, https://github.com/tharunkumarreddyy
+
+## Frequently asked questions
+
+### Who is Tharun Kumar Reddy?
+Tharun Kumar Reddy is an AI and Data Engineer based in Bengaluru, India. He takes large language models from demo to production, building RAG assistants, real-time voice agents, Claude and MCP connectors and agentic automation on top of solid data platforms. He has worked at Easystepin IT Services since June 2024.
+
+### What does Tharun Kumar Reddy build?
+He builds production AI systems: retrieval-augmented generation (RAG) assistants with citations, a multilingual voice agent with sub-800ms response time, custom MCP servers that connect Claude to enterprise systems, an invoice-extraction pipeline, forecasting APIs, and a library of 60+ governed n8n marketing automations.
+
+### What technologies does he work with?
+Python and SQL; GPT-4/4o, Anthropic and Azure OpenAI APIs, MCP, LangChain and ChromaDB for LLM work; PostgreSQL, MySQL and Redis for data; Django, FastAPI, Flask and Celery for backends; n8n, Twilio, Whisper and Azure TTS for voice and automation; and Docker, GitLab CI/CD and OpenTelemetry on Azure.
+
+### What results has his work achieved?
+Highlights include a 40% reduction in RAG query latency, sub-800ms end-to-end voice latency, 95% field accuracy on 500+ invoices per day with about 90% less manual entry, 10 forecasting and classification APIs, 60+ n8n workflows on 17 shared subflows, and a 99.95 to 99.999% uptime SLA on a multi-cloud platform.
+
+### Has he worked with the Model Context Protocol (MCP)?
+Yes. He builds custom MCP servers that plug Claude into enterprise systems with typed tool schemas, scoped authentication and audited access, and uses MCP as the tool layer in his real-time voice agent. He holds the Claude Certified Architect credential and has written about why MCP matters.
+
+### Is Tharun available for hire or consulting?
+Yes. He is open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation. The quickest way to start is a short email describing what you are building.
+
+### How can I contact Tharun Kumar Reddy?
+Email tharunkumarau01@gmail.com or message him on LinkedIn at linkedin.com/in/tharunreddyy. A résumé PDF is available to download from this page.
+
+### What certifications does he hold?
+Claude Certified Architect (Anthropic), Microsoft Frontier Engineer, Microsoft AB-100 Agentic AI Business Solutions Architect, AB-620 AI Agent Builder Associate, AI-103 Azure AI Engineer Associate, and the Google TensorFlow Developer Certificate.
+
+### Where is he based and where did he study?
+He is based in Bengaluru, India. He earned a B.Tech in Computer Science from Sri Venkateswara Engineering College, Tirupati (2021 to 2024).
+
+### What does he write about?
+Short essays on production AI: why RAG is not the hard part, why MCP is more than a buzzword, the boring infrastructure behind reliable AI, multi-tenant SaaS scaling decisions, data quality as a trust problem, and why automation is a data engineering problem.
+
+## Projects and platform builds
+
+### Manufacturing Intelligence Platform
+An industrial operations platform covering ERP, MES, SCADA, inventory and invoicing across 9 business units, then made intelligent: ask questions in plain English, get grounded answers and forecasts.
+
+### Claude Enterprise Connectors
+Custom MCP servers that plug Claude into enterprise systems — typed tool schemas, scoped auth and audited access, so teams can work with live company data from inside Claude.
+
+### Real-time Multilingual Voice Agent
+Twilio → Whisper STT → GPT-4o with tool calling + MCP → Azure TTS at sub-800ms end-to-end; Pulls live balances, orders and CRM data mid-call; books calendars and takes payments by caller intent; New industries go live by prompt, not code
+
+### n8n Sales & Marketing Automation
+60+ workflows on 17 shared subflows for SEO, content, social, ad campaigns, CRO and compliance; Claude/OpenAI content generation behind validation and human-approval gates; Search Console, GA4, PageSpeed, WordPress, Google Workspace and Slack wired in
+
+### Databricks AI Agent
+An agent that answers business questions over the lakehouse — routing to governed, read-only SQL on medallion tables and explaining the numbers it returns.
+
+### Boomi Agents
+AI agents running on top of Boomi integrations — reasoning over cross-system events and triggering the right processes across connected apps.
+
+### Capacity Allocator
+An allocation product that matches demand to available capacity, with clear, explainable recommendations instead of spreadsheets.
+
+### Agri WhatsApp Bot
+A WhatsApp assistant for farmers that meets them where they already are — local-language questions, including voice notes, answered with crop advisory and market information.
+
+### Binance Trading Bot
+An automated trading bot on the Binance API — strategy signals in, orders out — with position sizing and stop-loss risk controls built in from day one.
+
+### Analysis Bot for a Chartered Accountant
+A working analysis assistant built for a chartered accountant and run locally, so the figures they work with can be questioned in plain language.
+
+### Invoice Intelligence
+Email in, ledger out : OCR, GPT-4 extraction to a strict schema, then business-rule checks; 500+ invoices a day at 95% field accuracy, with about 90% less manual entry; Only doubtful fields go to a person
+
+### Medallion Data + AI Platform
+A Bronze/Silver/Gold platform designed across 6 source systems, with an intent-routed SQL + RAG assistant on top. Sized for 2M events a day, 500 assistant queries a day, sub-6s p95 and roughly $4.5K a month.
+
+### NL-to-SQL Enterprise Chatbot
+Ask the database in plain English. A SQL agent behind role-based access and Microsoft SSO, embeddable as a JS widget, and tuned until queries ran about 30% faster.
+
+### Employee Recognition Platform
+MCP connectors and n8n workflows behind two features: a RAG assistant people can chat with, and an engine that automates employee recognition.
+
+### Multi-Tenant Django Platform
+A scaling design for a SaaS backend: schema-per-tenant isolation, four workload-partitioned Celery queues, circuit breakers and a documented capacity plan.
+
+### Multi-Cloud Provisioning Platform
+Backend microservices behind managed multi-cloud provisioning, environment lifecycle and billing, supporting a 99.95–99.999% uptime SLA.
+
+### SMB & Accelerator Programme Portal
+Multi-tenant backend APIs that run SMB management and the administration of accelerator programmes.
+
+## Essays
+
+### RAG Is Not the Hard Part
+RAG & Retrieval · Sep 2026 · 5 min read · __SITE_URL__/writing/rag-is-not-the-hard-part/
+
+Most teams treat RAG as the hard problem: which vector database, what chunk size, which embedding model. In practice, standing up a retrieval pipeline that returns plausible-looking answers is the easy part — maybe 20% of the work. The other 80% is what happens after retrieval: grounding, citations, deciding when to say nothing at all, and staying fast enough that someone actually uses it in the flow of their work instead of falling back to Ctrl+F.
+
+ ## The retrieval pipeline is a commodity now
+
+ LangChain or LlamaIndex for orchestration, ChromaDB or pgvector or Qdrant for storage, OpenAI or Azure OpenAI for embeddings — these pieces are reasonably interchangeable, and a basic pipeline can be stood up in a day. That's not a criticism; it's just no longer where the differentiation lives. If your RAG project's hardest technical decision was "which vector DB," you haven't hit the actual hard part yet.
+
+ ## Grounding and abstention are the actual product
+
+ A system that confidently answers even when retrieval quality is poor erodes trust fast, especially once its output starts feeding real operational decisions. Citation-grounded generation and explicit abstention on low-relevance retrieval aren't nice-to-haves bolted on at the end — they're the part of the system that determines whether anyone keeps using it after the first bad answer.
+
+ A RAG demo answers one kind of question. A RAG system in production has to know which kind of question it's being asked.
+
+ ## Multi-source retrieval is where tutorials stop
+
+ Combining structured data (a SQL query against Postgres or MySQL) with unstructured retrieval (documents, OCR'd text, vector search) in the same query path is where most walkthroughs end and most real systems begin. Intent routing — deciding whether a question needs an exact number from a database or a synthesized answer from documents — is unglamorous, and it's also the difference between a toy and a tool.
+
+ ## Where this leaves me
+
+ I come at this from the data engineering side, and the parts of RAG I find most interesting aren't the model calls — they're the same discipline data engineering has always demanded: idempotent processing, cost control on re-embedding, and building a system that knows the limits of what it actually knows.
+
+### Why MCP Is More Than a Buzzword
+Agentic AI & MCP · Sep 2026 · 4 min read · __SITE_URL__/writing/why-mcp-is-more-than-a-buzzword/
+
+Every agent framework has its own way of calling tools. That was fine while agents were single-vendor demos with two or three functions wired up. It stops being fine the moment an agent needs to reach five different systems that were never built to talk to an LLM — each with its own auth model, its own error shapes, its own rate limits.
+
+ ## The integration tax
+
+ The unglamorous truth about agentic AI is that most of the engineering effort doesn't go into prompting or reasoning — it goes into bespoke integration work, repeated for every tool and every vertical. MCP (Model Context Protocol) is the first serious attempt to standardize that interface, the way REST standardized the interface between a browser and a server rather than leaving every site to invent its own.
+
+ ## What actually changes with MCP
+
+ In practice: tool connectors become reusable instead of one-off, a new vertical becomes a configuration change — a prompt and a tool list — rather than a redeploy, and "what the agent is allowed to touch" becomes a separate, inspectable concern from "how the agent talks to the model." That separation is what makes a voice agent or a chat assistant portable across very different use cases without rewriting the plumbing each time.
+
+ The interesting part of an agent was never the model. It's what the model is allowed to touch.
+
+ ## Where it's still rough
+
+ The protocol is young. Tool discovery, fine-grained permissioning, and observability across a chain of MCP-connected tools are all still being worked out in practice, not just in spec documents. Treat it as an infrastructure investment worth making early, not a solved problem you can bolt on later.
+
+ ## Why I'm betting on it
+
+ I've built MCP connectors and used MCP as the tool-calling layer in a real-time voice agent, and the pattern holds: the more systems an agent needs to reach, the more a standard interface pays for itself. That's the same lesson data engineering learned about schemas a long time ago, just applied one layer up.
+
+### The Boring Infrastructure Behind Reliable AI Systems
+Observability & Evaluation · Sep 2026 · 5 min read · __SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/
+
+Nobody gets excited about tracing spans or eval harnesses. Everyone gets excited about the demo where the agent answers a hard question correctly on the first try. The gap between those two things is where most AI projects actually die — quietly, in production, a few weeks after the demo, once the questions stop being the ones in the slide deck.
+
+ ## Evaluation is not a one-time gate
+
+ Faithfulness, retrieval recall and precision, citation accuracy — metrics in the style of Ragas or DeepEval — are usually run once, right before launch, to satisfy a checklist. They're far more useful run continuously, against real traffic, because the failure modes that show up after launch are rarely the ones anyone tested for.
+
+ ## Observability has to span the whole stack
+
+ Tracing with OpenTelemetry and LLM-specific tooling like Langfuse or MLflow only pays off when it's tied back to data quality and cost, not treated as a separate dashboard for "the AI part." The systems that actually stay healthy correlate all three — data quality, generation quality, and cost — into one view instead of three dashboards nobody cross-references.
+
+ If you can't tell me why the model said what it said, you don't have an AI system — you have a slot machine with good PR.
+
+ ## This is a data engineering problem wearing an AI costume
+
+ Schema validation, testing, lineage, capacity planning — none of this is new. It's the same discipline data engineering has always required, just pointed at a new kind of pipeline where the transformation step happens to be a language model instead of a SQL query.
+
+ ## Why this is the part I want to own
+
+ It's not the flashiest layer of the stack, but it's the layer that decides whether an AI system survives contact with real usage instead of quietly rotting after the demo. That's the direction I'm deliberately building toward.
+
+### Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About
+Backend & Systems · Sep 2026 · 5 min read · __SITE_URL__/writing/multi-tenant-saas-scaling-decisions/
+
+Adding multi-tenancy gets treated like a checkbox: one flag, one column, done. In practice, it's a series of trade-offs about isolation, fairness, and what happens when one tenant starts behaving badly — and most of those decisions don't show up until the system is already under load.
+
+ ## Schema-per-tenant is a trade-off, not a default
+
+ Schema-per-tenant (django-tenants, in my case) buys strong data isolation and lets you reason about a tenant's data as a self-contained unit. It also means "just add an index" becomes an operation across every schema, and that a single Postgres instance eventually stops being enough. Designing the tenant-sharding path — how tenants get distributed across database instances once you outgrow one — is a decision worth making on paper before you need it, not during an incident.
+
+ ## Connection pooling is not optional at scale
+
+ Every tenant's app-tier connections funnel through the same Postgres instance. PgBouncer session pooling, paired with a read-replica router that keeps reporting workloads off the transactional path, is what keeps a busy reporting query from starving a checkout flow that happens to share a database.
+
+ ## Queues need fairness, not just workers
+
+ Partitioning Celery workloads into independently-tuned queues (by type — OCR, notifications, batch — and by tenant/plan tier) is what stops one heavy tenant from starving everyone else's background jobs. Soft and hard backpressure limits matter more than raw worker count once you have tenants with very different usage patterns sharing infrastructure.
+
+ A noisy tenant isn't a bug. It's the first thing your architecture has to assume will happen.
+
+ ## Resilience is a default state, not a patch
+
+ Circuit breakers and exponential backoff with jitter on external dependencies (maps, OCR, third-party APIs), plus a cache-aside strategy with jittered TTLs and lock-based stampede protection, aren't extras bolted on after an incident — they're what a system built for many tenants at once should assume it needs from day one, because the blast radius of a naive retry storm or a cache stampede is every tenant, not one.
+
+ ## The unglamorous part: playbooks
+
+ Documenting failure-mode and recovery playbooks — DB failover, broker outage, quota exhaustion — before they happen is the least exciting part of multi-tenant architecture and the part that actually determines how bad a 2am incident is.
+
+### Data Quality Is a Trust Problem, Not a Testing Problem
+Data Engineering · Sep 2026 · 4 min read · __SITE_URL__/writing/data-quality-is-a-trust-problem/
+
+"Data quality" usually gets reduced to a testing checklist: not-null checks, schema tests, a row-count assertion. Those catch known failure modes. They don't answer the question a stakeholder is actually asking when they look at a number on a dashboard: can I trust this?
+
+ ## Bronze doesn't mean unvalidated
+
+ An append-only, immutable Bronze layer is about preserving what actually arrived, not about skipping validation until later. Deduplication and validation belong in Silver, business modeling in Gold — but "raw" and "untrusted" aren't the same thing, and treating Bronze as a dumping ground just moves the trust problem downstream instead of solving it.
+
+ ## A rollback is a feature
+
+ When a bulk-import pipeline processes messy Excel or CSV exports — inconsistent dates, malformed phone numbers, broken foreign-key mappings — wrapping the load in a database transaction so a single invalid row rolls back the entire batch is a deliberate choice. The alternative, a partially-applied batch, is worse than a failed one: it looks like it worked.
+
+ The worst data quality bug isn't the one that crashes the pipeline. It's the one that loads successfully and is wrong.
+
+ ## Testing is necessary, not sufficient
+
+ dbt-style tests and tools like Great Expectations are good at catching failure modes you already anticipated. They're much weaker at answering "where did this number come from" or "how current is this." That's a lineage and freshness problem, not a testing problem, and it needs to be designed in rather than assumed.
+
+ ## Why this matters more now
+
+ Every RAG or agentic system inherits whatever trust problems already exist in the data layer underneath it. Bad data that used to show up as a wrong number on a report now shows up as a confidently-worded, citation-backed answer from an AI system. The data engineering discipline of knowing what you can trust and why doesn't get less important as AI sits on top of it — it gets more important, because the failure mode gets harder to spot.
+
+### Automation Is a Data Engineering Problem
+Automation & Workflows · Sep 2026 · 4 min read · __SITE_URL__/writing/automation-is-a-data-engineering-problem/
+
+Workflow automation tools get treated as a different discipline from data engineering — drag-and-drop nodes instead of code, "ops" instead of "engineering." At any real scale, an automation fails in exactly the same ways a data pipeline does, and the teams that treat it that way build automations that survive contact with production.
+
+ ## An automation is a pipeline with a friendlier UI
+
+ The moment a workflow retries on failure, writes to a database, or triggers a downstream system, it needs the same things an ETL job needs: idempotency, so a retry doesn't double-charge or double-send; explicit error handling, not a silent failure; and a clear contract for what happens when an upstream API is slow or down.
+
+ ## Reusable building blocks beat one-off flows
+
+ Building an automation platform (n8n, in my case) around reusable components — for API integrations, data processing, validation and approval steps, AI-powered content generation — instead of letting every workflow reinvent its own version of the same logic is what keeps a platform maintainable past the first dozen workflows. One-off flows are fast to build and expensive to maintain; shared components are the opposite trade.
+
+ The moment an automation touches money, customer data, or another team's workflow, it stopped being "just automation."
+
+ ## Standards nobody asks for, until something breaks
+
+ Data models, event schemas, error handling conventions, retry mechanisms, credential management, security, and — increasingly — AI governance for anything that touches a language model: none of this is exciting to write down, and all of it is what separates an automation platform from a pile of workflows that happen to work today.
+
+ ## Where this leaves me
+
+ I come at automation from the data engineering side, which means I default to asking the boring questions first — what happens on retry, who owns this credential, what's the blast radius if this runs twice — before asking what the workflow should do. That's usually the difference between an automation that survives a busy Monday and one that doesn't.

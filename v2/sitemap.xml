@@ -2,7 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>__SITE_URL__/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-15</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/rag-is-not-the-hard-part/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/why-mcp-is-more-than-a-buzzword/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/multi-tenant-saas-scaling-decisions/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/data-quality-is-a-trust-problem/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>__SITE_URL__/writing/automation-is-a-data-engineering-problem/</loc>
+    <lastmod>2026-09</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
