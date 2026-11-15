@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tharun Kumar Reddy B — Résumé</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Calibri, "Segoe UI", Arial, sans-serif; font-size: 10pt; line-height: 1.32; color: #222; margin: 0; }
+  h1 { margin: 0; text-align: center; font-size: 19pt; letter-spacing: .02em; color: #1f3a6e; }
+  .role { text-align: center; font-weight: 700; margin-top: 3px; }
+  .contact { text-align: center; color: #666; margin-top: 3px; font-size: 9.5pt; }
+  h2 { margin: 11px 0 5px; padding: 3px 0 2px; font-size: 10pt; letter-spacing: .02em; text-transform: uppercase; color: #1f3a6e; border-top: 1px solid #1f3a6e; border-bottom: 1px solid #1f3a6e; }
+  h3 { margin: 8px 0 1px; font-size: 10.5pt; color: #1f3a6e; break-after: avoid; }
+  .stack { font-style: italic; color: #666; font-size: 9.2pt; margin-bottom: 1px; break-after: avoid; }
+  h2 { break-after: avoid; }
+  ul { margin: 2px 0 0; padding-left: 17px; }
+  li { margin: 0 0 2px; }
+  p { margin: 3px 0; }
+  .job { margin-top: 6px; font-weight: 700; }
+  .job span { color: #1f3a6e; font-size: 10.5pt; }
+  .break { break-before: page; }
+  section, h3 + .stack, li { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<h1>THARUN KUMAR REDDY B</h1>
+<div class="role">Data Engineer</div>
+<div class="contact">tharunkumarau01@gmail.com &nbsp;|&nbsp; linkedin.com/in/tharunreddyy &nbsp;|&nbsp; Bengaluru, India</div>
+
+<h2>Professional Summary</h2>
+<p>Data Engineer with 2.5 years of experience building LLM-powered systems on top of data platforms: RAG assistants, a real-time voice agent, document-extraction pipelines and forecasting APIs, using Python, PostgreSQL and Azure. Delivered these from design to deployment, including latency work (40% faster RAG queries, sub-800ms voice responses) and accuracy work (95% field extraction on 500+ invoices/day).</p>
+
+<h2>Technical Skills</h2>
+<p><b>Languages:</b> Python, SQL</p>
+<p><b>Data Engineering:</b> ETL and ELT pipelines, data cleaning and validation, bulk data loading, data modelling, Medallion architecture design</p>
+<p><b>LLM &amp; AI:</b> OpenAI GPT-4/4o, Anthropic and Azure OpenAI APIs, tool calling, MCP (Model Context Protocol), LangChain, retrieval-augmented generation (RAG) with chunking, embeddings, hybrid retrieval and reranking, agentic workflows, prompt engineering, output validation and fallback guardrails, OCR with Mistral OCR</p>
+<p><b>Classic ML:</b> Forecasting and classification (XGBoost, Random Forest, Prophet), feature engineering, Pandas</p>
+<p><b>Data Stores:</b> PostgreSQL, MySQL, ChromaDB (vector search), Redis</p>
+<p><b>Backend:</b> Flask, FastAPI, Django, DRF, Celery, REST APIs, WebSockets, JWT/RBAC</p>
+<p><b>Voice &amp; Automation:</b> n8n, Twilio, Whisper STT, Azure TTS</p>
+<p><b>Cloud &amp; DevOps:</b> Azure (OpenAI, Blob, DevOps, Communication Services), Docker, Git, GitLab CI/CD, OpenTelemetry</p>
+
+<h2>Work Experience</h2>
+<div class="job"><span>Data Engineer</span> | Easystepin IT Services Pvt. Ltd. | Jun 2024 - Present</div>
+<ul>
+  <li><b>Built RAG assistants</b> (LangChain, GPT-4/4o, ChromaDB) over PostgreSQL, MySQL and OCR'd PDFs, with semantic chunking and agent-based tool routing: 40% query-latency reduction over a keyword-search baseline.</li>
+  <li><b>Built a real-time voice agent</b> (Twilio, Whisper STT, GPT-4o with tool calling and MCP, Azure TTS) with sub-800ms end-to-end latency, configurable by prompt for new industries without code changes.</li>
+  <li><b>Built an invoice-extraction pipeline</b> (OCR, GPT-4 structured extraction, validation, human-review routing) handling 500+ invoices/day at 95% field accuracy, cutting manual entry by 90%.</li>
+  <li><b>Shipped 10 forecasting and classification APIs</b> (sales, inventory, energy, quality, predictive maintenance, delivery risk) using XGBoost, Random Forest and Prophet with lag features and recursive forecasting.</li>
+  <li><b>Added guardrails to AI workflows:</b> output validation, confidence-based fallback chains and human-approval gates, and built 60+ n8n workflows on 17 shared subflows, including Claude/OpenAI-driven content and SEO automations.</li>
+  <li><b>Deployed services with Docker and GitLab CI/CD</b> and added OpenTelemetry tracing; also contributed to 6 further products (see Additional Projects).</li>
+</ul>
+
+<h2>Projects</h2>
+
+<h3>Industrial Operations Platform &amp; AI Manufacturing Intelligence (v1 &amp; v2)</h3>
+<div class="stack">Python, Flask, Django/DRF, PostgreSQL, MySQL, LangChain, GPT-4/4o, ChromaDB, XGBoost, Prophet, Mistral OCR</div>
+<ul>
+  <li><b>v2 - Operations RAG assistant:</b> Flask service with a full RAG pipeline: pdfplumber extraction, LangChain chunking, OpenAI embeddings, ChromaDB storage scoped per user/session and GPT-4 grounded answers, using SHA-256 hashing to skip re-embedding unchanged documents.</li>
+  <li><b>v2 - ML services:</b> 10 prediction APIs (sales, inventory, energy, cost, churn, quality, predictive maintenance, supplier performance, backorder, delivery risk) with XGBoost, Random Forest and Prophet, using lag-feature engineering and recursive forecasting.</li>
+  <li><b>Natural-language analytics:</b> OpenAI + LangChain + ChromaDB layer that turns business questions into database queries over production, sales, inventory, OEE and machine-uptime data.</li>
+  <li><b>v1 - Operations platform:</b> Django/DRF/PostgreSQL platform covering ERP, MES, SCADA, inventory and invoicing across 9 business units, with a bulk-import pipeline that cleans Excel/CSV data and loads it transactionally.</li>
+</ul>
+
+<h3>End-to-End Data + Analytics + AI Platform - Architecture &amp; Build Strategy (design project)</h3>
+<div class="stack">Medallion Architecture, Hybrid SQL + RAG, Text-to-SQL, OpenTelemetry, Langfuse/MLflow</div>
+<ul>
+  <li><b>Hybrid SQL + RAG assistant:</b> Designed an intent router sending numeric questions to a schema-validated, read-only text-to-SQL tool and document questions to BM25 + vector retrieval with cross-encoder reranking, citations, and abstention on low-relevance results.</li>
+  <li><b>Evaluation &amp; observability:</b> Defined an evaluation framework (faithfulness, retrieval recall/precision, citation accuracy) and tracing (OpenTelemetry, Langfuse/MLflow) that ties answer quality, latency and cost together.</li>
+  <li><b>Platform &amp; targets:</b> Medallion (Bronze/Silver/Gold) architecture integrating 6 source systems, with capacity and cost estimates for 2M events/day, 500 assistant queries/day, sub-6s p95 latency, and about $4.5K/month.</li>
+</ul>
+
+<h3>Real-Time Multilingual Voice AI Agent</h3>
+<div class="stack">Twilio, Whisper STT, GPT-4o, Azure TTS, FastAPI, MCP, Tool Calling</div>
+<ul>
+  <li><b>Pipeline:</b> Twilio call handling, then Whisper STT, then GPT-4o with tool calling and MCP context, then Azure TTS, at sub-800ms end-to-end latency across multilingual inbound and outbound calls.</li>
+  <li><b>Tools:</b> MCP pulls live customer data, balances and order histories mid-call; domain tools (calendar, payment gateway, CRM) are chosen by caller intent, with no human involved per call.</li>
+  <li><b>Configuration:</b> Prompt-driven industry setup deploys to new verticals without code changes; transcripts and summaries are stored per call.</li>
+</ul>
+
+<h3>Marketing Automation Platform - Enterprise B2B Marketing Operations</h3>
+<div class="stack">n8n, Python, OpenAI/Anthropic APIs, Google Search Console, GA4, WordPress REST API, Slack</div>
+<ul>
+  <li><b>Workflows:</b> 60+ n8n workflows on 17 shared subflows covering SEO, content, social, ad campaigns, CRO and compliance, with AI content generation behind validation and approval gates.</li>
+  <li><b>Standards &amp; integrations:</b> Defined error handling, retry, credential management, security and AI governance conventions; integrated Search Console, GA4, PageSpeed Insights, WordPress, Google Workspace, Slack and OpenAI/Anthropic APIs.</li>
+</ul>
+
+<h2>Additional Projects</h2>
+<ul>
+  <li><b>Invoice Intelligence - Invoice Automation (n8n, Azure OpenAI GPT-4, OCR):</b> Email-to-storage pipeline processing 500+ invoices/day at 95% accuracy.</li>
+  <li><b>NL-to-SQL Enterprise Chatbot (Flask, RAG, SQL Agents):</b> NL-to-SQL agent with RBAC and Microsoft SSO; cut query latency 30% via execution-plan optimisation.</li>
+  <li><b>Employee Recognition Platform (n8n, MCP Connectors):</b> MCP connectors and n8n workflows behind a RAG assistant and an automated recognition engine.</li>
+  <li><b>Multi-Tenant Django Platform (design):</b> Schema-per-tenant architecture with 4 workload-partitioned Celery queues, circuit breakers and capacity plans.</li>
+  <li><b>Multi-Cloud Provisioning Platform (Django/FastAPI):</b> Backend microservices for managed multi-cloud provisioning and billing, supporting a 99.95-99.999% uptime SLA.</li>
+  <li><b>SMB &amp; Accelerator-Programme Portal (Django, Flask):</b> Multi-tenant backend APIs for SMB management and accelerator-programme administration.</li>
+</ul>
+
+<h2>Education</h2>
+<p>B.Tech in Computer Science | Sri Venkateswara Engineering College, Tirupati | 2021 - 2024</p>
+
+<h2>Certifications</h2>
+<ul>
+  <li>Microsoft Certified: Agentic AI Business Solutions Architect (AB-100)</li>
+  <li>Microsoft Certified: AI Agent Builder Associate (AB-620)</li>
+  <li>Microsoft Certified: Azure AI Engineer Associate (AI-103)</li>
+  <li>Google TensorFlow Developer Certificate</li>
+</ul>
+
+</body>
+</html>

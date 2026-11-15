@@ -1,0 +1,39 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local tooling (preview server config, Claude Code state)
+.claude/
+
+# Local-only checks and notes (contain private terms / personal notes)
+scripts/banned-terms.local.txt
+ASSETS-NEEDED.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets: never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Old v1 site: kept on disk locally but no longer part of the repo
+# (its contact page listed a phone number). Safe to delete from disk.
+/profile.png
+/*.html
+/projects/
+/blog/
+/images/
+/styles.css
+/nav.js
+/generate_site.py
+/qr.svg
+/og-image.png
+/apple-touch-icon.png
+/favicon.svg
+/Tharun_Kumar_Reddy_Resume.pdf

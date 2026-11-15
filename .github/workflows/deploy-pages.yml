@@ -1,0 +1,59 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "v2/**"
+      - "scripts/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+# Only the minimum permissions Pages needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; let a running deploy finish rather than cancel it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Public URL of the site. Defaults to https://<owner>.github.io/<repo>.
+  # For a custom domain, set a repository variable named SITE_URL
+  # (Settings → Secrets and variables → Actions → Variables), e.g. https://tharunreddy.dev
+  SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fill in the public URL (canonical, Open Graph, sitemap)
+        run: |
+          url="${SITE_URL%/}"
+          echo "Using SITE_URL=$url"
+          grep -rl "__SITE_URL__" v2 --include=*.html --include=*.xml --include=*.txt \
+            | xargs sed -i "s|__SITE_URL__|$url|g"
+
+      - name: Check the site
+        run: python3 scripts/check_site.py v2
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

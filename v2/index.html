@@ -1,0 +1,1235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tharun Kumar Reddy — AI & Data Engineer</title>
+<meta name="description" content="Tharun Kumar Reddy — AI & Data Engineer building production RAG assistants, real-time voice agents, MCP connectors and agentic automation.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%23c6f36b%27/%3E%3Cstop offset=%271%27 stop-color=%27%238b93ff%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27url(%23g)%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2726%27 text-anchor=%27middle%27 fill=%27%230a0b0e%27%3ETK%3C/text%3E%3C/svg%3E">
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<meta property="og:title" content="Tharun Kumar Reddy — AI & Data Engineer">
+<meta property="og:description" content="Production RAG, real-time voice agents, Claude/MCP connectors and agentic automation.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tharun Kumar Reddy">
+<link rel="canonical" href="__SITE_URL__/">
+<meta property="og:url" content="__SITE_URL__/">
+<meta property="og:image" content="__SITE_URL__/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tharun Kumar Reddy — AI &amp; Data Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tharun Kumar Reddy — AI & Data Engineer">
+<meta name="twitter:description" content="Production RAG, real-time voice agents, Claude/MCP connectors and agentic automation.">
+<meta name="twitter:image" content="__SITE_URL__/assets/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tharun Kumar Reddy","url":"__SITE_URL__/","image":"__SITE_URL__/assets/profile.webp","jobTitle":"AI & Data Engineer","sameAs":["https://www.linkedin.com/in/tharunreddyy"],"worksFor":{"@type":"Organization","name":"Easystepin IT Services Pvt. Ltd."},"alumniOf":{"@type":"CollegeOrUniversity","name":"Sri Venkateswara Engineering College"},"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#06070a; --bg-2:#0b0d12; --bg-3:#11141b;
+  --surface:rgba(255,255,255,.028); --surface-2:rgba(255,255,255,.05);
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
+  --text:#eceef3; --muted:#8a90a2; --dim:#5b6070;
+  --a1:#c6f36b; --a2:#5ee7df; --a3:#8b93ff;
+  --grad:linear-gradient(100deg,var(--a1) 0%,var(--a2) 50%,var(--a3) 100%);
+  --sans:"Inter Tight",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r:22px; --gutter:clamp(16px,4vw,40px); --max:1240px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--a1);color:#0a0b0e}
+.shell{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+:focus-visible{outline:2px solid var(--a1);outline-offset:3px;border-radius:8px}
+
+/* grain + ambient */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}
+.aurora{position:fixed;inset:-20% -10% auto;height:90vh;z-index:0;pointer-events:none;filter:blur(90px);opacity:.38}
+.aurora i{position:absolute;border-radius:50%}
+.aurora i:nth-child(1){width:46vw;height:46vw;left:4%;top:0;background:radial-gradient(circle,rgba(139,147,255,.55),transparent 65%);animation:drift 22s ease-in-out infinite alternate}
+.aurora i:nth-child(2){width:38vw;height:38vw;right:6%;top:8%;background:radial-gradient(circle,rgba(94,231,223,.4),transparent 65%);animation:drift 28s ease-in-out infinite alternate-reverse}
+.aurora i:nth-child(3){width:30vw;height:30vw;left:40%;top:30%;background:radial-gradient(circle,rgba(198,243,107,.25),transparent 65%);animation:drift 32s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(6vw,4vh) scale(1.15)}}
+main,footer,nav{position:relative;z-index:2}
+
+/* nav */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 var(--gutter);pointer-events:none}
+.nav-in{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 8px;border:1px solid var(--line);border-radius:999px;
+  background:rgba(10,11,15,.62);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 10px 40px -12px rgba(0,0,0,.6);max-width:100%}
+.logo{display:flex;align-items:center;gap:10px;padding:4px 10px 4px 4px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.logo-mark{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;color:#0a0b0e;background:var(--grad)}
+.nav-links{display:flex;gap:2px}
+.nav-links a{font-size:14px;color:var(--muted);padding:7px 13px;border-radius:999px;transition:color .2s,background .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--text);background:var(--surface-2)}
+.kbtn{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding:7px 10px 7px 13px;border-radius:999px;border:1px solid var(--line);transition:border-color .2s,color .2s}
+.kbtn:hover{color:var(--text);border-color:var(--line-2)}
+.kbtn kbd{font-family:var(--mono);font-size:11px;padding:2px 6px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line)}
+.kbtn .lbl-m{display:none}
+@media (max-width:860px){.nav-links{display:none}.kbtn kbd{display:none}.kbtn .lbl-d{display:none}.kbtn .lbl-m{display:inline}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(32px,5vw,80px);align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);padding:7px 14px 7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--a1);box-shadow:0 0 0 0 rgba(198,243,107,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(198,243,107,0)}100%{box-shadow:0 0 0 0 rgba(198,243,107,0)}}
+h1{font-size:clamp(44px,7.4vw,104px);line-height:.95;letter-spacing:-.045em;font-weight:600;margin:26px 0 24px}
+h1 .serif{font-size:1.08em;letter-spacing:-.02em}
+.rot{font-size:clamp(17px,1.8vw,21px);color:var(--muted);display:flex;flex-wrap:wrap;gap:.35em;align-items:baseline;min-height:1.6em}
+.rot b{font-weight:500;color:var(--text)}
+.type{font-family:var(--mono);font-size:.92em;color:var(--a1)}
+.type::after{content:"";display:inline-block;width:.55em;height:1.05em;margin-left:2px;vertical-align:-.15em;background:var(--a1);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{max-width:560px;color:var(--muted);font-size:clamp(16px,1.3vw,18px);margin-top:18px}
+.lede strong{color:var(--text);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .3s var(--ease),box-shadow .3s,background .3s,border-color .3s}
+.btn-p{color:#0a0b0e;background:var(--a1);box-shadow:0 0 0 0 rgba(198,243,107,.0),0 12px 40px -10px rgba(198,243,107,.55)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 0 6px rgba(198,243,107,.12),0 18px 50px -10px rgba(198,243,107,.7)}
+.btn-g{border:1px solid var(--line-2);background:var(--surface)}
+.btn-g:hover{border-color:rgba(255,255,255,.3);background:var(--surface-2);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+
+.portrait{position:relative;aspect-ratio:4/5;max-width:440px;justify-self:end;width:100%}
+.portrait .frame{position:absolute;inset:0;border-radius:32px;overflow:hidden;border:1px solid var(--line-2);background:var(--bg-3);
+  box-shadow:0 40px 120px -30px rgba(139,147,255,.35),0 0 0 1px rgba(255,255,255,.02) inset}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:saturate(.92) contrast(1.04)}
+.portrait .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(6,7,10,.85))}
+.portrait .ring{position:absolute;inset:-1px;border-radius:33px;padding:1px;background:conic-gradient(from var(--ang,0deg),transparent 0 60%,var(--a1),var(--a2),var(--a3),transparent 95%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;z-index:2;pointer-events:none}
+@property --ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes spin{to{--ang:360deg}}
+.p-cap{position:absolute;left:22px;right:22px;bottom:20px;z-index:3;display:flex;justify-content:space-between;align-items:end;gap:12px}
+.p-cap .n{font-weight:600;font-size:18px;letter-spacing:-.01em}
+.p-cap .r{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.chip-f{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;border:1px solid var(--line-2);
+  background:rgba(14,16,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:13px;white-space:nowrap;box-shadow:0 20px 50px -20px rgba(0,0,0,.8);animation:bob 6s ease-in-out infinite}
+.chip-f b{font-family:var(--mono);font-weight:600;font-size:15px}
+.chip-f small{display:block;color:var(--muted);font-size:11px;line-height:1.2}
+.chip-f .dot{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;flex:none}
+.chip-f.c1{top:9%;left:-14%}.chip-f.c1 .dot{background:rgba(198,243,107,.14);color:var(--a1)}
+.chip-f.c2{top:44%;right:-10%;animation-delay:-2s}.chip-f.c2 .dot{background:rgba(94,231,223,.14);color:var(--a2)}
+.chip-f.c3{bottom:16%;left:-18%;animation-delay:-4s}.chip-f.c3 .dot{background:rgba(139,147,255,.16);color:var(--a3)}
+.chip-f svg{width:15px;height:15px}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{justify-self:center;max-width:360px;margin-top:20px}
+  .chip-f.c1{left:-6%}.chip-f.c2{right:-6%}.chip-f.c3{left:-4%}
+}
+@media (max-width:480px){.chip-f{transform:scale(.88)}.chip-f.c1{left:-2%}.chip-f.c2{right:-2%}.chip-f.c3{left:0}}
+.scroll-cue{display:flex;align-items:center;gap:10px;margin-top:56px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.scroll-cue i{width:1px;height:38px;background:linear-gradient(var(--line-2),transparent);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--a1);animation:fall 2s ease-in-out infinite}
+@keyframes fall{to{top:110%}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);padding:18px 0;overflow:hidden;background:rgba(6,7,10,.6);-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-track{display:flex;gap:44px;width:max-content;animation:mq 48s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-track span{font-family:var(--mono);font-size:14px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:44px}
+.mq-track span::after{content:"✦";color:var(--dim);font-size:10px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:clamp(80px,11vw,150px) 0 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--a1)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h2{font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:600;margin:18px 0 0;max-width:900px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.stat{padding:30px 28px;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:0}
+.stat .v{font-size:clamp(40px,5vw,62px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.stat .v sup{font-size:.45em;vertical-align:.9em;margin-left:2px;color:var(--a1)}
+.stat .k{margin-top:12px;color:var(--muted);font-size:14px;max-width:220px}
+@media (max-width:860px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font-size:13px;padding:8px 15px;border-radius:999px;border:1px solid var(--line);color:var(--muted);transition:all .25s}
+.filters button:hover{color:var(--text);border-color:var(--line-2)}
+.filters button.on{color:#0a0b0e;background:var(--text);border-color:var(--text)}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{--mx:50%;--my:50%;position:relative;grid-column:span 2;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  padding:26px;overflow:hidden;display:flex;flex-direction:column;min-height:300px;transition:border-color .35s,transform .5s var(--ease),opacity .4s}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx) var(--my),rgba(198,243,107,.10),transparent 45%)}
+.card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(300px circle at var(--mx) var(--my),rgba(198,243,107,.55),transparent 50%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.card:hover{border-color:var(--line-2)}
+.card:hover::before,.card:hover::after{opacity:1}
+.card.wide{grid-column:span 4}
+.card.half{grid-column:span 3}
+.card.hide{display:none}
+.card-top{display:flex;justify-content:space-between;align-items:start;gap:14px}
+.ix{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.card h3{font-size:clamp(22px,2.2vw,28px);letter-spacing:-.03em;line-height:1.1;font-weight:600;margin-top:auto;padding-top:28px}
+.card h3 .serif{color:var(--a2)}
+.card p{color:var(--muted);font-size:15px;margin-top:10px}
+.card ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.card li{position:relative;padding-left:18px;color:var(--muted);font-size:14.5px}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:1px;background:var(--a1)}
+.card li b{color:var(--text);font-weight:500}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.stack span{font-family:var(--mono);font-size:11px;color:var(--muted);padding:4px 8px;border-radius:7px;background:var(--surface-2)}
+.kpis{display:flex;gap:28px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.kpis div b{display:block;font-size:26px;letter-spacing:-.04em;font-weight:600}
+.kpis div small{color:var(--muted);font-size:12.5px}
+.card .viz{position:relative;margin:18px -6px 0;height:120px}
+.card .viz svg{width:100%;height:100%;overflow:visible}
+.feature{background:radial-gradient(120% 90% at 100% 0%,rgba(139,147,255,.12),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+.feature .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:end;margin-top:auto}
+.feature h3{padding-top:40px;font-size:clamp(28px,3.2vw,42px)}
+@media (max-width:1020px){.card,.card.half{grid-column:span 3}.card.wide{grid-column:span 6}}
+@media (max-width:680px){.bento{grid-template-columns:1fr}.card,.card.half,.card.wide{grid-column:auto}.feature .cols{grid-template-columns:1fr}}
+
+/* svg viz anim */
+.flow-dash{stroke-dasharray:4 6;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-20}}
+.wave rect{animation:eq 1.1s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.candle{animation:cflick 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes cflick{50%{transform:scaleY(.8)}}
+
+/* architecture explorer */
+.arch{border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008));overflow:hidden}
+.arch-tabs{display:flex;gap:4px;padding:8px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.arch-tabs::-webkit-scrollbar{display:none}
+.arch-tabs button{flex:none;display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:14px;font-size:14px;color:var(--muted);transition:all .25s}
+.arch-tabs button i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--dim)}
+.arch-tabs button:hover{color:var(--text);background:var(--surface)}
+.arch-tabs button.on{color:var(--text);background:var(--surface-2);box-shadow:0 0 0 1px var(--line-2) inset}
+.arch-tabs button.on i{color:var(--a1)}
+.arch-body{display:grid;grid-template-columns:1fr 340px;min-height:420px}
+.arch-stage{position:relative;min-width:0;padding:44px 34px;display:flex;align-items:center;justify-content:center;
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;background-position:center}
+.arch-side{border-left:1px solid var(--line);padding:30px;display:flex;flex-direction:column;gap:18px}
+.arch-side h4{font-size:22px;letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.arch-side p{color:var(--muted);font-size:14.5px}
+.arch-side .m{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+.arch-side .m div{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--surface)}
+.arch-side .m b{display:block;font-size:20px;letter-spacing:-.03em;font-weight:600}
+.arch-side .m small{color:var(--muted);font-size:12px;line-height:1.3;display:block}
+.pipe{display:flex;align-items:center;flex-wrap:nowrap;gap:0;width:100%;justify-content:center}
+.node{position:relative;flex:none;min-width:116px;max-width:150px;padding:14px 14px 13px;border-radius:16px;border:1px solid var(--line-2);background:rgba(14,16,22,.9);
+  opacity:0;transform:translateY(10px);animation:nin .6s var(--ease) forwards;box-shadow:0 14px 40px -18px rgba(0,0,0,.9)}
+.node .t{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.node .l{font-size:14px;font-weight:600;line-height:1.25;margin-top:5px;letter-spacing:-.01em}
+.node .s{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.35}
+.node.hl{border-color:rgba(198,243,107,.5);box-shadow:0 0 0 4px rgba(198,243,107,.06),0 14px 40px -18px rgba(198,243,107,.4)}
+.node.hl .t{color:var(--a1)}
+.split{display:flex;flex-direction:column;gap:12px;flex:none}
+@keyframes nin{to{opacity:1;transform:none}}
+.wire{position:relative;flex:1 1 26px;min-width:22px;max-width:60px;height:2px;background:linear-gradient(90deg,var(--line-2),rgba(198,243,107,.4));opacity:0;animation:nin .4s forwards}
+.wire::after{content:"";position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--a1);box-shadow:0 0 12px var(--a1);animation:packet 1.6s linear infinite}
+@keyframes packet{from{left:-4px}to{left:calc(100% - 4px)}}
+@media (max-width:1200px){
+  .arch-body{grid-template-columns:1fr}.arch-side{border-left:0;border-top:1px solid var(--line)}
+  .arch-side .m{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:1020px){.node{min-width:100px;padding:12px 11px}.node .l{font-size:13px}}
+@media (max-width:860px){
+  .arch-side .m{grid-template-columns:1fr 1fr}
+  .arch-stage{padding:28px 18px}
+  .pipe{flex-direction:column}.split{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .node{min-width:0;width:100%;max-width:300px}.split .node{width:calc(50% - 6px)}
+  .wire{width:2px;height:22px;min-width:0;flex:none;background:linear-gradient(180deg,var(--line-2),rgba(198,243,107,.4))}
+  .wire::after{left:-3px;top:0;animation-name:packetv}
+}
+@keyframes packetv{from{top:-4px}to{top:calc(100% - 4px)}}
+
+/* accelerators */
+.acc{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.acc-i{position:relative;padding:26px 24px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;transition:background .35s;overflow:hidden}
+.acc-i:nth-child(4n){border-right:0}
+.acc-i:nth-last-child(-n+4){border-bottom:0}
+.acc-i:hover{background:var(--surface-2)}
+.acc-i .no{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.acc-i .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line-2);margin:18px 0 auto;color:var(--a2);transition:transform .4s var(--ease),color .3s}
+.acc-i:hover .ic{transform:rotate(-8deg) scale(1.08);color:var(--a1)}
+.acc-i .ic svg{width:20px;height:20px}
+.acc-i h4{font-size:18px;letter-spacing:-.02em;font-weight:600;margin-top:22px;line-height:1.2}
+.acc-i p{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.5}
+.acc-i .big{position:absolute;right:-10px;bottom:-34px;font-size:120px;font-weight:700;letter-spacing:-.06em;color:rgba(255,255,255,.018);line-height:1;pointer-events:none}
+@media (max-width:1020px){.acc{grid-template-columns:1fr 1fr}.acc-i:nth-child(4n){border-right:1px solid var(--line)}.acc-i:nth-child(2n){border-right:0}.acc-i:nth-last-child(-n+4){border-bottom:1px solid var(--line)}.acc-i:nth-last-child(-n+2){border-bottom:0}}
+@media (max-width:560px){.acc{grid-template-columns:1fr}.acc-i{border-right:0!important;border-bottom:1px solid var(--line)!important;min-height:0}.acc-i:last-child{border-bottom:0!important}}
+
+/* experience */
+.xp{display:grid;grid-template-columns:320px 1fr;gap:clamp(30px,5vw,80px)}
+.xp-meta{position:sticky;top:110px;align-self:start}
+.xp-meta .role{font-size:30px;letter-spacing:-.03em;font-weight:600;line-height:1.1}
+.xp-meta .co{color:var(--muted);margin-top:8px}
+.xp-meta .when{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--a1);border:1px solid rgba(198,243,107,.3);padding:6px 12px;border-radius:999px}
+.xp-meta .edu{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+.xp-meta .edu b{display:block;color:var(--text);font-weight:500;font-size:15.5px;margin-bottom:2px}
+.tl{position:relative;display:grid;gap:14px}
+.tl-i{position:relative;display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 24px;border:1px solid var(--line);border-radius:18px;background:var(--surface);transition:border-color .3s,transform .4s var(--ease)}
+.tl-i:hover{border-color:var(--line-2);transform:translateX(4px)}
+.tl-i .n{font-family:var(--mono);font-size:12px;color:var(--dim);padding-top:3px}
+.tl-i h5{font-size:17px;font-weight:600;letter-spacing:-.015em}
+.tl-i p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.tl-i p em{font-style:normal;color:var(--a1);font-family:var(--mono);font-size:.92em}
+@media (max-width:860px){.xp{grid-template-columns:1fr}.xp-meta{position:static}.tl-i{grid-template-columns:1fr;gap:6px}}
+
+/* creds */
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;perspective:1200px}
+.cred{--rx:0deg;--ry:0deg;--gx:50%;--gy:50%;position:relative;padding:26px;min-height:210px;border-radius:var(--r);border:1px solid var(--line-2);display:flex;flex-direction:column;
+  background:linear-gradient(160deg,#141822,#0b0d12);transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .2s ease-out,box-shadow .3s;overflow:hidden}
+.cred:hover{box-shadow:0 30px 70px -30px rgba(139,147,255,.45)}
+.cred::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;mix-blend-mode:color-dodge;
+  background:radial-gradient(circle at var(--gx) var(--gy),rgba(255,255,255,.22),transparent 40%),
+  linear-gradient(115deg,transparent 20%,rgba(198,243,107,.18) 35%,rgba(94,231,223,.18) 50%,rgba(139,147,255,.2) 65%,transparent 80%);background-size:100% 100%,250% 250%;background-position:center,var(--gx) var(--gy)}
+.cred:hover::before{opacity:1}
+.cred .iss{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cred .seal{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--surface-2);font-family:var(--mono);font-size:11px;font-weight:600;color:var(--text)}
+.cred .code{font-family:var(--mono);font-size:13px;color:var(--a1);margin-top:auto;padding-top:26px}
+.cred h4{font-size:20px;letter-spacing:-.02em;font-weight:600;line-height:1.2;margin-top:6px}
+.cred.m .seal{background:linear-gradient(135deg,rgba(94,231,223,.18),rgba(139,147,255,.18))}
+.cred.a .seal{background:linear-gradient(135deg,rgba(217,119,87,.28),rgba(217,119,87,.08));color:#f1b49b}
+.cred.g .seal{background:linear-gradient(135deg,rgba(255,170,60,.25),rgba(255,170,60,.06));color:#ffc477}
+@media (max-width:1020px){.creds{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.creds{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding-bottom:40px}
+.cta{position:relative;border:1px solid var(--line);border-radius:36px;padding:clamp(40px,7vw,96px) clamp(24px,6vw,80px);overflow:hidden;
+  background:radial-gradient(70% 120% at 0% 100%,rgba(198,243,107,.12),transparent 60%),radial-gradient(60% 100% at 100% 0%,rgba(139,147,255,.18),transparent 60%),var(--bg-2)}
+.cta h2{font-size:clamp(42px,8vw,118px);line-height:.92;letter-spacing:-.055em;max-width:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;align-items:center}
+.mail{display:inline-flex;align-items:center;gap:14px;padding:12px 12px 12px 22px;border-radius:999px;border:1px solid var(--line-2);background:rgba(6,7,10,.5);font-family:var(--mono);font-size:clamp(13px,1.6vw,16px);max-width:100%}
+.mail span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mail button{flex:none;font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:var(--text);color:#0a0b0e;transition:background .2s}
+.mail button.ok{background:var(--a1)}
+footer{border-top:1px solid var(--line);margin-top:80px;padding:28px 0 36px;color:var(--dim);font-size:13px}
+footer .shell{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:var(--text)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+.split-word{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split-word>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.hero.go .split-word>span{transform:none}
+
+/* palette */
+.pal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-start;justify-content:center;padding:14vh 16px 16px;background:rgba(3,4,6,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pal.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}}
+.pal-box{width:100%;max-width:560px;border:1px solid var(--line-2);border-radius:20px;background:rgba(14,16,22,.96);box-shadow:0 40px 120px -20px rgba(0,0,0,.9);overflow:hidden;animation:pop .25s var(--ease)}
+@keyframes pop{from{transform:translateY(-8px) scale(.98);opacity:0}}
+.pal-in{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.pal-in svg{width:18px;height:18px;color:var(--muted);flex:none}
+.pal-in input{flex:1;background:none;border:0;outline:0;color:var(--text);font:inherit;font-size:16px}
+.pal-in kbd{font-family:var(--mono);font-size:11px;color:var(--muted);padding:2px 6px;border-radius:6px;border:1px solid var(--line)}
+.pal-list{max-height:min(380px,55vh);overflow:auto;padding:8px}
+.pal-g{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:10px 12px 6px}
+.pal-it{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:left;padding:11px 12px;border-radius:12px;font-size:14.5px;color:var(--muted)}
+.pal-it.act{background:var(--surface-2);color:var(--text)}
+.pal-it small{font-family:var(--mono);font-size:11px;color:var(--dim)}
+.pal-empty{padding:24px;text-align:center;color:var(--dim);font-size:14px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;z-index:300;padding:11px 18px;border-radius:999px;background:var(--text);color:#0a0b0e;font-size:14px;font-weight:600;transition:all .35s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* progress */
+.prog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:60;transform-origin:0 50%;transform:scaleX(0);background:var(--grad)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}.split-word>span{transform:none}#net{display:none}
+}
+
+/* platforms + writing + toolbox + reader (added) */
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mini-grid .card{grid-column:auto;min-height:260px}
+.mini-grid .card h3{font-size:clamp(20px,1.9vw,24px);padding-top:22px}
+.mini-grid .card .more{display:inline-flex;gap:6px;margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--a2)}
+.mini-grid .card .more:hover{color:var(--a1)}
+@media (max-width:1020px){.mini-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.mini-grid{grid-template-columns:1fr}}
+.posts{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.post{grid-column:span 2;text-align:left;display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));transition:border-color .3s,transform .4s var(--ease),background .3s;cursor:pointer;color:inherit;font:inherit}
+.post:hover,.post:focus-visible{border-color:var(--line-2);transform:translateY(-3px);background:var(--surface-2)}
+.post.lead{grid-column:span 4;background:radial-gradient(120% 90% at 100% 0%,rgba(94,231,223,.10),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012))}
+.post.lead h3{font-size:clamp(26px,3vw,38px)}
+.post .pc{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--a2)}
+.post h3{font-size:clamp(19px,1.8vw,23px);letter-spacing:-.025em;line-height:1.15;font-weight:600}
+.post p{color:var(--muted);font-size:14.5px;flex:1}
+.post .pm{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;color:var(--dim);padding-top:14px;border-top:1px dashed var(--line)}
+.post .pm b{font-weight:500;color:var(--a1)}
+@media (max-width:1020px){.posts{grid-template-columns:1fr 1fr}.post,.post.lead{grid-column:auto}.post.lead{grid-column:span 2}}
+@media (max-width:680px){.posts{grid-template-columns:1fr}.post.lead{grid-column:auto}}
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.kit-g{padding:22px 24px 24px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.kit-g h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--a1);font-weight:500}
+.kit-g .stack{margin-top:14px}
+.rd{position:fixed;inset:0;z-index:190;display:none;justify-content:center;align-items:flex-start;padding:5vh 16px;background:rgba(3,4,6,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);overflow:auto}
+.rd.open{display:flex;animation:fade .2s}
+.rd-box{position:relative;width:100%;max-width:740px;border:1px solid var(--line-2);border-radius:24px;background:rgba(12,14,19,.98);box-shadow:0 40px 120px -20px rgba(0,0,0,.9);padding:clamp(24px,5vw,52px);animation:pop .3s var(--ease)}
+.rd-x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--muted);transition:all .2s}
+.rd-x:hover{color:var(--text);background:var(--surface-2)}
+.rd-x svg{width:16px;height:16px}
+.rd .pc{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--a2)}
+.rd h2{font-size:clamp(28px,4.4vw,44px);margin-top:14px;padding-right:40px}
+.rd .rm{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:16px;display:flex;gap:14px;flex-wrap:wrap}
+.rd-body{margin-top:30px;padding-top:30px;border-top:1px solid var(--line)}
+.rd-body p{color:#b9bfce;font-size:17px;line-height:1.75;margin:0 0 18px}
+.rd-body h2{font-size:clamp(22px,2.6vw,28px);margin:34px 0 12px;padding:0;letter-spacing:-.025em;font-weight:600;max-width:none}
+.rd-body .pull-quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,30px);line-height:1.3;color:var(--text);border-left:2px solid var(--a1);padding:4px 0 4px 22px;margin:30px 0}
+.rd-nav{display:flex;justify-content:space-between;gap:12px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.rd-nav button{flex:1;text-align:left;padding:14px 16px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:13.5px;line-height:1.35;transition:all .2s}
+.rd-nav button:hover{border-color:var(--line-2);color:var(--text);background:var(--surface-2)}
+.rd-nav button small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
+.rd-nav button:last-child{text-align:right}
+body.noscroll{overflow:hidden}
+
+/* UX pass */
+:root{--dim:#7b8196}
+.skip{position:fixed;left:16px;top:-80px;z-index:400;padding:12px 18px;border-radius:12px;background:var(--a1);color:#0a0b0e;font-weight:600;font-size:14px;transition:top .2s}
+.skip:focus{top:14px}
+.filters button sup{font-family:var(--mono);font-size:10px;margin-left:7px;opacity:.55}
+.filters button.on sup{opacity:.7}
+.bento.flat .card,.bento.flat .card.half,.bento.flat .card.wide{grid-column:span 2}
+.bento.flat .feature .cols{grid-template-columns:1fr}
+@media (max-width:1020px){.bento.flat .card,.bento.flat .card.half,.bento.flat .card.wide{grid-column:span 3}}
+@media (max-width:680px){.bento.flat .card,.bento.flat .card.half,.bento.flat .card.wide{grid-column:auto}
+  .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--gutter) * -1);padding:2px var(--gutter);width:calc(100% + var(--gutter) * 2)}
+  .filters::-webkit-scrollbar{display:none}
+  .filters button{flex:none;padding:11px 17px}
+  .btn{padding:15px 22px}}
+.avail{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--muted)}
+.avail a{color:var(--text);border-bottom:1px solid var(--line-2);transition:border-color .2s,color .2s}
+.avail a:hover{color:var(--a1);border-color:var(--a1)}
+.totop{position:fixed;right:18px;bottom:22px;z-index:80;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:rgba(14,16,22,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--text);display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .4s var(--ease),border-color .2s}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.totop:hover{border-color:var(--a1);color:var(--a1)}
+.totop svg{width:18px;height:18px}
+.rd-copy{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 11px;transition:all .2s}
+.rd-copy:hover{color:var(--text);border-color:var(--line-2)}
+.cta-row .btn-g svg{width:15px;height:15px}
+</style>
+</head>
+<body>
+<a class="skip" href="#impact">Skip to content</a>
+<div class="prog" id="prog"></div>
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Tharun Kumar Reddy — home"><span class="logo-mark">TK</span><span>Tharun Kumar Reddy</span></a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#systems">Systems</a>
+      <a href="#writing">Writing</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="kbtn" id="palBtn" aria-label="Open command menu"><span class="lbl-d">Jump to</span><span class="lbl-m">Menu</span><kbd>Ctrl K</kbd></button>
+  </div>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="shell hero-grid">
+    <div>
+      <span class="status"><span class="pulse"></span>AI &amp; Data Engineer · Bengaluru, India</span>
+      <h1 id="h1"><span class="split-word"><span>I&nbsp;build</span></span> <span class="split-word"><span>AI&nbsp;systems</span></span><br><span class="split-word"><span>that</span></span> <span class="split-word"><span class="serif grad">actually&nbsp;ship.</span></span></h1>
+      <div class="rot rv">Right now: <span class="type" id="type"></span></div>
+      <p class="lede rv d1">I take LLMs from demo to production — <strong>RAG assistants, real-time voice agents, Claude &amp; MCP connectors, and agentic automation</strong> — built on solid data platforms, with the latency, accuracy and guardrails that make people trust them.</p>
+      <div class="ctas rv d2">
+        <a class="btn btn-p" href="#work">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="assets/Tharun_Kumar_Reddy_Resume.pdf" download>Download résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+      </div>
+      <p class="avail rv d3"><span class="pulse"></span><span>Open to AI engineering roles &amp; consulting · <a href="#contact">say hello</a></span></p>
+      <div class="scroll-cue rv d3"><i></i>Scroll to explore</div>
+    </div>
+
+    <div class="portrait rv d1" id="portrait">
+      <div class="frame"><img src="assets/profile.webp" alt="Portrait of Tharun Kumar Reddy" width="880" height="1100" fetchpriority="high"></div>
+      <div class="ring"></div>
+      <div class="p-cap"><div><div class="n">Tharun Kumar Reddy B</div><div class="r">Easystepin IT Services</div></div><div class="r">2024 — now</div></div>
+      <div class="chip-f c1"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M7 8v8M17 6v12M3 11v2M21 10v4"/></svg></span><div><b>&lt;800ms</b><small>voice-agent latency</small></div></div>
+      <div class="chip-f c2"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>95%</b><small>extraction accuracy</small></div></div>
+      <div class="chip-f c3"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><div><b>−40%</b><small>RAG query latency</small></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-label="Technologies">
+  <div class="mq-track">
+    <span>Claude &amp; Anthropic API</span><span>Model Context Protocol</span><span>GPT-4o</span><span>Azure OpenAI</span><span>LangChain</span><span>ChromaDB</span><span>Databricks</span><span>Boomi</span><span>n8n</span><span>Twilio</span><span>Whisper STT</span><span>Azure TTS</span><span>Mistral OCR</span><span>XGBoost</span><span>Prophet</span><span>FastAPI</span><span>Django / DRF</span><span>PostgreSQL</span><span>Redis</span><span>Celery</span><span>Docker</span><span>GitLab CI/CD</span><span>OpenTelemetry</span><span>Langfuse / MLflow</span>
+    <span aria-hidden="true">Claude &amp; Anthropic API</span><span aria-hidden="true">Model Context Protocol</span><span aria-hidden="true">GPT-4o</span><span aria-hidden="true">Azure OpenAI</span><span aria-hidden="true">LangChain</span><span aria-hidden="true">ChromaDB</span><span aria-hidden="true">Databricks</span><span aria-hidden="true">Boomi</span><span aria-hidden="true">n8n</span><span aria-hidden="true">Twilio</span><span aria-hidden="true">Whisper STT</span><span aria-hidden="true">Azure TTS</span><span aria-hidden="true">Mistral OCR</span><span aria-hidden="true">XGBoost</span><span aria-hidden="true">Prophet</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">Django / DRF</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Redis</span><span aria-hidden="true">Celery</span><span aria-hidden="true">Docker</span><span aria-hidden="true">GitLab CI/CD</span><span aria-hidden="true">OpenTelemetry</span><span aria-hidden="true">Langfuse / MLflow</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section id="impact" style="padding-top:clamp(70px,9vw,120px)">
+  <div class="shell">
+    <div class="stats rv">
+      <div class="stat"><div class="v"><span data-count="11">0</span></div><div class="k">AI products built, from trading and farming to accounting</div></div>
+      <div class="stat"><div class="v"><span data-count="7">0</span><sup>+</sup></div><div class="k">Reusable AI accelerators built for faster delivery</div></div>
+      <div class="stat"><div class="v"><span data-count="60">0</span><sup>+</sup></div><div class="k">Production n8n workflows on 17 shared subflows</div></div>
+      <div class="stat"><div class="v"><span data-count="500">0</span><sup>+</sup></div><div class="k">Invoices a day processed at 95% field accuracy</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Selected work</div><h2 class="rv d1">Products that think, talk, <span class="serif">and act.</span></h2></div>
+      <div class="filters rv d2" id="filters" role="group" aria-label="Filter projects">
+        <button class="on" data-f="all">All</button>
+        <button data-f="agents">Agents</button>
+        <button data-f="automation">Automation</button>
+        <button data-f="data">Data &amp; ML</button>
+        <button data-f="integration">Integrations</button>
+      </div>
+    </div>
+
+    <div class="bento" id="bento">
+      <!-- 01 Manufacturing -->
+      <article class="card wide feature rv" data-cat="data agents">
+        <div class="card-top"><span class="ix">01 — Flagship</span><span class="tag">Manufacturing AI</span></div>
+        <div class="cols">
+          <div>
+            <h3>Manufacturing <span class="serif">Intelligence Platform</span></h3>
+            <p>An industrial operations platform covering ERP, MES, SCADA, inventory and invoicing across 9 business units, then made intelligent: ask questions in plain English, get grounded answers and forecasts.</p>
+            <div class="stack"><span>Django/DRF</span><span>Flask</span><span>PostgreSQL</span><span>LangChain</span><span>GPT-4o</span><span>ChromaDB</span><span>XGBoost</span><span>Prophet</span><span>Mistral OCR</span></div>
+          </div>
+          <div>
+            <ul>
+              <li><b>Operations RAG assistant</b>: pdfplumber extraction, chunking, per-user ChromaDB, SHA-256 hashing to skip re-embedding</li>
+              <li><b>10 prediction APIs</b>: sales, inventory, energy, quality, predictive maintenance, delivery risk</li>
+              <li><b>Natural-language analytics</b> over production, OEE and machine uptime</li>
+            </ul>
+            <div class="kpis"><div><b>9</b><small>business units</small></div><div><b>10</b><small>ML APIs</small></div><div><b>v1→v2</b><small>platform to AI</small></div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Claude connectors -->
+      <article class="card rv d1" data-cat="integration agents">
+        <div class="card-top"><span class="ix">02</span><span class="tag">Claude · MCP</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <defs><radialGradient id="cg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#d97757" stop-opacity=".55"/><stop offset="1" stop-color="#d97757" stop-opacity="0"/></radialGradient></defs>
+            <circle cx="150" cy="60" r="46" fill="url(#cg)"/>
+            <g stroke="rgba(255,255,255,.22)" stroke-width="1.2" fill="none" class="flow-dash"><path d="M150 60 L40 20"/><path d="M150 60 L36 98"/><path d="M150 60 L262 18"/><path d="M150 60 L266 100"/><path d="M150 60 L150 6"/></g>
+            <g fill="#11141b" stroke="rgba(255,255,255,.25)"><rect x="14" y="8" width="54" height="24" rx="7"/><rect x="10" y="86" width="54" height="24" rx="7"/><rect x="236" y="6" width="54" height="24" rx="7"/><rect x="240" y="88" width="54" height="24" rx="7"/></g>
+            <g font-family="JetBrains Mono" font-size="9" fill="#8a90a2" text-anchor="middle"><text x="41" y="24">CRM</text><text x="37" y="102">ERP</text><text x="263" y="22">Docs</text><text x="267" y="104">SQL</text></g>
+            <circle cx="150" cy="60" r="20" fill="#11141b" stroke="#d97757"/>
+            <path d="M150 48v24M138 60h24M141.5 51.5l17 17M158.5 51.5l-17 17" stroke="#e8a184" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Claude Enterprise <span class="serif">Connectors</span></h3>
+        <p>Custom MCP servers that plug Claude into enterprise systems — typed tool schemas, scoped auth and audited access, so teams can work with live company data from inside Claude.</p>
+        <div class="stack"><span>MCP</span><span>Anthropic API</span><span>Python</span><span>OAuth</span></div>
+      </article>
+
+      <!-- 03 Voice agent -->
+      <article class="card half rv" data-cat="agents">
+        <div class="card-top"><span class="ix">03</span><span class="tag">Voice AI</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120" class="wave">
+            <g fill="#5ee7df">
+              <rect x="10" y="30" width="6" height="60" rx="3" style="animation-delay:-.1s"/><rect x="22" y="20" width="6" height="80" rx="3" style="animation-delay:-.5s"/><rect x="34" y="35" width="6" height="50" rx="3" style="animation-delay:-.3s"/><rect x="46" y="15" width="6" height="90" rx="3" style="animation-delay:-.8s"/><rect x="58" y="28" width="6" height="64" rx="3" style="animation-delay:-.2s"/><rect x="70" y="38" width="6" height="44" rx="3" style="animation-delay:-.6s"/>
+            </g>
+            <g font-family="JetBrains Mono" font-size="9" fill="#8a90a2">
+              <rect x="96" y="44" width="58" height="32" rx="8" fill="#11141b" stroke="rgba(255,255,255,.2)"/><text x="125" y="64" text-anchor="middle">Whisper</text>
+              <rect x="170" y="44" width="58" height="32" rx="8" fill="#11141b" stroke="rgba(198,243,107,.5)"/><text x="199" y="64" text-anchor="middle" fill="#c6f36b">GPT-4o</text>
+              <rect x="244" y="44" width="52" height="32" rx="8" fill="#11141b" stroke="rgba(255,255,255,.2)"/><text x="270" y="64" text-anchor="middle">TTS</text>
+            </g>
+            <g stroke="rgba(255,255,255,.3)" class="flow-dash"><path d="M82 60h14M154 60h16M228 60h16"/></g>
+            <text x="199" y="100" font-family="JetBrains Mono" font-size="9" fill="#5b6070" text-anchor="middle">+ MCP tools mid-call</text>
+          </svg>
+        </div>
+        <h3>Real-time Multilingual <span class="serif">Voice Agent</span></h3>
+        <ul>
+          <li>Twilio → Whisper STT → GPT-4o with tool calling + MCP → Azure TTS at <b>sub-800ms end-to-end</b></li>
+          <li>Pulls live balances, orders and CRM data mid-call; books calendars and takes payments by caller intent</li>
+          <li>New industries go live <b>by prompt, not code</b></li>
+        </ul>
+      </article>
+
+      <!-- 04 n8n -->
+      <article class="card half rv d1" data-cat="automation">
+        <div class="card-top"><span class="ix">04</span><span class="tag">Sales &amp; Marketing</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g stroke="rgba(255,255,255,.22)" fill="none" class="flow-dash"><path d="M44 60 C80 60 80 22 116 22"/><path d="M44 60 C80 60 80 98 116 98"/><path d="M44 60h72"/><path d="M164 22 C200 22 200 60 236 60"/><path d="M164 98 C200 98 200 60 236 60"/><path d="M164 60h72"/></g>
+            <g fill="#11141b" stroke="rgba(255,255,255,.22)"><circle cx="30" cy="60" r="14"/><rect x="116" y="10" width="48" height="24" rx="7"/><rect x="116" y="48" width="48" height="24" rx="7"/><rect x="116" y="86" width="48" height="24" rx="7"/></g>
+            <circle cx="252" cy="60" r="16" fill="#11141b" stroke="#c6f36b"/>
+            <path d="M245 60l5 5 9-10" stroke="#c6f36b" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <g font-family="JetBrains Mono" font-size="9" fill="#8a90a2" text-anchor="middle"><text x="140" y="26">SEO</text><text x="140" y="64">Content</text><text x="140" y="102">Ads/CRO</text></g>
+            <path d="M25 55l6 5-6 5M31 55l6 5-6 5" stroke="#ff6d5a" stroke-width="1.6" fill="none"/>
+          </svg>
+        </div>
+        <h3>n8n Sales &amp; Marketing <span class="serif">Automation</span></h3>
+        <ul>
+          <li><b>60+ workflows on 17 shared subflows</b> for SEO, content, social, ad campaigns, CRO and compliance</li>
+          <li>Claude/OpenAI content generation behind validation and human-approval gates</li>
+          <li>Search Console, GA4, PageSpeed, WordPress, Google Workspace and Slack wired in</li>
+        </ul>
+      </article>
+
+      <!-- 05 Databricks -->
+      <article class="card rv" data-cat="data agents">
+        <div class="card-top"><span class="ix">05</span><span class="tag">Lakehouse</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g fill="none" stroke-width="1.4">
+              <path d="M90 92 150 108 210 92 150 76Z" fill="rgba(205,127,50,.12)" stroke="rgba(205,127,50,.7)"/>
+              <path d="M90 70 150 86 210 70 150 54Z" fill="rgba(200,200,210,.1)" stroke="rgba(200,200,210,.6)"/>
+              <path d="M90 48 150 64 210 48 150 32Z" fill="rgba(255,205,80,.12)" stroke="rgba(255,205,80,.75)"/>
+            </g>
+            <g font-family="JetBrains Mono" font-size="9" fill="#8a90a2"><text x="222" y="96">Bronze</text><text x="222" y="74">Silver</text><text x="222" y="52">Gold</text></g>
+            <circle cx="150" cy="14" r="10" fill="#11141b" stroke="#c6f36b"/><path d="M150 24v10" stroke="#c6f36b" class="flow-dash"/>
+            <text x="40" y="18" font-family="JetBrains Mono" font-size="9" fill="#5b6070">"why did yield dip?"</text>
+          </svg>
+        </div>
+        <h3>Databricks <span class="serif">AI Agent</span></h3>
+        <p>An agent that answers business questions over the lakehouse — routing to governed, read-only SQL on medallion tables and explaining the numbers it returns.</p>
+        <div class="stack"><span>Databricks</span><span>Text-to-SQL</span><span>Medallion</span><span>LLM agents</span></div>
+      </article>
+
+      <!-- 06 Boomi -->
+      <article class="card rv d1" data-cat="integration agents">
+        <div class="card-top"><span class="ix">06</span><span class="tag">iPaaS agents</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g stroke="rgba(255,255,255,.2)" fill="none" class="flow-dash"><circle cx="150" cy="60" r="44"/></g>
+            <g fill="#11141b" stroke="rgba(94,231,223,.6)"><circle cx="150" cy="16" r="9"/><circle cx="194" cy="60" r="9"/><circle cx="150" cy="104" r="9"/><circle cx="106" cy="60" r="9"/></g>
+            <rect x="128" y="48" width="44" height="24" rx="8" fill="#11141b" stroke="#5ee7df"/>
+            <text x="150" y="64" font-family="JetBrains Mono" font-size="9" fill="#5ee7df" text-anchor="middle">agent</text>
+            <g font-family="JetBrains Mono" font-size="9" fill="#5b6070"><text x="214" y="64">SaaS</text><text x="54" y="64">ERP</text></g>
+          </svg>
+        </div>
+        <h3>Boomi <span class="serif">Agents</span></h3>
+        <p>AI agents running on top of Boomi integrations — reasoning over cross-system events and triggering the right processes across connected apps.</p>
+        <div class="stack"><span>Boomi</span><span>Agentic workflows</span><span>APIs</span></div>
+      </article>
+
+      <!-- 07 Allocation -->
+      <article class="card rv d2" data-cat="data">
+        <div class="card-top"><span class="ix">07</span><span class="tag">Product</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g font-family="JetBrains Mono" font-size="9" fill="#5b6070"><text x="20" y="24">A</text><text x="20" y="54">B</text><text x="20" y="84">C</text></g>
+            <g><rect x="36" y="14" width="0" height="14" rx="4" fill="#8b93ff"><animate attributeName="width" values="0;180;180" dur="3s" repeatCount="indefinite"/></rect>
+            <rect x="36" y="44" width="0" height="14" rx="4" fill="#5ee7df"><animate attributeName="width" values="0;120;120" dur="3s" begin=".3s" repeatCount="indefinite"/></rect>
+            <rect x="36" y="74" width="0" height="14" rx="4" fill="#c6f36b"><animate attributeName="width" values="0;230;230" dur="3s" begin=".6s" repeatCount="indefinite"/></rect></g>
+            <path d="M36 104h250" stroke="rgba(255,255,255,.12)"/>
+          </svg>
+        </div>
+        <h3>Capacity <span class="serif">Allocator</span></h3>
+        <p>An allocation product that matches demand to available capacity, with clear, explainable recommendations instead of spreadsheets.</p>
+        <div class="stack"><span>Python</span><span>Optimization</span><span>APIs</span></div>
+      </article>
+
+      <!-- 08 Agri -->
+      <article class="card half rv" data-cat="agents">
+        <div class="card-top"><span class="ix">08</span><span class="tag">AgriTech</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <rect x="20" y="14" width="150" height="30" rx="12" fill="rgba(37,211,102,.14)" stroke="rgba(37,211,102,.45)"/>
+            <text x="34" y="33" font-family="JetBrains Mono" font-size="9.5" fill="#9ff0bd">🎙 voice note · local language</text>
+            <rect x="110" y="56" width="172" height="44" rx="12" fill="#11141b" stroke="rgba(255,255,255,.2)"/>
+            <text x="124" y="74" font-family="JetBrains Mono" font-size="9.5" fill="#eceef3">Here's your crop advisory.</text>
+            <text x="124" y="90" font-family="JetBrains Mono" font-size="9.5" fill="#8a90a2">+ today's market prices →</text>
+            <g fill="#5b6070"><circle cx="128" cy="112" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" repeatCount="indefinite"/></circle><circle cx="136" cy="112" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" begin=".2s" repeatCount="indefinite"/></circle><circle cx="144" cy="112" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" begin=".4s" repeatCount="indefinite"/></circle></g>
+          </svg>
+        </div>
+        <h3>Agri <span class="serif">WhatsApp Bot</span></h3>
+        <p>A WhatsApp assistant for farmers that meets them where they already are — local-language questions, including voice notes, answered with crop advisory and market information.</p>
+        <div class="stack"><span>WhatsApp Business API</span><span>LLM</span><span>Speech-to-text</span><span>RAG</span></div>
+      </article>
+
+      <!-- 09 Binance -->
+      <article class="card half rv d1" data-cat="automation data">
+        <div class="card-top"><span class="ix">09</span><span class="tag">Algo trading</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <path d="M10 90 L50 70 L80 78 L120 46 L160 56 L200 30 L240 40 L290 14" fill="none" stroke="#f0b90b" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400"><animate attributeName="stroke-dashoffset" values="400;0;0" dur="4s" repeatCount="indefinite"/></path>
+            <g>
+              <rect class="candle" x="40" y="58" width="8" height="26" rx="2" fill="#2ebd85"/><rect class="candle" x="74" y="66" width="8" height="22" rx="2" fill="#f6465d" style="animation-delay:-1s"/><rect class="candle" x="112" y="38" width="8" height="30" rx="2" fill="#2ebd85" style="animation-delay:-2s"/><rect class="candle" x="152" y="46" width="8" height="18" rx="2" fill="#f6465d"/><rect class="candle" x="192" y="22" width="8" height="28" rx="2" fill="#2ebd85" style="animation-delay:-1.5s"/><rect class="candle" x="232" y="30" width="8" height="18" rx="2" fill="#2ebd85" style="animation-delay:-.5s"/>
+            </g>
+            <path d="M10 104h280" stroke="rgba(246,70,93,.4)" stroke-dasharray="3 4"/><text x="12" y="116" font-family="JetBrains Mono" font-size="8.5" fill="#5b6070">stop-loss guard</text>
+          </svg>
+        </div>
+        <h3>Binance <span class="serif">Trading Bot</span></h3>
+        <p>An automated trading bot on the Binance API — strategy signals in, orders out — with position sizing and stop-loss risk controls built in from day one.</p>
+        <div class="stack"><span>Python</span><span>Binance API</span><span>WebSockets</span><span>Risk controls</span></div>
+      </article>
+
+      <!-- 10 CA analysis bot -->
+      <article class="card half rv" data-cat="agents data">
+        <div class="card-top"><span class="ix">10</span><span class="tag">FinTech · Accounting</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g fill="#11141b" stroke="rgba(255,255,255,.2)"><rect x="14" y="12" width="120" height="96" rx="10"/></g>
+            <g stroke="rgba(255,255,255,.12)"><path d="M14 36h120M14 60h120M14 84h120M62 12v96M98 12v96"/></g>
+            <g font-family="JetBrains Mono" font-size="8.5" fill="#5b6070"><text x="22" y="28">Item</text><text x="68" y="28">Dr</text><text x="104" y="28">Cr</text></g>
+            <g fill="#8b93ff"><rect x="68" y="44" width="22" height="6" rx="3"/><rect x="68" y="68" width="14" height="6" rx="3"/><rect x="68" y="92" width="26" height="6" rx="3"/></g>
+            <g fill="#5ee7df"><rect x="104" y="44" width="16" height="6" rx="3"/><rect x="104" y="68" width="24" height="6" rx="3"/></g>
+            <rect x="160" y="14" width="126" height="28" rx="10" fill="rgba(94,231,223,.12)" stroke="rgba(94,231,223,.4)"/>
+            <text x="172" y="32" font-family="JetBrains Mono" font-size="9" fill="#9bf0ea">why did this move?</text>
+            <rect x="154" y="54" width="132" height="54" rx="10" fill="#11141b" stroke="rgba(198,243,107,.45)"/>
+            <text x="166" y="72" font-family="JetBrains Mono" font-size="9" fill="#eceef3">Here is what changed</text>
+            <text x="166" y="88" font-family="JetBrains Mono" font-size="9" fill="#8a90a2">and where to look →</text>
+            <g fill="#c6f36b"><circle cx="268" cy="96" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" repeatCount="indefinite"/></circle><circle cx="276" cy="96" r="2"><animate attributeName="opacity" values=".2;1;.2" dur="1.2s" begin=".2s" repeatCount="indefinite"/></circle></g>
+          </svg>
+        </div>
+        <h3>Analysis Bot <span class="serif">for a Chartered Accountant</span></h3>
+        <p>A working analysis assistant built for a chartered accountant and run locally, so the figures they work with can be questioned in plain language.</p>
+        <div class="stack"><span>Local deployment</span><span>Financial analysis</span><span>Built for a CA</span></div>
+      </article>
+
+      <!-- 11 Invoice AI -->
+      <article class="card half rv d1" data-cat="automation data">
+        <div class="card-top"><span class="ix">11</span><span class="tag">Invoice AI</span></div>
+        <div class="viz" aria-hidden="true">
+          <svg viewBox="0 0 300 120">
+            <g fill="#11141b" stroke="rgba(255,255,255,.22)"><rect x="10" y="30" width="44" height="58" rx="7"/><rect x="100" y="38" width="52" height="42" rx="8"/><rect x="200" y="30" width="44" height="58" rx="7"/></g>
+            <g stroke="rgba(255,255,255,.28)" stroke-width="1.4"><path d="M20 46h24M20 56h24M20 66h16"/></g>
+            <g font-family="JetBrains Mono" font-size="9" fill="#8a90a2" text-anchor="middle"><text x="126" y="64">GPT-4</text><text x="32" y="20">email</text><text x="222" y="20">ledger</text></g>
+            <rect x="100" y="38" width="52" height="42" rx="8" fill="none" stroke="#c6f36b"/>
+            <g stroke="rgba(255,255,255,.3)" class="flow-dash"><path d="M54 59h46M152 59h48"/></g>
+            <path d="M262 59l8 8 14-16" stroke="#c6f36b" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M126 82v22h60" stroke="rgba(94,231,223,.5)" fill="none" stroke-dasharray="3 4"/><text x="192" y="108" font-family="JetBrains Mono" font-size="8.5" fill="#5ee7df">human review</text>
+          </svg>
+        </div>
+        <h3>Invoice <span class="serif">Intelligence</span></h3>
+        <ul>
+          <li><b>Email in, ledger out</b>: OCR, GPT-4 extraction to a strict schema, then business-rule checks</li>
+          <li><b>500+ invoices a day</b> at 95% field accuracy, with about 90% less manual entry</li>
+          <li>Only doubtful fields go to a person</li>
+        </ul>
+        <div class="stack"><span>n8n</span><span>Azure OpenAI GPT-4</span><span>OCR</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section id="platforms">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Platform engineering</div><h2 class="rv d1">The foundations <span class="serif">under the products.</span></h2></div>
+      <p class="rv d2">Data architecture, enterprise assistants and multi-tenant backends: the less visible work the headline products stand on.</p>
+    </div>
+    <div class="mini-grid">
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—01</span><span class="tag">Data architecture</span></div>
+        <h3>Medallion Data <span class="serif">+ AI Platform</span></h3>
+        <p>A Bronze/Silver/Gold platform designed across 6 source systems, with an intent-routed SQL + RAG assistant on top. Sized for 2M events a day, 500 assistant queries a day, sub-6s p95 and roughly $4.5K a month.</p>
+        <div class="stack"><span>Medallion</span><span>Text-to-SQL</span><span>Hybrid RAG</span><span>OpenTelemetry</span><span>Langfuse / MLflow</span></div>
+        <a class="more" href="#systems">See how a question is routed →</a>
+      </article>
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—02</span><span class="tag">Enterprise assistant</span></div>
+        <h3>NL-to-SQL <span class="serif">Enterprise Chatbot</span></h3>
+        <p>Ask the database in plain English. A SQL agent behind role-based access and Microsoft SSO, embeddable as a JS widget, and tuned until queries ran about 30% faster.</p>
+        <div class="stack"><span>Flask</span><span>RAG</span><span>SQL agents</span><span>RBAC</span><span>Microsoft SSO</span></div>
+      </article>
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—03</span><span class="tag">MCP · n8n</span></div>
+        <h3>Employee <span class="serif">Recognition Platform</span></h3>
+        <p>MCP connectors and n8n workflows behind two features: a RAG assistant people can chat with, and an engine that automates employee recognition.</p>
+        <div class="stack"><span>MCP</span><span>n8n</span><span>RAG</span></div>
+      </article>
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—04</span><span class="tag">SaaS backend</span></div>
+        <h3>Multi-Tenant <span class="serif">Django Platform</span></h3>
+        <p>A scaling design for a SaaS backend: schema-per-tenant isolation, four workload-partitioned Celery queues, circuit breakers and a documented capacity plan.</p>
+        <div class="stack"><span>Django</span><span>django-tenants</span><span>Celery</span><span>PgBouncer</span><span>Redis</span><span>Kubernetes</span></div>
+      </article>
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—05</span><span class="tag">Cloud platform</span></div>
+        <h3>Multi-Cloud <span class="serif">Provisioning Platform</span></h3>
+        <p>Backend microservices behind managed multi-cloud provisioning, environment lifecycle and billing, supporting a 99.95–99.999% uptime SLA.</p>
+        <div class="stack"><span>Django</span><span>FastAPI</span><span>Terraform</span><span>Ansible</span></div>
+      </article>
+      <article class="card rv" data-cat="platform">
+        <div class="card-top"><span class="ix">P—06</span><span class="tag">Programme platform</span></div>
+        <h3>SMB &amp; Accelerator <span class="serif">Programme Portal</span></h3>
+        <p>Multi-tenant backend APIs that run SMB management and the administration of accelerator programmes.</p>
+        <div class="stack"><span>Django</span><span>Flask</span><span>REST APIs</span><span>Multi-tenant</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Under the hood</div><h2 class="rv d1">The architecture is <span class="serif">the product.</span></h2></div>
+      <p class="rv d2">Every system here was designed for latency, accuracy and failure, not just the happy path. Pick a system to see how a request travels through it.</p>
+    </div>
+    <div class="arch rv">
+      <div class="arch-tabs" id="archTabs" role="tablist"></div>
+      <div class="arch-body">
+        <div class="arch-stage"><div class="pipe" id="pipe"></div></div>
+        <aside class="arch-side" id="archSide"></aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCELERATORS -->
+<section id="accelerators">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">7+ accelerators</div><h2 class="rv d1">Built once. <span class="serif">Shipped everywhere.</span></h2></div>
+      <p class="rv d2">Reusable building blocks that turn a months-long AI build into a short configuration project, each one proven in production.</p>
+    </div>
+    <div class="acc rv" id="acc"></div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Writing</div><h2 class="rv d1">Notes from <span class="serif">production.</span></h2></div>
+      <p class="rv d2">Short essays on RAG, agents, MCP and the data engineering that keeps them honest. Written from systems I've actually run.</p>
+    </div>
+    <div class="posts rv" id="posts"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="shell">
+    <div class="sec-head"><div><div class="eyebrow rv">Experience</div><h2 class="rv d1">Design to deployment, <span class="serif">end to end.</span></h2></div></div>
+    <div class="xp">
+      <div class="xp-meta rv">
+        <div class="role">Data Engineer</div>
+        <div class="co">Easystepin IT Services Pvt. Ltd. · Bengaluru</div>
+        <div class="when"><span class="pulse"></span>Jun 2024 — Present</div>
+        <div class="edu"><b>B.Tech, Computer Science</b>Sri Venkateswara Engineering College, Tirupati · 2021 – 2024</div>
+      </div>
+      <div class="tl">
+        <div class="tl-i rv"><span class="n">01</span><div><h5>RAG assistants over company data</h5><p>LangChain, GPT-4/4o and ChromaDB over PostgreSQL, MySQL and OCR'd PDFs, with semantic chunking and agent-based tool routing. <em>−40% query latency</em> against a keyword-search baseline.</p></div></div>
+        <div class="tl-i rv"><span class="n">02</span><div><h5>Real-time voice agent</h5><p>Twilio, Whisper STT, GPT-4o with tool calling and MCP, Azure TTS. <em>&lt;800ms end-to-end</em>, configurable by prompt for new industries.</p></div></div>
+        <div class="tl-i rv"><span class="n">03</span><div><h5>Invoice-extraction pipeline</h5><p>OCR, GPT-4 structured extraction, validation and human-review routing. <em>500+ invoices/day · 95% field accuracy · −90% manual entry</em>.</p></div></div>
+        <div class="tl-i rv"><span class="n">04</span><div><h5>Forecasting &amp; classification APIs</h5><p>10 shipped APIs (sales, inventory, energy, quality, predictive maintenance, delivery risk) using XGBoost, Random Forest and Prophet with lag features and recursive forecasting.</p></div></div>
+        <div class="tl-i rv"><span class="n">05</span><div><h5>Guardrails for AI workflows</h5><p>Output validation, confidence-based fallback chains and human-approval gates, plus <em>60+ n8n workflows</em> on 17 shared subflows.</p></div></div>
+        <div class="tl-i rv"><span class="n">06</span><div><h5>Production engineering</h5><p>Docker, GitLab CI/CD and OpenTelemetry tracing, plus contributions to 6 more products, including a multi-cloud platform at a 99.95–99.999% SLA.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLBOX -->
+<section id="toolbox">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Toolbox</div><h2 class="rv d1">What I reach for, <span class="serif">and why.</span></h2></div>
+      <p class="rv d2">Grouped by the job they do, not alphabetically. Everything here has shipped in at least one production system.</p>
+    </div>
+    <div class="kit">
+      <div class="kit-g rv"><h4>Languages</h4><div class="stack"><span>Python</span><span>SQL</span></div></div>
+      <div class="kit-g rv"><h4>LLMs &amp; agents</h4><div class="stack"><span>GPT-4 / 4o</span><span>Anthropic API</span><span>Azure OpenAI</span><span>MCP</span><span>Tool calling</span><span>LangChain</span><span>Hybrid retrieval + reranking</span><span>Prompt engineering</span><span>Output guardrails</span></div></div>
+      <div class="kit-g rv"><h4>Documents &amp; vision</h4><div class="stack"><span>Mistral OCR</span><span>pdfplumber</span><span>Structured extraction</span></div></div>
+      <div class="kit-g rv"><h4>Data engineering</h4><div class="stack"><span>ETL / ELT</span><span>Medallion architecture</span><span>Data modelling</span><span>Cleaning &amp; validation</span><span>Bulk loading</span></div></div>
+      <div class="kit-g rv"><h4>Classic ML</h4><div class="stack"><span>XGBoost</span><span>Random Forest</span><span>Prophet</span><span>Feature engineering</span><span>Pandas</span></div></div>
+      <div class="kit-g rv"><h4>Data stores</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>ChromaDB</span><span>Redis</span></div></div>
+      <div class="kit-g rv"><h4>Backend</h4><div class="stack"><span>Django / DRF</span><span>FastAPI</span><span>Flask</span><span>Celery</span><span>REST APIs</span><span>WebSockets</span><span>JWT / RBAC</span></div></div>
+      <div class="kit-g rv"><h4>Voice &amp; automation</h4><div class="stack"><span>n8n</span><span>Twilio</span><span>Whisper STT</span><span>Azure TTS</span></div></div>
+      <div class="kit-g rv"><h4>Cloud &amp; DevOps</h4><div class="stack"><span>Azure</span><span>Docker</span><span>Git</span><span>GitLab CI/CD</span><span>OpenTelemetry</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Credentials</div><h2 class="rv d1">Certified across <span class="serif">the AI stack.</span></h2></div>
+      <p class="rv d2">Microsoft, Anthropic and Google certifications covering agent architecture, enterprise AI on Azure and deep learning.</p>
+    </div>
+    <div class="creds">
+      <div class="cred a rv"><div class="iss">Anthropic<span class="seal">A\</span></div><div class="code">Professional</div><h4>Claude Certified Architect</h4></div>
+      <div class="cred m rv d1"><div class="iss">Microsoft<span class="seal">MS</span></div><div class="code">Frontier</div><h4>Microsoft Frontier Engineer</h4></div>
+      <div class="cred m rv d2"><div class="iss">Microsoft<span class="seal">MS</span></div><div class="code">AB-100</div><h4>Agentic AI Business Solutions Architect</h4></div>
+      <div class="cred m rv"><div class="iss">Microsoft<span class="seal">MS</span></div><div class="code">AB-620</div><h4>AI Agent Builder Associate</h4></div>
+      <div class="cred m rv d1"><div class="iss">Microsoft<span class="seal">MS</span></div><div class="code">AI-103</div><h4>Azure AI Engineer Associate</h4></div>
+      <div class="cred g rv d2"><div class="iss">Google<span class="seal">TF</span></div><div class="code">TensorFlow</div><h4>TensorFlow Developer Certificate</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="shell">
+    <div class="cta rv">
+      <div class="eyebrow">Let's talk</div>
+      <h2 style="margin-top:22px">Have an AI idea<br>that needs to <span class="serif grad">go live?</span></h2>
+      <p class="lede" style="margin-top:22px">Open to AI engineering roles, consulting and ambitious builds: agents, RAG, voice and automation.</p>
+      <div class="cta-row">
+        <div class="mail"><span id="mailTxt">tharunkumarau01@gmail.com</span><button id="copyMail">Copy</button></div>
+        <a class="btn btn-p" href="mailto:tharunkumarau01@gmail.com">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="https://www.linkedin.com/in/tharunreddyy" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-g" href="assets/Tharun_Kumar_Reddy_Resume.pdf" download>Résumé <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="shell">
+    <span>© <span id="yr"></span> Tharun Kumar Reddy B · Bengaluru</span>
+    <span><a href="#top">Back to top ↑</a></span>
+  </div>
+</footer>
+
+<div class="pal" id="pal" role="dialog" aria-modal="true" aria-label="Command menu">
+  <div class="pal-box">
+    <div class="pal-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="palQ" placeholder="Jump to a section or project…" autocomplete="off" aria-label="Search"><kbd>Esc</kbd></div>
+    <div class="pal-list" id="palList"></div>
+  </div>
+</div>
+<button class="totop" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<div class="toast" id="toast"></div>
+<div class="rd" id="rd" role="dialog" aria-modal="true" aria-labelledby="rdT" aria-hidden="true">
+  <div class="rd-box">
+    <button class="rd-x" id="rdX" aria-label="Close article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="rdC"></div>
+  </div>
+</div>
+
+
+<script>
+(function(){
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+$('#yr').textContent = new Date().getFullYear();
+
+/* ---------- hero intro + typewriter ---------- */
+requestAnimationFrame(() => setTimeout(() => $('#hero').classList.add('go'), 80));
+const phrases = ['RAG assistants with citations','sub-800ms voice agents','Claude enterprise connectors','agents on Databricks & Boomi','guardrailed n8n automation','WhatsApp advisory for farmers'];
+const tEl = $('#type');
+if (reduce) tEl.textContent = phrases[0];
+else {
+  let p = 0, i = 0, del = false;
+  (function tick(){
+    const w = phrases[p];
+    i += del ? -1 : 1;
+    tEl.textContent = w.slice(0, i);
+    let d = del ? 28 : 55;
+    if (!del && i === w.length){ del = true; d = 1700; }
+    else if (del && i === 0){ del = false; p = (p + 1) % phrases.length; d = 300; }
+    setTimeout(tick, d);
+  })();
+}
+
+/* ---------- reveal + counters ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  $$('[data-count]', e.target).forEach(count);
+  io.unobserve(e.target);
+}), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+$$('.rv').forEach(el => io.observe(el));
+function count(el){
+  const to = +el.dataset.count;
+  if (reduce){ el.textContent = to; return; }
+  const t0 = performance.now(), dur = 1600;
+  (function f(t){
+    const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 4);
+    el.textContent = Math.round(to * e);
+    if (k < 1) requestAnimationFrame(f);
+  })(t0);
+}
+
+/* ---------- scroll progress + active nav ---------- */
+const prog = $('#prog'), links = $$('.nav-links a');
+const secs = links.map(a => $(a.getAttribute('href')));
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  prog.style.transform = `scaleX(${h.scrollTop / (h.scrollHeight - h.clientHeight)})`;
+  let cur = -1;
+  secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
+  links.forEach((a, i) => a.classList.toggle('on', i === cur));
+}, {passive:true});
+
+/* ---------- back to top ---------- */
+const topBtn = $('#toTop');
+addEventListener('scroll', () => topBtn.classList.toggle('show', scrollY > 900), {passive:true});
+topBtn.onclick = () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+
+/* ---------- card spotlight ---------- */
+$$('.card').forEach(c => c.addEventListener('pointermove', e => {
+  const r = c.getBoundingClientRect();
+  c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+  c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+}));
+
+/* ---------- filters ---------- */
+const fb = $$('#filters button'), bento = $('#bento'), bcards = $$('#bento .card');
+fb.forEach(b => {
+  const f = b.dataset.f, n = f === 'all' ? bcards.length : bcards.filter(c => c.dataset.cat.split(' ').includes(f)).length;
+  b.insertAdjacentHTML('beforeend', `<sup>${n}</sup>`);
+  b.setAttribute('aria-pressed', b.classList.contains('on'));
+});
+$('#filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  fb.forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); });
+  const f = b.dataset.f;
+  bento.classList.toggle('flat', f !== 'all');
+  bcards.forEach(c => {
+    const show = f === 'all' || c.dataset.cat.split(' ').includes(f);
+    c.classList.toggle('hide', !show);
+    if (show) c.classList.add('in');
+  });
+});
+
+/* ---------- architecture explorer ---------- */
+const SYSTEMS = [
+  {name:'Hybrid SQL + RAG', title:'A question router that knows when to query and when to read',
+   desc:'Numeric questions go to a schema-validated, read-only text-to-SQL tool. Document questions go to BM25 + vector retrieval with cross-encoder reranking. Answers carry citations, and the system declines to answer when relevance is low.',
+   flow:[{t:'Input',l:'User question'},{t:'Route',l:'Intent router',s:'numeric vs. document',hl:1},
+     {split:[{t:'Tool',l:'Text-to-SQL',s:'read-only · validated'},{t:'Retrieve',l:'BM25 + vector',s:'cross-encoder rerank'}]},
+     {t:'Guard',l:'Abstain check',s:'low relevance → decline'},{t:'Output',l:'Answer + citations',hl:1}],
+   m:[['2M','events / day'],['<6s','p95 latency'],['6','source systems'],['~$4.5K','per month']]},
+  {name:'Voice Agent', title:'Talking to an LLM at the speed of conversation',
+   desc:'Each step is tuned for streaming. MCP pulls live customer data mid-call, and domain tools such as calendars, payments and CRM are chosen by caller intent, with no human needed on the call.',
+   flow:[{t:'Telephony',l:'Twilio',s:'inbound & outbound'},{t:'STT',l:'Whisper',s:'multilingual'},{t:'Reason',l:'GPT-4o',s:'tool calling + MCP',hl:1},{t:'Speak',l:'Azure TTS'},{t:'Store',l:'Transcript + summary'}],
+   m:[['<800ms','end-to-end'],['0','code to add a vertical'],['MCP','live context'],['24/7','autonomous']]},
+  {name:'Invoice Intelligence', title:'From inbox to ledger, with a human only where it matters',
+   desc:'Invoices arriving by email are OCR\'d, extracted to a strict schema by GPT-4, and validated against business rules. Only low-confidence fields go to a human reviewer.',
+   flow:[{t:'Ingest',l:'Email → storage',s:'n8n'},{t:'Read',l:'OCR',s:'Mistral / Azure'},{t:'Extract',l:'GPT-4 structured',s:'JSON schema',hl:1},{t:'Check',l:'Validation rules'},
+     {split:[{t:'Auto',l:'Post to system'},{t:'Review',l:'Human queue',s:'low confidence'}]}],
+   m:[['500+','invoices / day'],['95%','field accuracy'],['−90%','manual entry'],['1','review queue']]},
+  {name:'Guardrails', title:'AI that fails safely',
+   desc:'Every AI action goes through layered checks: schema validation, confidence scoring, a fallback chain across models, and approval gates for anything that publishes or spends.',
+   flow:[{t:'LLM',l:'Draft output'},{t:'Validate',l:'Schema + rules'},{t:'Score',l:'Confidence',hl:1},
+     {split:[{t:'Fallback',l:'Retry / alt model'},{t:'Gate',l:'Human approval'}]},{t:'Act',l:'Publish / execute',hl:1}],
+   m:[['3','layers of checks'],['60+','guarded workflows'],['0','silent failures'],['OTel','traced end-to-end']]},
+  {name:'Forecasting APIs', title:'Ten models behind one consistent API',
+   desc:'Lag features and recursive forecasting with XGBoost, Random Forest and Prophet, served as REST APIs for sales, inventory, energy, quality, maintenance and delivery risk.',
+   flow:[{t:'Source',l:'ERP / MES data'},{t:'Clean',l:'Bulk import',s:'Excel/CSV → SQL'},{t:'Features',l:'Lag features'},{t:'Model',l:'XGBoost · RF · Prophet',hl:1},{t:'Serve',l:'REST API',s:'Flask / DRF'}],
+   m:[['10','prediction APIs'],['3','model families'],['9','business units'],['v2','in production']]}
+];
+const tabs = $('#archTabs'), pipe = $('#pipe'), side = $('#archSide');
+SYSTEMS.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.setAttribute('role','tab');
+  b.innerHTML = `<i>0${i+1}</i>${s.name}`;
+  b.onclick = () => showSys(i);
+  tabs.appendChild(b);
+});
+const nodeHTML = (n, d) => `<div class="node${n.hl?' hl':''}" style="animation-delay:${d}s"><div class="t">${n.t}</div><div class="l">${n.l}</div>${n.s?`<div class="s">${n.s}</div>`:''}</div>`;
+function showSys(i){
+  const s = SYSTEMS[i];
+  $$('button', tabs).forEach((b, j) => { b.classList.toggle('on', i === j); b.setAttribute('aria-selected', i === j); });
+  let h = '', d = 0;
+  s.flow.forEach((n, k) => {
+    if (k) { h += `<div class="wire" style="animation-delay:${d}s"></div>`; d += .08; }
+    h += n.split ? `<div class="split">${n.split.map(x => nodeHTML(x, d)).join('')}</div>` : nodeHTML(n, d);
+    d += .1;
+  });
+  pipe.innerHTML = h;
+  side.innerHTML = `<div class="eyebrow">System ${String(i+1).padStart(2,'0')}</div><h4>${s.title}</h4><p>${s.desc}</p><div class="m">${s.m.map(([b,t]) => `<div><b>${b}</b><small>${t}</small></div>`).join('')}</div>`;
+}
+showSys(0);
+
+/* ---------- accelerators ---------- */
+const ic = {
+  rag:'<path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/>',
+  voice:'<path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+  doc:'<path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13l2 2 4-4"/>',
+  sql:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
+  chart:'<path d="M4 19h16M6 15l4-5 4 3 5-7"/>',
+  flow:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8.5 6H12a3 3 0 0 1 3 3v.5M8.5 18H12a3 3 0 0 0 3-3v-.5"/>',
+  plug:'<path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/>',
+  cloud:'<path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/>'
+};
+const ACC = [
+  ['rag','Enterprise RAG Kit','Hybrid retrieval, reranking, citations and abstention over SQL and documents.'],
+  ['voice','Voice Agent Kit','Telephony-to-LLM pipeline under 800ms, with new verticals set up by prompt.'],
+  ['doc','Invoice Intelligence Kit','OCR + GPT-4 extraction at 500+/day with 95% field accuracy.'],
+  ['sql','NL-to-SQL Assistant','SQL agent with RBAC and Microsoft SSO, 30% faster through plan tuning.'],
+  ['chart','Forecasting Suite','10 prediction APIs using lag features and recursive forecasting.'],
+  ['flow','Marketing Engine','60+ n8n workflows on 17 subflows, with approval gates.'],
+  ['plug','MCP Connector Kit','MCP connectors + n8n powering a RAG assistant and a recognition engine.'],
+  ['cloud','Multi-tenant SaaS Core','Schema-per-tenant, partitioned Celery queues, 99.95%+ SLA.']
+];
+$('#acc').innerHTML = ACC.map(([k,h,p], i) => `<div class="acc-i"><span class="no">A—0${i+1}</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ic[k]}</svg></div><h4>${h}</h4><p>${p}</p><span class="big">0${i+1}</span></div>`).join('');
+
+/* ---------- credential tilt ---------- */
+if (!reduce && matchMedia('(hover:hover)').matches) $$('.cred').forEach(c => {
+  c.addEventListener('pointermove', e => {
+    const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    c.style.setProperty('--ry', ((x - .5) * 14) + 'deg');
+    c.style.setProperty('--rx', ((.5 - y) * 12) + 'deg');
+    c.style.setProperty('--gx', (x * 100) + '%');
+    c.style.setProperty('--gy', (y * 100) + '%');
+  });
+  c.addEventListener('pointerleave', () => { c.style.setProperty('--rx','0deg'); c.style.setProperty('--ry','0deg'); });
+});
+
+/* ---------- copy email + toast ---------- */
+const toast = $('#toast'); let tt;
+function say(m){ toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 1800); }
+async function copyMail(){
+  const m = $('#mailTxt').textContent;
+  try { await navigator.clipboard.writeText(m); } catch(e) {
+    const t = document.createElement('textarea'); t.value = m; document.body.appendChild(t); t.select();
+    try { document.execCommand('copy'); } catch(_) {} t.remove();
+  }
+  const b = $('#copyMail'); b.textContent = 'Copied ✓'; b.classList.add('ok');
+  setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('ok'); }, 1800);
+  say('Email copied to clipboard');
+}
+$('#copyMail').onclick = copyMail;
+
+
+/* ---------- writing + reader ---------- */
+const POSTS = [{"slug": "rag-is-not-the-hard-part", "cat": "RAG & Retrieval", "title": "RAG Is Not the Hard Part", "date": "Sep 2026", "read": "5 min read", "excerpt": "Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.", "body": "<p>Most teams treat RAG as the hard problem: which vector database, what chunk size, which embedding model. In practice, standing up a retrieval pipeline that returns plausible-looking answers is the easy part &mdash; maybe 20% of the work. The other 80% is what happens after retrieval: grounding, citations, deciding when to say nothing at all, and staying fast enough that someone actually uses it in the flow of their work instead of falling back to Ctrl+F.<\/p>\n    <h2>The retrieval pipeline is a commodity now<\/h2>\n    <p>LangChain or LlamaIndex for orchestration, ChromaDB or pgvector or Qdrant for storage, OpenAI or Azure OpenAI for embeddings &mdash; these pieces are reasonably interchangeable, and a basic pipeline can be stood up in a day. That's not a criticism; it's just no longer where the differentiation lives. If your RAG project's hardest technical decision was \"which vector DB,\" you haven't hit the actual hard part yet.<\/p>\n    <h2>Grounding and abstention are the actual product<\/h2>\n    <p>A system that confidently answers even when retrieval quality is poor erodes trust fast, especially once its output starts feeding real operational decisions. Citation-grounded generation and explicit abstention on low-relevance retrieval aren't nice-to-haves bolted on at the end &mdash; they're the part of the system that determines whether anyone keeps using it after the first bad answer.<\/p>\n    <p class=\"pull-quote\">A RAG demo answers one kind of question. A RAG system in production has to know which kind of question it's being asked.<\/p>\n    <h2>Multi-source retrieval is where tutorials stop<\/h2>\n    <p>Combining structured data (a SQL query against Postgres or MySQL) with unstructured retrieval (documents, OCR'd text, vector search) in the same query path is where most walkthroughs end and most real systems begin. Intent routing &mdash; deciding whether a question needs an exact number from a database or a synthesized answer from documents &mdash; is unglamorous, and it's also the difference between a toy and a tool.<\/p>\n    <h2>Where this leaves me<\/h2>\n    <p>I come at this from the data engineering side, and the parts of RAG I find most interesting aren't the model calls &mdash; they're the same discipline data engineering has always demanded: idempotent processing, cost control on re-embedding, and building a system that knows the limits of what it actually knows.<\/p>"}, {"slug": "why-mcp-is-more-than-a-buzzword", "cat": "Agentic AI & MCP", "title": "Why MCP Is More Than a Buzzword", "date": "Sep 2026", "read": "4 min read", "excerpt": "Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface \u2014 here's why that matters more than the model underneath.", "body": "<p>Every agent framework has its own way of calling tools. That was fine while agents were single-vendor demos with two or three functions wired up. It stops being fine the moment an agent needs to reach five different systems that were never built to talk to an LLM &mdash; each with its own auth model, its own error shapes, its own rate limits.<\/p>\n    <h2>The integration tax<\/h2>\n    <p>The unglamorous truth about agentic AI is that most of the engineering effort doesn't go into prompting or reasoning &mdash; it goes into bespoke integration work, repeated for every tool and every vertical. MCP (Model Context Protocol) is the first serious attempt to standardize that interface, the way REST standardized the interface between a browser and a server rather than leaving every site to invent its own.<\/p>\n    <h2>What actually changes with MCP<\/h2>\n    <p>In practice: tool connectors become reusable instead of one-off, a new vertical becomes a configuration change &mdash; a prompt and a tool list &mdash; rather than a redeploy, and \"what the agent is allowed to touch\" becomes a separate, inspectable concern from \"how the agent talks to the model.\" That separation is what makes a voice agent or a chat assistant portable across very different use cases without rewriting the plumbing each time.<\/p>\n    <p class=\"pull-quote\">The interesting part of an agent was never the model. It's what the model is allowed to touch.<\/p>\n    <h2>Where it's still rough<\/h2>\n    <p>The protocol is young. Tool discovery, fine-grained permissioning, and observability across a chain of MCP-connected tools are all still being worked out in practice, not just in spec documents. Treat it as an infrastructure investment worth making early, not a solved problem you can bolt on later.<\/p>\n    <h2>Why I'm betting on it<\/h2>\n    <p>I've built MCP connectors and used MCP as the tool-calling layer in a real-time voice agent, and the pattern holds: the more systems an agent needs to reach, the more a standard interface pays for itself. That's the same lesson data engineering learned about schemas a long time ago, just applied one layer up.<\/p>"}, {"slug": "boring-infrastructure-behind-reliable-ai", "cat": "Observability & Evaluation", "title": "The Boring Infrastructure Behind Reliable AI Systems", "date": "Sep 2026", "read": "5 min read", "excerpt": "Nobody gets excited about tracing spans or eval harnesses. They're also the difference between a demo and a system that survives three weeks of real usage.", "body": "<p>Nobody gets excited about tracing spans or eval harnesses. Everyone gets excited about the demo where the agent answers a hard question correctly on the first try. The gap between those two things is where most AI projects actually die &mdash; quietly, in production, a few weeks after the demo, once the questions stop being the ones in the slide deck.<\/p>\n    <h2>Evaluation is not a one-time gate<\/h2>\n    <p>Faithfulness, retrieval recall and precision, citation accuracy &mdash; metrics in the style of Ragas or DeepEval &mdash; are usually run once, right before launch, to satisfy a checklist. They're far more useful run continuously, against real traffic, because the failure modes that show up after launch are rarely the ones anyone tested for.<\/p>\n    <h2>Observability has to span the whole stack<\/h2>\n    <p>Tracing with OpenTelemetry and LLM-specific tooling like Langfuse or MLflow only pays off when it's tied back to data quality and cost, not treated as a separate dashboard for \"the AI part.\" The systems that actually stay healthy correlate all three &mdash; data quality, generation quality, and cost &mdash; into one view instead of three dashboards nobody cross-references.<\/p>\n    <p class=\"pull-quote\">If you can't tell me why the model said what it said, you don't have an AI system &mdash; you have a slot machine with good PR.<\/p>\n    <h2>This is a data engineering problem wearing an AI costume<\/h2>\n    <p>Schema validation, testing, lineage, capacity planning &mdash; none of this is new. It's the same discipline data engineering has always required, just pointed at a new kind of pipeline where the transformation step happens to be a language model instead of a SQL query.<\/p>\n    <h2>Why this is the part I want to own<\/h2>\n    <p>It's not the flashiest layer of the stack, but it's the layer that decides whether an AI system survives contact with real usage instead of quietly rotting after the demo. That's the direction I'm deliberately building toward.<\/p>"}, {"slug": "multi-tenant-saas-scaling-decisions", "cat": "Backend & Systems", "title": "Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About", "date": "Sep 2026", "read": "5 min read", "excerpt": "Adding multi-tenancy gets treated like a checkbox. In practice it's a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.", "body": "<p>Adding multi-tenancy gets treated like a checkbox: one flag, one column, done. In practice, it's a series of trade-offs about isolation, fairness, and what happens when one tenant starts behaving badly &mdash; and most of those decisions don't show up until the system is already under load.<\/p>\n    <h2>Schema-per-tenant is a trade-off, not a default<\/h2>\n    <p>Schema-per-tenant (django-tenants, in my case) buys strong data isolation and lets you reason about a tenant's data as a self-contained unit. It also means \"just add an index\" becomes an operation across every schema, and that a single Postgres instance eventually stops being enough. Designing the tenant-sharding path &mdash; how tenants get distributed across database instances once you outgrow one &mdash; is a decision worth making on paper before you need it, not during an incident.<\/p>\n    <h2>Connection pooling is not optional at scale<\/h2>\n    <p>Every tenant's app-tier connections funnel through the same Postgres instance. PgBouncer session pooling, paired with a read-replica router that keeps reporting workloads off the transactional path, is what keeps a busy reporting query from starving a checkout flow that happens to share a database.<\/p>\n    <h2>Queues need fairness, not just workers<\/h2>\n    <p>Partitioning Celery workloads into independently-tuned queues (by type &mdash; OCR, notifications, batch &mdash; and by tenant/plan tier) is what stops one heavy tenant from starving everyone else's background jobs. Soft and hard backpressure limits matter more than raw worker count once you have tenants with very different usage patterns sharing infrastructure.<\/p>\n    <p class=\"pull-quote\">A noisy tenant isn't a bug. It's the first thing your architecture has to assume will happen.<\/p>\n    <h2>Resilience is a default state, not a patch<\/h2>\n    <p>Circuit breakers and exponential backoff with jitter on external dependencies (maps, OCR, third-party APIs), plus a cache-aside strategy with jittered TTLs and lock-based stampede protection, aren't extras bolted on after an incident &mdash; they're what a system built for many tenants at once should assume it needs from day one, because the blast radius of a naive retry storm or a cache stampede is every tenant, not one.<\/p>\n    <h2>The unglamorous part: playbooks<\/h2>\n    <p>Documenting failure-mode and recovery playbooks &mdash; DB failover, broker outage, quota exhaustion &mdash; before they happen is the least exciting part of multi-tenant architecture and the part that actually determines how bad a 2am incident is.<\/p>"}, {"slug": "data-quality-is-a-trust-problem", "cat": "Data Engineering", "title": "Data Quality Is a Trust Problem, Not a Testing Problem", "date": "Sep 2026", "read": "4 min read", "excerpt": "Schema tests and not-null checks catch known failure modes. They don't answer the question a stakeholder actually asks: can I trust this number?", "body": "<p>\"Data quality\" usually gets reduced to a testing checklist: not-null checks, schema tests, a row-count assertion. Those catch known failure modes. They don't answer the question a stakeholder is actually asking when they look at a number on a dashboard: can I trust this?<\/p>\n    <h2>Bronze doesn't mean unvalidated<\/h2>\n    <p>An append-only, immutable Bronze layer is about preserving what actually arrived, not about skipping validation until later. Deduplication and validation belong in Silver, business modeling in Gold &mdash; but \"raw\" and \"untrusted\" aren't the same thing, and treating Bronze as a dumping ground just moves the trust problem downstream instead of solving it.<\/p>\n    <h2>A rollback is a feature<\/h2>\n    <p>When a bulk-import pipeline processes messy Excel or CSV exports &mdash; inconsistent dates, malformed phone numbers, broken foreign-key mappings &mdash; wrapping the load in a database transaction so a single invalid row rolls back the entire batch is a deliberate choice. The alternative, a partially-applied batch, is worse than a failed one: it looks like it worked.<\/p>\n    <p class=\"pull-quote\">The worst data quality bug isn't the one that crashes the pipeline. It's the one that loads successfully and is wrong.<\/p>\n    <h2>Testing is necessary, not sufficient<\/h2>\n    <p>dbt-style tests and tools like Great Expectations are good at catching failure modes you already anticipated. They're much weaker at answering \"where did this number come from\" or \"how current is this.\" That's a lineage and freshness problem, not a testing problem, and it needs to be designed in rather than assumed.<\/p>\n    <h2>Why this matters more now<\/h2>\n    <p>Every RAG or agentic system inherits whatever trust problems already exist in the data layer underneath it. Bad data that used to show up as a wrong number on a report now shows up as a confidently-worded, citation-backed answer from an AI system. The data engineering discipline of knowing what you can trust and why doesn't get less important as AI sits on top of it &mdash; it gets more important, because the failure mode gets harder to spot.<\/p>"}, {"slug": "automation-is-a-data-engineering-problem", "cat": "Automation & Workflows", "title": "Automation Is a Data Engineering Problem", "date": "Sep 2026", "read": "4 min read", "excerpt": "A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.", "body": "<p>Workflow automation tools get treated as a different discipline from data engineering &mdash; drag-and-drop nodes instead of code, \"ops\" instead of \"engineering.\" At any real scale, an automation fails in exactly the same ways a data pipeline does, and the teams that treat it that way build automations that survive contact with production.<\/p>\n    <h2>An automation is a pipeline with a friendlier UI<\/h2>\n    <p>The moment a workflow retries on failure, writes to a database, or triggers a downstream system, it needs the same things an ETL job needs: idempotency, so a retry doesn't double-charge or double-send; explicit error handling, not a silent failure; and a clear contract for what happens when an upstream API is slow or down.<\/p>\n    <h2>Reusable building blocks beat one-off flows<\/h2>\n    <p>Building an automation platform (n8n, in my case) around reusable components &mdash; for API integrations, data processing, validation and approval steps, AI-powered content generation &mdash; instead of letting every workflow reinvent its own version of the same logic is what keeps a platform maintainable past the first dozen workflows. One-off flows are fast to build and expensive to maintain; shared components are the opposite trade.<\/p>\n    <p class=\"pull-quote\">The moment an automation touches money, customer data, or another team's workflow, it stopped being \"just automation.\"<\/p>\n    <h2>Standards nobody asks for, until something breaks<\/h2>\n    <p>Data models, event schemas, error handling conventions, retry mechanisms, credential management, security, and &mdash; increasingly &mdash; AI governance for anything that touches a language model: none of this is exciting to write down, and all of it is what separates an automation platform from a pile of workflows that happen to work today.<\/p>\n    <h2>Where this leaves me<\/h2>\n    <p>I come at automation from the data engineering side, which means I default to asking the boring questions first &mdash; what happens on retry, who owns this credential, what's the blast radius if this runs twice &mdash; before asking what the workflow should do. That's usually the difference between an automation that survives a busy Monday and one that doesn't.<\/p>"}];
+const postsEl = $('#posts');
+postsEl.innerHTML = POSTS.map((p, i) => `<button class="post${i === 0 ? ' lead' : ''}" data-i="${i}"><span class="pc">${p.cat}</span><h3>${p.title}</h3><p>${p.excerpt}</p><span class="pm"><span>${p.date} · ${p.read}</span><b>Read →</b></span></button>`).join('');
+postsEl.addEventListener('click', e => { const b = e.target.closest('.post'); if (b) openPost(+b.dataset.i, b); });
+const rd = $('#rd'), rdC = $('#rdC'); let rdFocus, cur = 0;
+function openPost(i, from){
+  cur = i; const p = POSTS[i], prev = POSTS[i - 1], next = POSTS[i + 1];
+  if (!rd.classList.contains('open')) rdFocus = from || document.activeElement;
+  rdC.innerHTML = `<div class="pc">${p.cat}</div><h2 id="rdT">${p.title}</h2><div class="rm"><span>Tharun Kumar Reddy</span><span>${p.date}</span><span>${p.read}</span><button class="rd-copy" id="rdCopy">Copy link</button></div><div class="rd-body">${p.body}</div><div class="rd-nav">${prev ? `<button data-i="${i-1}"><small>← Previous</small>${prev.title}</button>` : '<span style="flex:1"></span>'}${next ? `<button data-i="${i+1}"><small>Next →</small>${next.title}</button>` : '<span style="flex:1"></span>'}</div>`;
+  try { history.replaceState(null, '', '#read-' + p.slug); } catch(_) {}
+  rd.classList.add('open'); rd.setAttribute('aria-hidden', 'false'); document.body.classList.add('noscroll'); rd.scrollTop = 0;
+  setTimeout(() => $('#rdX').focus(), 10);
+}
+function closeRd(){
+  if (!rd.classList.contains('open')) return;
+  rd.classList.remove('open'); rd.setAttribute('aria-hidden', 'true'); document.body.classList.remove('noscroll');
+  try { history.replaceState(null, '', '#writing'); } catch(_) {}
+  rdFocus && rdFocus.focus && rdFocus.focus();
+}
+$('#rdX').onclick = closeRd;
+rd.addEventListener('click', e => { if (e.target === rd) closeRd(); if (e.target.id === 'rdCopy') { const u = location.href; (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(() => say('Link copied'), () => say(u)); } const b = e.target.closest('.rd-nav button'); if (b) openPost(+b.dataset.i); });
+{ const h = location.hash.match(/^#read-(.+)$/), i = h ? POSTS.findIndex(p => p.slug === h[1]) : -1; if (i > -1) setTimeout(() => openPost(i), 300); }
+addEventListener('keydown', e => { if (e.key === 'Escape' && rd.classList.contains('open') && !$('#pal').classList.contains('open')) closeRd(); });
+
+/* ---------- command palette ---------- */
+const go = id => () => document.getElementById(id).scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+const CMDS = [
+  ['Sections','Selected work','work'],['Sections','Platform engineering','platforms'],['Sections','Systems & architecture','systems'],['Sections','Accelerators','accelerators'],
+  ['Sections','Writing','writing'],['Sections','Experience','experience'],['Sections','Toolbox','toolbox'],['Sections','Credentials','credentials'],['Sections','Contact','contact'],
+  ['Projects','Manufacturing Intelligence Platform','work'],['Projects','Claude Enterprise Connectors','work'],['Projects','Voice AI Agent','systems'],
+  ['Projects','n8n Sales & Marketing Automation','work'],['Projects','Databricks AI Agent','work'],['Projects','Boomi Agents','work'],
+  ['Projects','Capacity Allocator','work'],['Projects','Agri WhatsApp Bot','work'],['Projects','Binance Trading Bot','work'],
+  ['Projects','Analysis Bot for a Chartered Accountant','work'],['Projects','Invoice Intelligence','work'],
+  ['Projects','Medallion Data + AI Platform','platforms'],['Projects','NL-to-SQL Enterprise Chatbot','platforms'],['Projects','Employee Recognition Platform','platforms'],
+  ['Projects','Multi-Tenant Django Platform','platforms'],['Projects','Multi-Cloud Provisioning Platform','platforms'],['Projects','SMB & Accelerator Programme Portal','platforms'],
+].map(([g,l,id]) => ({g, l, run: go(id), hint:'↵'}));
+POSTS.forEach((p, i) => CMDS.push({g:'Writing', l:p.title, run: () => openPost(i), hint:'read'}));
+CMDS.push(
+  {g:'Actions', l:'Copy email address', run: copyMail, hint:'copy'},
+  {g:'Actions', l:'Download résumé (PDF)', run: () => { const a = document.createElement('a'); a.href = 'assets/Tharun_Kumar_Reddy_Resume.pdf'; a.download = ''; a.click(); }, hint:'pdf'},
+  {g:'Actions', l:'Open LinkedIn', run: () => open('https://www.linkedin.com/in/tharunreddyy','_blank','noopener'), hint:'↗'}
+);
+const pal = $('#pal'), q = $('#palQ'), list = $('#palList');
+let res = [], act = 0, lastFocus;
+function render(){
+  const s = q.value.trim().toLowerCase();
+  res = CMDS.filter(c => !s || c.l.toLowerCase().includes(s) || c.g.toLowerCase().includes(s));
+  act = Math.min(act, Math.max(0, res.length - 1));
+  if (!res.length){ list.innerHTML = '<div class="pal-empty">No matches</div>'; return; }
+  let g = '', h = '';
+  res.forEach((c, i) => {
+    if (c.g !== g){ g = c.g; h += `<div class="pal-g">${g}</div>`; }
+    h += `<button class="pal-it${i === act ? ' act' : ''}" data-i="${i}">${c.l}<small>${c.hint}</small></button>`;
+  });
+  list.innerHTML = h;
+  const a = $('.pal-it.act', list); a && a.scrollIntoView({block:'nearest'});
+}
+function openPal(){ closeRd(); lastFocus = document.activeElement; pal.classList.add('open'); q.value = ''; act = 0; render(); setTimeout(() => q.focus(), 10); }
+function closePal(){ pal.classList.remove('open'); lastFocus && lastFocus.focus && lastFocus.focus(); }
+function runAct(i){ const c = res[i]; if (!c) return; closePal(); setTimeout(c.run, 60); }
+$('#palBtn').onclick = openPal;
+pal.addEventListener('click', e => { if (e.target === pal) closePal(); const it = e.target.closest('.pal-it'); if (it) runAct(+it.dataset.i); });
+list.addEventListener('mousemove', e => { const it = e.target.closest('.pal-it'); if (it && +it.dataset.i !== act){ act = +it.dataset.i; $$('.pal-it', list).forEach(b => b.classList.toggle('act', +b.dataset.i === act)); } });
+q.addEventListener('input', () => { act = 0; render(); });
+addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); pal.classList.contains('open') ? closePal() : openPal(); return; }
+  if (!pal.classList.contains('open')) return;
+  if (e.key === 'Escape') closePal();
+  else if (e.key === 'ArrowDown'){ e.preventDefault(); act = (act + 1) % res.length; render(); }
+  else if (e.key === 'ArrowUp'){ e.preventDefault(); act = (act - 1 + res.length) % res.length; render(); }
+  else if (e.key === 'Enter'){ e.preventDefault(); runAct(act); }
+});
+
+/* ---------- neural network background ---------- */
+const cv = $('#net');
+if (!reduce && cv.getContext){
+  const ctx = cv.getContext('2d');
+  let W, H, dpr, pts = [], mouse = {x:-999, y:-999};
+  function size(){
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = cv.width = innerWidth * dpr; H = cv.height = innerHeight * dpr;
+    const n = Math.round(Math.min(90, innerWidth * innerHeight / 16000));
+    pts = Array.from({length:n}, () => ({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.25*dpr, vy:(Math.random()-.5)*.25*dpr, r:(Math.random()*1.4+.6)*dpr}));
+  }
+  size(); addEventListener('resize', size);
+  addEventListener('pointermove', e => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; }, {passive:true});
+  let vis = true; document.addEventListener('visibilitychange', () => { vis = !document.hidden; if (vis) requestAnimationFrame(draw); });
+  function draw(){
+    if (!vis) return;
+    ctx.clearRect(0, 0, W, H);
+    const L = 130 * dpr, L2 = L * L;
+    for (const p of pts){
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, dd = dx*dx + dy*dy;
+      if (dd < 40000*dpr*dpr){ p.x += dx * .006; p.y += dy * .006; }
+    }
+    for (let i = 0; i < pts.length; i++){
+      const a = pts[i];
+      for (let j = i + 1; j < pts.length; j++){
+        const b = pts[j], dx = a.x - b.x, dy = a.y - b.y, d = dx*dx + dy*dy;
+        if (d < L2){
+          ctx.strokeStyle = `rgba(139,147,255,${(1 - d / L2) * .35})`;
+          ctx.lineWidth = dpr * .7;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = 'rgba(198,243,107,.55)';
+      ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.283); ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+})();
+</script>
+</body>
+</html>
