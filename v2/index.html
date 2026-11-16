@@ -154,11 +154,11 @@ h1 .serif{font-size:1.08em;letter-spacing:-.02em}
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* sections */
-section{padding:clamp(80px,11vw,150px) 0 0}
+section{padding:clamp(72px,8vw,112px) 0 0}
 .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--a1)}
 .eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
 h2{font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:600;margin:18px 0 0;max-width:900px}
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px 30px;flex-wrap:wrap;margin-bottom:36px}
 .sec-head p{max-width:420px;color:var(--muted)}
 
 /* stats */
@@ -301,7 +301,7 @@ h2{font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.04em;font-we
 
 /* creds */
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;perspective:1200px}
-.cred{--rx:0deg;--ry:0deg;--gx:50%;--gy:50%;position:relative;padding:26px;min-height:210px;border-radius:var(--r);border:1px solid var(--line-2);display:flex;flex-direction:column;
+.cred{--rx:0deg;--ry:0deg;--gx:50%;--gy:50%;position:relative;padding:26px;min-height:150px;border-radius:var(--r);border:1px solid var(--line-2);display:flex;flex-direction:column;
   background:linear-gradient(160deg,#141822,#0b0d12);transform:rotateX(var(--rx)) rotateY(var(--ry));transform-style:preserve-3d;transition:transform .2s ease-out,box-shadow .3s;overflow:hidden}
 .cred:hover{box-shadow:0 30px 70px -30px rgba(139,147,255,.45)}
 .cred::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;mix-blend-mode:color-dodge;
@@ -500,6 +500,37 @@ a.post,a.rd-copy{text-decoration:none}
 .ns-list li{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
 .ns-list b{display:block;font-size:17px}
 .ns-list span{color:var(--muted);font-size:14.5px}
+
+/* density + UX pass */
+.card.compact{min-height:0;padding:22px}
+.card.compact .viz{display:none}
+.card.compact h3{padding-top:16px;font-size:clamp(19px,1.7vw,22px)}
+.card.compact p{font-size:14.5px;margin-top:8px}
+.card.compact ul{margin-top:10px;gap:6px}
+.card.compact li{font-size:14px}
+.card.compact ul li:nth-child(n+3){display:none}
+.card.compact .stack{margin-top:14px}
+.card.compact .stack span:nth-child(n+4){display:none}
+.bento-sep{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:14px 0 2px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.bento-sep::after{content:"";flex:1;height:1px;background:var(--line)}
+.bento.flat .bento-sep{display:none}
+.sub-head{margin:56px 0 22px;display:flex;justify-content:space-between;align-items:end;gap:12px 30px;flex-wrap:wrap}
+.sub-head h3{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.03em;font-weight:600;line-height:1.1}
+.sub-head p{max-width:420px;color:var(--muted);font-size:15px}
+.acc-i{min-height:0;padding:18px 20px 20px}
+.acc-i .ic{width:34px;height:34px;border-radius:10px;margin:10px 0 0}
+.acc-i .ic svg{width:17px;height:17px}
+.acc-i h4{font-size:16px;margin-top:14px}
+.acc-i .big{display:none}
+#posts .post:nth-child(n+5){display:none}
+#posts .post:nth-child(3),#posts .post:nth-child(4){grid-column:span 3}
+@media (max-width:1020px){#posts .post:nth-child(3),#posts .post:nth-child(4){grid-column:auto}}
+.nav-links a.cta{background:var(--a1);color:#0a0b0e;font-weight:600;margin-left:6px}
+.nav-links a.cta:hover,.nav-links a.cta.on{background:#d9ff8a;color:#0a0b0e}
+#net{transition:opacity .6s}
+body.past-hero #net{opacity:0}
+body.past-hero .aurora i{animation-play-state:paused}
+.card:not(.live) .viz *{animation-play-state:paused!important}
 </style>
 </head>
 <body>
@@ -512,12 +543,12 @@ a.post,a.rd-copy{text-decoration:none}
   <div class="nav-in">
     <a class="logo" href="#top" aria-label="Tharun Kumar Reddy — home"><span class="logo-mark">TK</span><span>Tharun Kumar Reddy</span></a>
     <div class="nav-links">
-      <a href="#work">Work</a>
+      <a href="#work" data-spy="work platforms">Work</a>
+      <a href="#experience">Experience</a>
       <a href="#systems">Systems</a>
       <a href="#writing">Writing</a>
-      <a href="#experience">Experience</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
+      <a href="#toolbox" data-spy="toolbox credentials">Skills</a>
+      <a href="#contact" data-spy="faq contact" class="cta">Contact</a>
     </div>
     <button class="kbtn" id="palBtn" aria-label="Open command menu"><span class="lbl-d">Jump to</span><span class="lbl-m">Menu</span><kbd>Ctrl K</kbd></button>
   </div>
@@ -670,8 +701,10 @@ a.post,a.rd-copy{text-decoration:none}
         </ul>
       </article>
 
+      <div class="bento-sep"><span>More builds</span></div>
+
       <!-- 05 Databricks -->
-      <article class="card rv" data-cat="data agents">
+      <article class="card compact rv" data-cat="data agents">
         <div class="card-top"><span class="ix">05</span><span class="tag">Lakehouse</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -691,7 +724,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 06 Boomi -->
-      <article class="card rv d1" data-cat="integration agents">
+      <article class="card compact rv d1" data-cat="integration agents">
         <div class="card-top"><span class="ix">06</span><span class="tag">iPaaS agents</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -708,7 +741,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 07 Allocation -->
-      <article class="card rv d2" data-cat="data">
+      <article class="card compact rv d2" data-cat="data">
         <div class="card-top"><span class="ix">07</span><span class="tag">Product</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -725,7 +758,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 08 Agri -->
-      <article class="card half rv" data-cat="agents">
+      <article class="card compact half rv" data-cat="agents">
         <div class="card-top"><span class="ix">08</span><span class="tag">AgriTech</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -743,7 +776,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 09 Binance -->
-      <article class="card half rv d1" data-cat="automation data">
+      <article class="card compact half rv d1" data-cat="automation data">
         <div class="card-top"><span class="ix">09</span><span class="tag">Algo trading</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -760,7 +793,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 10 CA analysis bot -->
-      <article class="card half rv" data-cat="agents data">
+      <article class="card compact half rv" data-cat="agents data">
         <div class="card-top"><span class="ix">10</span><span class="tag">FinTech · Accounting</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -783,7 +816,7 @@ a.post,a.rd-copy{text-decoration:none}
       </article>
 
       <!-- 11 Invoice AI -->
-      <article class="card half rv d1" data-cat="automation data">
+      <article class="card compact half rv d1" data-cat="automation data">
         <div class="card-top"><span class="ix">11</span><span class="tag">Invoice AI</span></div>
         <div class="viz" aria-hidden="true">
           <svg viewBox="0 0 300 120">
@@ -854,47 +887,8 @@ a.post,a.rd-copy{text-decoration:none}
         <div class="stack"><span>Django</span><span>Flask</span><span>REST APIs</span><span>Multi-tenant</span></div>
       </article>
     </div>
-  </div>
-</section>
-
-<!-- SYSTEMS -->
-<section id="systems">
-  <div class="shell">
-    <div class="sec-head">
-      <div><div class="eyebrow rv">Under the hood</div><h2 class="rv d1">The architecture is <span class="serif">the product.</span></h2></div>
-      <p class="rv d2">Every system here was designed for latency, accuracy and failure, not just the happy path. Pick a system to see how a request travels through it.</p>
-    </div>
-    <div class="arch rv">
-      <div class="arch-tabs" id="archTabs" role="tablist"></div>
-      <div class="arch-body">
-        <div class="arch-stage"><div class="pipe" id="pipe"></div></div>
-        <aside class="arch-side" id="archSide"></aside>
-      </div>
-    </div>
-    <noscript><ul class="ns-list"><li><b>Hybrid SQL + RAG: A question router that knows when to query and when to read</b><span>Numeric questions go to a schema-validated, read-only text-to-SQL tool. Document questions go to BM25 + vector retrieval with cross-encoder reranking. Answers carry citations, and the system declines to answer when relevance is low.</span></li><li><b>Voice Agent: Talking to an LLM at the speed of conversation</b><span>Each step is tuned for streaming. MCP pulls live customer data mid-call, and domain tools such as calendars, payments and CRM are chosen by caller intent, with no human needed on the call.</span></li><li><b>Invoice Intelligence: From inbox to ledger, with a human only where it matters</b><span>Invoices arriving by email are OCR'd, extracted to a strict schema by GPT-4, and validated against business rules. Only low-confidence fields go to a human reviewer.</span></li><li><b>Guardrails: AI that fails safely</b><span>Every AI action goes through layered checks: schema validation, confidence scoring, a fallback chain across models, and approval gates for anything that publishes or spends.</span></li><li><b>Forecasting APIs: Ten models behind one consistent API</b><span>Lag features and recursive forecasting with XGBoost, Random Forest and Prophet, served as REST APIs for sales, inventory, energy, quality, maintenance and delivery risk.</span></li></ul></noscript>
-  </div>
-</section>
-
-<!-- ACCELERATORS -->
-<section id="accelerators">
-  <div class="shell">
-    <div class="sec-head">
-      <div><div class="eyebrow rv">7+ accelerators</div><h2 class="rv d1">Built once. <span class="serif">Shipped everywhere.</span></h2></div>
-      <p class="rv d2">Reusable building blocks that turn a months-long AI build into a short configuration project, each one proven in production.</p>
-    </div>
+    <div class="sub-head rv" id="accelerators"><h3>Built once, <span class="serif">shipped everywhere.</span></h3><p>Eight reusable kits that turn a months-long AI build into a short configuration project.</p></div>
     <div class="acc rv" id="acc"><div class="acc-i"><span class="no">A—01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div><h4>Enterprise RAG Kit</h4><p>Hybrid retrieval, reranking, citations and abstention over SQL and documents.</p><span class="big" aria-hidden="true">01</span></div><div class="acc-i"><span class="no">A—02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h4>Voice Agent Kit</h4><p>Telephony-to-LLM pipeline under 800ms, with new verticals set up by prompt.</p><span class="big" aria-hidden="true">02</span></div><div class="acc-i"><span class="no">A—03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 13l2 2 4-4"/></svg></div><h4>Invoice Intelligence Kit</h4><p>OCR + GPT-4 extraction at 500+/day with 95% field accuracy.</p><span class="big" aria-hidden="true">03</span></div><div class="acc-i"><span class="no">A—04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div><h4>NL-to-SQL Assistant</h4><p>SQL agent with RBAC and Microsoft SSO, 30% faster through plan tuning.</p><span class="big" aria-hidden="true">04</span></div><div class="acc-i"><span class="no">A—05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 15l4-5 4 3 5-7"/></svg></div><h4>Forecasting Suite</h4><p>10 prediction APIs using lag features and recursive forecasting.</p><span class="big" aria-hidden="true">05</span></div><div class="acc-i"><span class="no">A—06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8.5 6H12a3 3 0 0 1 3 3v.5M8.5 18H12a3 3 0 0 0 3-3v-.5"/></svg></div><h4>Marketing Engine</h4><p>60+ n8n workflows on 17 subflows, with approval gates.</p><span class="big" aria-hidden="true">06</span></div><div class="acc-i"><span class="no">A—07</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></svg></div><h4>MCP Connector Kit</h4><p>MCP connectors + n8n powering a RAG assistant and a recognition engine.</p><span class="big" aria-hidden="true">07</span></div><div class="acc-i"><span class="no">A—08</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg></div><h4>Multi-tenant SaaS Core</h4><p>Schema-per-tenant, partitioned Celery queues, 99.95%+ SLA.</p><span class="big" aria-hidden="true">08</span></div></div>
-  </div>
-</section>
-
-<!-- WRITING -->
-<section id="writing">
-  <div class="shell">
-    <div class="sec-head">
-      <div><div class="eyebrow rv">Writing</div><h2 class="rv d1">Notes from <span class="serif">production.</span></h2></div>
-      <p class="rv d2">Short essays on RAG, agents, MCP and the data engineering that keeps them honest. Written from systems I've actually run.</p>
-    </div>
-    <div class="posts rv" id="posts"><!--POSTS_HTML:START--><a class="post lead" href="writing/rag-is-not-the-hard-part/" data-i="0"><span class="pc">RAG &amp; Retrieval</span><h3>RAG Is Not the Hard Part</h3><p>Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/why-mcp-is-more-than-a-buzzword/" data-i="1"><span class="pc">Agentic AI &amp; MCP</span><h3>Why MCP Is More Than a Buzzword</h3><p>Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface — here&#x27;s why that matters more than the model underneath.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><a class="post" href="writing/boring-infrastructure-behind-reliable-ai/" data-i="2"><span class="pc">Observability &amp; Evaluation</span><h3>The Boring Infrastructure Behind Reliable AI Systems</h3><p>Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/multi-tenant-saas-scaling-decisions/" data-i="3"><span class="pc">Backend &amp; Systems</span><h3>Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About</h3><p>Adding multi-tenancy gets treated like a checkbox. In practice it&#x27;s a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/data-quality-is-a-trust-problem/" data-i="4"><span class="pc">Data Engineering</span><h3>Data Quality Is a Trust Problem, Not a Testing Problem</h3><p>Schema tests and not-null checks catch known failure modes. They don&#x27;t answer the question a stakeholder actually asks: can I trust this number?</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><a class="post" href="writing/automation-is-a-data-engineering-problem/" data-i="5"><span class="pc">Automation &amp; Workflows</span><h3>Automation Is a Data Engineering Problem</h3><p>A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><!--POSTS_HTML:END--></div>
-    <p class="more-link rv"><a href="writing/">Browse all essays →</a></p>
   </div>
 </section>
 
@@ -921,6 +915,36 @@ a.post,a.rd-copy{text-decoration:none}
   </div>
 </section>
 
+<!-- SYSTEMS -->
+<section id="systems">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Under the hood</div><h2 class="rv d1">The architecture is <span class="serif">the product.</span></h2></div>
+      <p class="rv d2">Every system here was designed for latency, accuracy and failure, not just the happy path. Pick a system to see how a request travels through it.</p>
+    </div>
+    <div class="arch rv">
+      <div class="arch-tabs" id="archTabs" role="tablist"></div>
+      <div class="arch-body">
+        <div class="arch-stage"><div class="pipe" id="pipe"></div></div>
+        <aside class="arch-side" id="archSide"></aside>
+      </div>
+    </div>
+    <noscript><ul class="ns-list"><li><b>Hybrid SQL + RAG: A question router that knows when to query and when to read</b><span>Numeric questions go to a schema-validated, read-only text-to-SQL tool. Document questions go to BM25 + vector retrieval with cross-encoder reranking. Answers carry citations, and the system declines to answer when relevance is low.</span></li><li><b>Voice Agent: Talking to an LLM at the speed of conversation</b><span>Each step is tuned for streaming. MCP pulls live customer data mid-call, and domain tools such as calendars, payments and CRM are chosen by caller intent, with no human needed on the call.</span></li><li><b>Invoice Intelligence: From inbox to ledger, with a human only where it matters</b><span>Invoices arriving by email are OCR'd, extracted to a strict schema by GPT-4, and validated against business rules. Only low-confidence fields go to a human reviewer.</span></li><li><b>Guardrails: AI that fails safely</b><span>Every AI action goes through layered checks: schema validation, confidence scoring, a fallback chain across models, and approval gates for anything that publishes or spends.</span></li><li><b>Forecasting APIs: Ten models behind one consistent API</b><span>Lag features and recursive forecasting with XGBoost, Random Forest and Prophet, served as REST APIs for sales, inventory, energy, quality, maintenance and delivery risk.</span></li></ul></noscript>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="shell">
+    <div class="sec-head">
+      <div><div class="eyebrow rv">Writing</div><h2 class="rv d1">Notes from <span class="serif">production.</span></h2></div>
+      <p class="rv d2">Short essays on RAG, agents, MCP and the data engineering that keeps them honest. Written from systems I've actually run.</p>
+    </div>
+    <div class="posts rv" id="posts"><!--POSTS_HTML:START--><a class="post lead" href="writing/rag-is-not-the-hard-part/" data-i="0"><span class="pc">RAG &amp; Retrieval</span><h3>RAG Is Not the Hard Part</h3><p>Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/why-mcp-is-more-than-a-buzzword/" data-i="1"><span class="pc">Agentic AI &amp; MCP</span><h3>Why MCP Is More Than a Buzzword</h3><p>Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface — here&#x27;s why that matters more than the model underneath.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><a class="post" href="writing/boring-infrastructure-behind-reliable-ai/" data-i="2"><span class="pc">Observability &amp; Evaluation</span><h3>The Boring Infrastructure Behind Reliable AI Systems</h3><p>Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/multi-tenant-saas-scaling-decisions/" data-i="3"><span class="pc">Backend &amp; Systems</span><h3>Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About</h3><p>Adding multi-tenancy gets treated like a checkbox. In practice it&#x27;s a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 5 min read</span><b>Read →</b></span></a><a class="post" href="writing/data-quality-is-a-trust-problem/" data-i="4"><span class="pc">Data Engineering</span><h3>Data Quality Is a Trust Problem, Not a Testing Problem</h3><p>Schema tests and not-null checks catch known failure modes. They don&#x27;t answer the question a stakeholder actually asks: can I trust this number?</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><a class="post" href="writing/automation-is-a-data-engineering-problem/" data-i="5"><span class="pc">Automation &amp; Workflows</span><h3>Automation Is a Data Engineering Problem</h3><p>A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.</p><span class="pm"><span><time datetime="2026-09">Sep 2026</time> · 4 min read</span><b>Read →</b></span></a><!--POSTS_HTML:END--></div>
+    <p class="more-link rv"><a href="writing/">Browse all essays →</a></p>
+  </div>
+</section>
+
 <!-- TOOLBOX -->
 <section id="toolbox">
   <div class="shell">
@@ -929,13 +953,10 @@ a.post,a.rd-copy{text-decoration:none}
       <p class="rv d2">Grouped by the job they do, not alphabetically. Everything here has shipped in at least one production system.</p>
     </div>
     <div class="kit">
-      <div class="kit-g rv"><h4>Languages</h4><div class="stack"><span>Python</span><span>SQL</span></div></div>
-      <div class="kit-g rv"><h4>LLMs &amp; agents</h4><div class="stack"><span>GPT-4 / 4o</span><span>Anthropic API</span><span>Azure OpenAI</span><span>MCP</span><span>Tool calling</span><span>LangChain</span><span>Hybrid retrieval + reranking</span><span>Prompt engineering</span><span>Output guardrails</span></div></div>
-      <div class="kit-g rv"><h4>Documents &amp; vision</h4><div class="stack"><span>Mistral OCR</span><span>pdfplumber</span><span>Structured extraction</span></div></div>
-      <div class="kit-g rv"><h4>Data engineering</h4><div class="stack"><span>ETL / ELT</span><span>Medallion architecture</span><span>Data modelling</span><span>Cleaning &amp; validation</span><span>Bulk loading</span></div></div>
+      <div class="kit-g rv"><h4>LLMs, agents &amp; documents</h4><div class="stack"><span>GPT-4 / 4o</span><span>Anthropic API</span><span>Azure OpenAI</span><span>MCP</span><span>Tool calling</span><span>LangChain</span><span>Hybrid retrieval + reranking</span><span>Guardrails</span><span>Mistral OCR</span><span>Structured extraction</span></div></div>
+      <div class="kit-g rv"><h4>Data engineering &amp; stores</h4><div class="stack"><span>ETL / ELT</span><span>Medallion architecture</span><span>Data modelling</span><span>PostgreSQL</span><span>MySQL</span><span>ChromaDB</span><span>Redis</span></div></div>
       <div class="kit-g rv"><h4>Classic ML</h4><div class="stack"><span>XGBoost</span><span>Random Forest</span><span>Prophet</span><span>Feature engineering</span><span>Pandas</span></div></div>
-      <div class="kit-g rv"><h4>Data stores</h4><div class="stack"><span>PostgreSQL</span><span>MySQL</span><span>ChromaDB</span><span>Redis</span></div></div>
-      <div class="kit-g rv"><h4>Backend</h4><div class="stack"><span>Django / DRF</span><span>FastAPI</span><span>Flask</span><span>Celery</span><span>REST APIs</span><span>WebSockets</span><span>JWT / RBAC</span></div></div>
+      <div class="kit-g rv"><h4>Backend</h4><div class="stack"><span>Python</span><span>SQL</span><span>Django / DRF</span><span>FastAPI</span><span>Flask</span><span>Celery</span><span>REST</span><span>WebSockets</span><span>JWT / RBAC</span></div></div>
       <div class="kit-g rv"><h4>Voice &amp; automation</h4><div class="stack"><span>n8n</span><span>Twilio</span><span>Whisper STT</span><span>Azure TTS</span></div></div>
       <div class="kit-g rv"><h4>Cloud &amp; DevOps</h4><div class="stack"><span>Azure</span><span>Docker</span><span>Git</span><span>GitLab CI/CD</span><span>OpenTelemetry</span></div></div>
     </div>
@@ -1089,19 +1110,33 @@ function count(el){
 
 /* ---------- scroll progress + active nav ---------- */
 const prog = $('#prog'), links = $$('.nav-links a');
-const secs = links.map(a => $(a.getAttribute('href')));
+const spy = [];
+links.forEach((a, i) => (a.dataset.spy || a.getAttribute('href').slice(1)).split(' ').forEach(id => { const el = document.getElementById(id); if (el) spy.push([el, i]); }));
+spy.sort((a, b) => a[0].compareDocumentPosition(b[0]) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1);
 addEventListener('scroll', () => {
   const h = document.documentElement;
   prog.style.transform = `scaleX(${h.scrollTop / (h.scrollHeight - h.clientHeight)})`;
   let cur = -1;
-  secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
+  spy.forEach(([el, i]) => { if (el.getBoundingClientRect().top < innerHeight * .4) cur = i; });
   links.forEach((a, i) => a.classList.toggle('on', i === cur));
+  const past = scrollY > innerHeight * .9;
+  if (past !== document.body.classList.contains('past-hero')){
+    document.body.classList.toggle('past-hero', past);
+    if (!past && window.__netWake) window.__netWake();
+  }
 }, {passive:true});
 
 /* ---------- back to top ---------- */
 const topBtn = $('#toTop');
 addEventListener('scroll', () => topBtn.classList.toggle('show', scrollY > 900), {passive:true});
 topBtn.onclick = () => scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+
+/* ---------- run diagrams only while their card is on screen ---------- */
+const vizIO = new IntersectionObserver(es => es.forEach(e => {
+  e.target.classList.toggle('live', e.isIntersecting);
+  $$('.viz svg', e.target).forEach(v => { try { e.isIntersecting ? v.unpauseAnimations() : v.pauseAnimations(); } catch(_) {} });
+}), {rootMargin:'80px'});
+$$('.card').forEach(c => { if ($('.viz', c)) vizIO.observe(c); });
 
 /* ---------- card spotlight ---------- */
 $$('.card').forEach(c => c.addEventListener('pointermove', e => {
@@ -1268,7 +1303,7 @@ function render(){
   list.innerHTML = h;
   const a = $('.pal-it.act', list); a && a.scrollIntoView({block:'nearest'});
 }
-function openPal(){ closeRd(); lastFocus = document.activeElement; pal.classList.add('open'); q.value = ''; act = 0; render(); setTimeout(() => q.focus(), 10); }
+function openPal(){ closeRd(); lastFocus = document.activeElement; pal.classList.add('open'); q.value = ''; act = 0; render(); if (!matchMedia('(pointer:coarse)').matches) setTimeout(() => q.focus(), 10); }
 function closePal(){ pal.classList.remove('open'); lastFocus && lastFocus.focus && lastFocus.focus(); }
 function runAct(i){ const c = res[i]; if (!c) return; closePal(); setTimeout(c.run, 60); }
 $('#palBtn').onclick = openPal;
@@ -1434,8 +1469,10 @@ if (!reduce && cv.getContext){
   size(); addEventListener('resize', size);
   addEventListener('pointermove', e => { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; }, {passive:true});
   let vis = true; document.addEventListener('visibilitychange', () => { vis = !document.hidden; if (vis) requestAnimationFrame(draw); });
+  let running = true;
   function draw(){
-    if (!vis) return;
+    if (!vis || document.body.classList.contains('past-hero')){ running = false; return; }
+    running = true;
     ctx.clearRect(0, 0, W, H);
     const L = 130 * dpr, L2 = L * L;
     for (const p of pts){
@@ -1460,6 +1497,7 @@ if (!reduce && cv.getContext){
     }
     requestAnimationFrame(draw);
   }
+  window.__netWake = () => { if (!running){ running = true; requestAnimationFrame(draw); } };
   draw();
 }
 })();
