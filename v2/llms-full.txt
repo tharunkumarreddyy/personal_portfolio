@@ -8,7 +8,7 @@
 - Availability: open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.
 - Selected results: 40% lower RAG query latency; sub-800ms end-to-end voice agent; 95% field accuracy on 500+ invoices per day; 10 forecasting APIs; 60+ n8n workflows on 17 shared subflows.
 - Location: Bengaluru, India.
-- Profiles: https://www.linkedin.com/in/tharunreddyy, https://github.com/tharunkumarreddyy
+- Profiles: https://www.linkedin.com/in/tharun-kumar-reddy-b-a545a9204/, https://github.com/tharunkumarreddyy
 
 ## Frequently asked questions
 
@@ -31,7 +31,7 @@ Yes. He builds custom MCP servers that plug Claude into enterprise systems with 
 Yes. He is open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation. The quickest way to start is a short email describing what you are building.
 
 ### How can I contact Tharun Kumar Reddy?
-Email tharunkumarau01@gmail.com or message him on LinkedIn at linkedin.com/in/tharunreddyy. A résumé PDF is available to download from this page.
+Email tharunkumarau01@gmail.com or message him on LinkedIn at linkedin.com/in/tharun-kumar-reddy-b-a545a9204. A résumé PDF is available to download from this page.
 
 ### What certifications does he hold?
 Claude Certified Architect (Anthropic), Microsoft Frontier Engineer, Microsoft AB-100 Agentic AI Business Solutions Architect, AB-620 AI Agent Builder Associate, AI-103 Azure AI Engineer Associate, and the Google TensorFlow Developer Certificate.
@@ -82,9 +82,6 @@ A Bronze/Silver/Gold platform designed across 6 source systems, with an intent-r
 
 ### NL-to-SQL Enterprise Chatbot
 Ask the database in plain English. A SQL agent behind role-based access and Microsoft SSO, embeddable as a JS widget, and tuned until queries ran about 30% faster.
-
-### Employee Recognition Platform
-MCP connectors and n8n workflows behind two features: a RAG assistant people can chat with, and an engine that automates employee recognition.
 
 ### Multi-Tenant Django Platform
 A scaling design for a SaaS backend: schema-per-tenant isolation, four workload-partitioned Celery queues, circuit breakers and a documented capacity plan.

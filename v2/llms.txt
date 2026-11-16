@@ -8,7 +8,7 @@
 - Availability: open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.
 - Selected results: 40% lower RAG query latency; sub-800ms end-to-end voice agent; 95% field accuracy on 500+ invoices per day; 10 forecasting APIs; 60+ n8n workflows on 17 shared subflows.
 - Location: Bengaluru, India.
-- Profiles: https://www.linkedin.com/in/tharunreddyy, https://github.com/tharunkumarreddyy
+- Profiles: https://www.linkedin.com/in/tharun-kumar-reddy-b-a545a9204/, https://github.com/tharunkumarreddyy
 
 ## Pages
 - [Portfolio](__SITE_URL__/): projects, platform engineering, writing, toolbox, credentials and FAQ
