@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy</title>
+<title>The Boring Infrastructure Behind Reliable AI Systems - Tharun Kumar Reddy</title>
 <meta name="description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Tharun Kumar Reddy">
@@ -13,15 +13,15 @@
 <link rel="canonical" href="__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tharun Kumar Reddy">
-<meta property="og:title" content="The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy">
+<meta property="og:title" content="The Boring Infrastructure Behind Reliable AI Systems - Tharun Kumar Reddy">
 <meta property="og:description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
 <meta property="og:url" content="__SITE_URL__/writing/boring-infrastructure-behind-reliable-ai/">
 <meta property="og:image" content="__SITE_URL__/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Tharun Kumar Reddy — AI &amp; Data Engineer">
+<meta property="og:image:alt" content="Tharun Kumar Reddy - AI &amp; Data Engineer">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Boring Infrastructure Behind Reliable AI Systems — Tharun Kumar Reddy">
+<meta name="twitter:title" content="The Boring Infrastructure Behind Reliable AI Systems - Tharun Kumar Reddy">
 <meta name="twitter:description" content="Nobody gets excited about tracing spans or eval harnesses. They&#x27;re also the difference between a demo and a system that survives three weeks of real usage.">
 <meta name="twitter:image" content="__SITE_URL__/assets/og-image.png">
 <meta property="article:published_time" content="2026-09">
@@ -77,8 +77,8 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);fon
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header class="top">
-  <a class="logo" href="../../" aria-label="Tharun Kumar Reddy — home"><span class="mark" aria-hidden="true">TK</span><span>Tharun Kumar Reddy</span></a>
-  <div class="tools"><nav aria-label="Primary"><a href="../../#work">Work</a><a href="../../writing/">Writing</a><a href="../../#faq">FAQ</a><a href="../../#contact">Contact</a></nav><button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch theme"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button></div>
+  <a class="logo" href="../../" aria-label="Tharun Kumar Reddy - home"><span class="mark" aria-hidden="true">TK</span><span>Tharun Kumar Reddy</span></a>
+  <div class="tools"><nav aria-label="Primary"><a href="../../#work">Projects</a><a href="../../writing/">Writing</a><a href="../../#faq">FAQ</a><a href="../../#contact">Contact</a></nav><button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Switch theme"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button></div>
 </header>
 <main id="main">
 <article>
@@ -87,19 +87,19 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--dim);fon
   <h1>The Boring Infrastructure Behind Reliable AI Systems</h1>
   <p class="meta"><span>By <a href="../../" rel="author">Tharun Kumar Reddy</a></span><time datetime="2026-09">Sep 2026</time><span>5 min read</span></p>
   <div class="body">
-<p>Nobody gets excited about tracing spans or eval harnesses. Everyone gets excited about the demo where the agent answers a hard question correctly on the first try. The gap between those two things is where most AI projects actually die &mdash; quietly, in production, a few weeks after the demo, once the questions stop being the ones in the slide deck.</p>
+<p>Nobody gets excited about tracing spans or eval harnesses. Everyone gets excited about the demo where the agent answers a hard question correctly on the first try. The gap between those two things is where most AI projects actually die - quietly, in production, a few weeks after the demo, once the questions stop being the ones in the slide deck.</p>
     <h2>Evaluation is not a one-time gate</h2>
-    <p>Faithfulness, retrieval recall and precision, citation accuracy &mdash; metrics in the style of Ragas or DeepEval &mdash; are usually run once, right before launch, to satisfy a checklist. They're far more useful run continuously, against real traffic, because the failure modes that show up after launch are rarely the ones anyone tested for.</p>
+    <p>Faithfulness, retrieval recall and precision, citation accuracy - metrics in the style of Ragas or DeepEval - are usually run once, right before launch, to satisfy a checklist. They're far more useful run continuously, against real traffic, because the failure modes that show up after launch are rarely the ones anyone tested for.</p>
     <h2>Observability has to span the whole stack</h2>
-    <p>Tracing with OpenTelemetry and LLM-specific tooling like Langfuse or MLflow only pays off when it's tied back to data quality and cost, not treated as a separate dashboard for "the AI part." The systems that actually stay healthy correlate all three &mdash; data quality, generation quality, and cost &mdash; into one view instead of three dashboards nobody cross-references.</p>
-    <p class="pull-quote">If you can't tell me why the model said what it said, you don't have an AI system &mdash; you have a slot machine with good PR.</p>
+    <p>Tracing with OpenTelemetry and LLM-specific tooling like Langfuse or MLflow only pays off when it's tied back to data quality and cost, not treated as a separate dashboard for "the AI part." The systems that actually stay healthy correlate all three - data quality, generation quality, and cost - into one view instead of three dashboards nobody cross-references.</p>
+    <p class="pull-quote">If you can't tell me why the model said what it said, you don't have an AI system - you have a slot machine with good PR.</p>
     <h2>This is a data engineering problem wearing an AI costume</h2>
-    <p>Schema validation, testing, lineage, capacity planning &mdash; none of this is new. It's the same discipline data engineering has always required, just pointed at a new kind of pipeline where the transformation step happens to be a language model instead of a SQL query.</p>
+    <p>Schema validation, testing, lineage, capacity planning - none of this is new. It's the same discipline data engineering has always required, just pointed at a new kind of pipeline where the transformation step happens to be a language model instead of a SQL query.</p>
     <h2>Why this is the part I want to own</h2>
     <p>It's not the flashiest layer of the stack, but it's the layer that decides whether an AI system survives contact with real usage instead of quietly rotting after the demo. That's the direction I'm deliberately building toward.</p>
   </div>
   <aside class="cta"><h2>Building something similar?</h2><p>Tharun Kumar Reddy is open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation.</p><a class="btn" href="../../#contact">Get in touch</a></aside>
-  <section class="more" aria-labelledby="more-h"><h2 id="more-h">More essays</h2><ul><li><a href="../rag-is-not-the-hard-part/"><b>RAG Is Not the Hard Part</b><span>Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.</span><small>RAG &amp; Retrieval · 5 min read</small></a></li><li><a href="../why-mcp-is-more-than-a-buzzword/"><b>Why MCP Is More Than a Buzzword</b><span>Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface — here&#x27;s why that matters more than the model underneath.</span><small>Agentic AI &amp; MCP · 4 min read</small></a></li><li><a href="../multi-tenant-saas-scaling-decisions/"><b>Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About</b><span>Adding multi-tenancy gets treated like a checkbox. In practice it&#x27;s a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.</span><small>Backend &amp; Systems · 5 min read</small></a></li><li><a href="../data-quality-is-a-trust-problem/"><b>Data Quality Is a Trust Problem, Not a Testing Problem</b><span>Schema tests and not-null checks catch known failure modes. They don&#x27;t answer the question a stakeholder actually asks: can I trust this number?</span><small>Data Engineering · 4 min read</small></a></li><li><a href="../automation-is-a-data-engineering-problem/"><b>Automation Is a Data Engineering Problem</b><span>A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.</span><small>Automation &amp; Workflows · 4 min read</small></a></li></ul></section>
+  <section class="more" aria-labelledby="more-h"><h2 id="more-h">More essays</h2><ul><li><a href="../rag-is-not-the-hard-part/"><b>RAG Is Not the Hard Part</b><span>Standing up a retrieval pipeline is a weekend project now. Grounding, abstention, and multi-source retrieval are where real systems actually live or die.</span><small>RAG &amp; Retrieval · 5 min read</small></a></li><li><a href="../why-mcp-is-more-than-a-buzzword/"><b>Why MCP Is More Than a Buzzword</b><span>Every agent framework invents its own way to call tools. MCP is the first serious attempt to standardize that interface - here&#x27;s why that matters more than the model underneath.</span><small>Agentic AI &amp; MCP · 4 min read</small></a></li><li><a href="../multi-tenant-saas-scaling-decisions/"><b>Multi-Tenant SaaS: The Scaling Decisions Nobody Talks About</b><span>Adding multi-tenancy gets treated like a checkbox. In practice it&#x27;s a series of trade-offs about isolation, fairness, and what happens when one tenant misbehaves.</span><small>Backend &amp; Systems · 5 min read</small></a></li><li><a href="../data-quality-is-a-trust-problem/"><b>Data Quality Is a Trust Problem, Not a Testing Problem</b><span>Schema tests and not-null checks catch known failure modes. They don&#x27;t answer the question a stakeholder actually asks: can I trust this number?</span><small>Data Engineering · 4 min read</small></a></li><li><a href="../automation-is-a-data-engineering-problem/"><b>Automation Is a Data Engineering Problem</b><span>A drag-and-drop workflow tool feels like a different discipline from a data pipeline. At any real scale, it fails in exactly the same ways.</span><small>Automation &amp; Workflows · 4 min read</small></a></li></ul></section>
 </article>
 </main>
 <footer><span>© 2026 Tharun Kumar Reddy · Bengaluru, India</span><span><a href="../../">Portfolio</a> · <a href="https://www.linkedin.com/in/tharun-kumar-reddy-b-a545a9204/" rel="me noopener">LinkedIn</a> · <a href="https://github.com/tharunkumarreddyy" rel="me noopener">GitHub</a></span></footer>

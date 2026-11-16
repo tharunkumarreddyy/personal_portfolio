@@ -16,27 +16,11 @@
     "a": "Highlights include a 40% reduction in RAG query latency, sub-800ms end-to-end voice latency, 95% field accuracy on 500+ invoices per day with about 90% less manual entry, 10 forecasting and classification APIs, 60+ n8n workflows on 17 shared subflows, and a 99.95 to 99.999% uptime SLA on a multi-cloud platform."
   },
   {
-    "q": "Has he worked with the Model Context Protocol (MCP)?",
-    "a": "Yes. He builds custom MCP servers that plug Claude into enterprise systems with typed tool schemas, scoped authentication and audited access, and uses MCP as the tool layer in his real-time voice agent. He holds the Claude Certified Architect credential and has written about why MCP matters."
-  },
-  {
     "q": "Is Tharun available for hire or consulting?",
     "a": "Yes. He is open to AI engineering roles, consulting and ambitious builds in agents, RAG, voice and automation. The quickest way to start is a short email describing what you are building."
   },
   {
     "q": "How can I contact Tharun Kumar Reddy?",
     "a": "Email tharunkumarau01@gmail.com or message him on LinkedIn at linkedin.com/in/tharun-kumar-reddy-b-a545a9204. A résumé PDF is available to download from this page."
-  },
-  {
-    "q": "What certifications does he hold?",
-    "a": "Claude Certified Architect (Anthropic), Microsoft Frontier Engineer, Microsoft AB-100 Agentic AI Business Solutions Architect, AB-620 AI Agent Builder Associate, AI-103 Azure AI Engineer Associate, and the Google TensorFlow Developer Certificate."
-  },
-  {
-    "q": "Where is he based and where did he study?",
-    "a": "He is based in Bengaluru, India. He earned a B.Tech in Computer Science from Sri Venkateswara Engineering College, Tirupati (2021 to 2024)."
-  },
-  {
-    "q": "What does he write about?",
-    "a": "Short essays on production AI: why RAG is not the hard part, why MCP is more than a buzzword, the boring infrastructure behind reliable AI, multi-tenant SaaS scaling decisions, data quality as a trust problem, and why automation is a data engineering problem."
   }
 ]

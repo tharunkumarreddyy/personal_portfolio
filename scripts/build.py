@@ -112,15 +112,15 @@ def home_graph():
                    "url": f"{BASE}/writing/{p['slug']}/", "datePublished": p["iso"], "author": {"@id": PERSON_ID}} for p in posts]
     return {"@context": "https://schema.org", "@graph": [
         person_node(),
-        {"@type": "WebSite", "@id": f"{BASE}/#website", "url": f"{BASE}/", "name": f"{NAME} — {site['jobTitle']}",
+        {"@type": "WebSite", "@id": f"{BASE}/#website", "url": f"{BASE}/", "name": f"{NAME} - {site['jobTitle']}",
          "inLanguage": "en", "author": {"@id": PERSON_ID}, "publisher": {"@id": PERSON_ID}},
-        {"@type": "ProfilePage", "@id": f"{BASE}/#profilepage", "url": f"{BASE}/", "name": f"{NAME} — {site['jobTitle']}",
+        {"@type": "ProfilePage", "@id": f"{BASE}/#profilepage", "url": f"{BASE}/", "name": f"{NAME} - {site['jobTitle']}",
          "inLanguage": "en", "isPartOf": {"@id": f"{BASE}/#website"}, "about": {"@id": PERSON_ID}, "mainEntity": {"@id": PERSON_ID},
          "dateModified": site["updated"], "description": site["summary"],
          "primaryImageOfPage": {"@type": "ImageObject", "url": OG_IMAGE, "width": 1200, "height": 630}},
         {"@type": "FAQPage", "@id": f"{BASE}/#faq", "mainEntity": [
             {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]},
-        {"@type": "Blog", "@id": f"{BASE}/writing/#blog", "url": f"{BASE}/writing/", "name": f"Notes from production by {NAME}",
+        {"@type": "Blog", "@id": f"{BASE}/writing/#blog", "url": f"{BASE}/writing/", "name": f"Essays by {NAME}",
          "inLanguage": "en", "author": {"@id": PERSON_ID}, "blogPost": post_nodes},
     ]}
 
@@ -193,7 +193,7 @@ def page(title, desc, path, up, og_type, body_html, ld, extra_meta=""):
 <meta property="og:image" content="{OG_IMAGE}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{esc(NAME)} — {esc(site['jobTitle'])}">
+<meta property="og:image:alt" content="{esc(NAME)} - {esc(site['jobTitle'])}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
@@ -212,8 +212,8 @@ def page(title, desc, path, up, og_type, body_html, ld, extra_meta=""):
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header class="top">
-  <a class="logo" href="{up}" aria-label="{esc(NAME)} — home"><span class="mark" aria-hidden="true">TK</span><span>{esc(NAME)}</span></a>
-  <div class="tools"><nav aria-label="Primary"><a href="{up}#work">Work</a><a href="{up}writing/">Writing</a><a href="{up}#faq">FAQ</a><a href="{up}#contact">Contact</a></nav>{THEME_BTN}</div>
+  <a class="logo" href="{up}" aria-label="{esc(NAME)} - home"><span class="mark" aria-hidden="true">TK</span><span>{esc(NAME)}</span></a>
+  <div class="tools"><nav aria-label="Primary"><a href="{up}#work">Projects</a><a href="{up}writing/">Writing</a><a href="{up}#faq">FAQ</a><a href="{up}#contact">Contact</a></nav>{THEME_BTN}</div>
 </header>
 <main id="main">
 {body_html}
@@ -255,7 +255,7 @@ def post_page(p):
   {other_posts(p['slug'])}
 </article>"""
     meta = f'<meta property="article:published_time" content="{p["iso"]}">\n<meta property="article:author" content="{esc(NAME)}">\n<meta property="article:section" content="{esc(p["cat"])}">\n'
-    return page(f"{p['title']} — {NAME}", clip(p["excerpt"]), f"writing/{p['slug']}/", "../../", "article", body, ld, meta)
+    return page(f"{p['title']} - {NAME}", clip(p["excerpt"]), f"writing/{p['slug']}/", "../../", "article", body, ld, meta)
 
 
 def writing_index():
@@ -263,18 +263,18 @@ def writing_index():
         f'<li><a href="{p["slug"]}/"><b>{esc(p["title"])}</b><span>{esc(p["excerpt"])}</span><small>{esc(p["cat"])} · <time datetime="{p["iso"]}">{esc(p["date"])}</time> · {esc(p["read"])}</small></a></li>'
         for p in posts)
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "CollectionPage", "@id": f"{BASE}/writing/", "url": f"{BASE}/writing/", "name": f"Writing — {NAME}", "inLanguage": "en",
+        {"@type": "CollectionPage", "@id": f"{BASE}/writing/", "url": f"{BASE}/writing/", "name": f"Writing - {NAME}", "inLanguage": "en",
          "isPartOf": {"@id": f"{BASE}/#website"}, "about": {"@id": PERSON_ID}},
-        {"@type": "Blog", "@id": f"{BASE}/writing/#blog", "url": f"{BASE}/writing/", "name": f"Notes from production by {NAME}", "inLanguage": "en",
+        {"@type": "Blog", "@id": f"{BASE}/writing/#blog", "url": f"{BASE}/writing/", "name": f"Essays by {NAME}", "inLanguage": "en",
          "author": person_node(False), "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{BASE}/writing/{p['slug']}/", "datePublished": p["iso"]} for p in posts]},
         crumbs([("Home", f"{BASE}/"), ("Writing", f"{BASE}/writing/")]),
     ]}
     body = f"""<a class="back" href="../">← Portfolio</a>
 <p class="cat">Writing</p>
-<h1>Notes from production</h1>
+<h1>Essays and writing</h1>
 <p class="lede">Short essays on RAG, agents, MCP and the data engineering that keeps them honest, written from systems {esc(NAME)} has actually run.</p>
 <section class="more" style="margin-top:32px" aria-label="Essays"><ul>{items}</ul></section>"""
-    return page(f"Writing — {NAME}", "Essays on production AI: RAG, agents, MCP, multi-tenant backends, data quality and automation, by Tharun Kumar Reddy.", "writing/", "../", "website", body, ld)
+    return page(f"Writing - {NAME}", "Essays on production AI: RAG, agents, MCP, multi-tenant backends, data quality and automation, by Tharun Kumar Reddy.", "writing/", "../", "website", body, ld)
 
 
 # ---------------------------------------------------------------- index.html regions
